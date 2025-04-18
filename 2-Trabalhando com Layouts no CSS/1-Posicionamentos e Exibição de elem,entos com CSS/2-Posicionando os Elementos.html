@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+   	<body> 
+		<style>
+			
+		h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+		pre{
+			font-weight: bold;
+		}
+		</style>
+	<h2>POSITION STATIC</h2>	
+	<pre>
+		position: static;
+			É do tipo padrao. 
+				Vai respeitar a posição do elemento na ordem que escrevemos eles nos codigos.
+	</pre>
+	<p>
+		<style>
+			.inline {
+				display: inline-block;
+			}
+			.exemplo {
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				padding: 10px;
+				border-radius: 4px;
+			}
+			#elemento-1 {
+				background-color: orange;
+			}
+			#elemento-2 {
+				background-color: lightblue;
+			}
+			#elemento-3 {
+				background-color: lightcoral;
+			}
+			#elemento-a {
+				background-color: yellow;
+			}
+			#elemento-b {
+				background-color: lightgreen;
+			}
+			#elemento-c {
+				background-color: lightslategray;
+			}
+		</style>
+		<div id="elemento-1" class="exemplo inline">Elemento 1</div>
+		<div id="elemento-2" class="exemplo inline">Elemento 2</div>
+		<div id="elemento-3" class="exemplo inline">Elemento 3</div>
+
+		<hr>
+
+		<div id="elemento-a" class="exemplo">Elemento A</div>
+		<div id="elemento-b" class="exemplo">Elemento B</div>
+		<div id="elemento-c" class="exemplo">Elemento C</div>
+	</p>
+	<pre>
+		< style>
+		.inline {
+			display: inline-block;
+		}
+		.exemplo {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 4px;
+		}
+		#elemento-1 {
+			background-color: orange;
+		}
+		#elemento-2 {
+			background-color: lightblue;
+		}
+		#elemento-3 {
+			background-color: lightcoral;
+		}
+		#elemento-a {
+			background-color: yellow;
+		}
+		#elemento-b {
+			background-color: lightgreen;
+		}
+		#elemento-c {
+			background-color: lightslategray;
+		}
+	< /style>
+	< div id="elemento-1" class="exemplo inline">Elemento 1< /div>
+	< div id="elemento-2" class="exemplo inline">Elemento 2< /div>
+	< div id="elemento-3" class="exemplo inline">Elemento 3< /div>
+
+	< hr>
+
+	< div id="elemento-a" class="exemplo">Elemento A< /div>
+	< div id="elemento-b" class="exemplo">Elemento B< /div>
+	< div id="elemento-c" class="exemplo">Elemento C< /div>
+	</pre>
+	<br><br>
+
+	<h2>POSITION RELATIVE</h2>	
+	<pre>
+		position: relative;
+		left, right, top ou bottom 10px;
+
+		Pode movimentar o elemento pra qualquer lado.Ex. 
+
+			position: relative;
+			left: 40px;
+			top: 20px;
+	</pre>
+	<p>
+		<style>
+			#elemento-4 {
+				background-color: orange;
+				position: relative;
+				left: 40px;
+				top: 20px;
+			}
+			#elemento-5 {
+				background-color: lightblue;
+				position: relative;
+				bottom: 20px;
+				right: 50px;
+				top: 50px;
+			}
+			#elemento-6 {
+				background-color: lightcoral;
+				position: relative;
+				right: 90px;
+				bottom: 20px;
+			}
+		</style>
+		<div id="elemento-4" class="exemplo inline">Elemento 4</div>
+		<div id="elemento-5" class="exemplo inline">Elemento 5</div>
+		<div id="elemento-6" class="exemplo inline">Elemento 6</div>
+		<pre>
+			< style>
+				#elemento-4 {
+					background-color: orange;
+					position: relative;
+					left: 40px;
+					top: 20px;
+				}
+				#elemento-5 {
+					background-color: lightblue;
+					position: relative;
+					bottom: 20px;
+					right: 50px;
+					top: 50px;
+				}
+				#elemento-6 {
+					background-color: lightcoral;
+					position: relative;
+					right: 90px;
+					bottom: 20px;
+				}
+			< /style>
+			< div id="elemento-4" class="exemplo inline">Elemento 4< /div>
+			< div id="elemento-5" class="exemplo inline">Elemento 5< /div>
+			< div id="elemento-6" class="exemplo inline">Elemento 6< /div>
+		</pre>
+	</p>
+	<br><br>
+
+	<h2>POSITION ABSOLUTE</h2>	
+	<pre>
+		position: absolute;
+		left, right, top ou bottom 10px;
+
+			Ele movimenta o elemento pra qualquer canto da pagina, 
+				não respeita o espaço dos demais. Um exemplo disso: pop-up
+
+				position: absolute; 
+				top: 0px;
+
+		Observe o elemento pai e filho no codigo;
+			O comportamentodo do filho é restrito apenas dentro do quadrado
+			do pai.
+
+			</pre>
+	<p>
+
+		<style>
+			#elemento-7 {
+				background-color: orange;			
+				}
+			#elemento-8 {
+				background-color: lightblue;
+				position: absolute;
+				opacity: .5;
+				right: 20%;			
+			}
+			#elemento-9 {
+				background-color: lightblue;
+				position: absolute;
+				opacity: .5;
+				right: 30%;			
+			}
+			#pai {
+				background-color: lightcoral;	
+				box-sizing: border-box;
+				border: 1px solid black;
+				position: relative;
+				height: 250px;
+		
+			}
+			#filho {
+				background-color: lightpink;
+				position: absolute;
+				top: -6%;
+				bottom: 10%;     
+				right: 30%;
+				}
+		</style>
+		<div id="elemento-7" class="exemplo inline">Elemento 7</div>
+		<div id="elemento-8" class="exemplo inline">Elemento 8</div>
+		<div id="elemento-9" class="exemplo inline">Elemento 9</div>
+		
+		<div id="pai">Pai
+			<div id="filho" class="exemplo">Filho				
+			</div>
+		</div>
+		<pre>
+			
+		< style>
+			#elemento-7 {
+				background-color: orange;			
+				}
+			#elemento-8 {
+				background-color: lightblue;
+				position: absolute;
+				opacity: .5;
+				right: 20%;			
+			}
+			#elemento-9 {
+				background-color: lightblue;
+				position: absolute;
+				opacity: .5;
+				right: 30%;			
+			}
+			#pai {
+				background-color: lightcoral;	
+				box-sizing: border-box;
+				border: 1px solid black;
+				position: relative;
+				height: 250px;
+		
+			}
+			#filho {
+				background-color: lightpink;
+				position: absolute;
+				top: -6%;
+				bottom: 10%;     
+				right: 30%;
+				}
+		< /style>
+		< div id="elemento-7" class="exemplo inline">Elemento 7< /div>
+		< div id="elemento-8" class="exemplo inline">Elemento 8< /div>
+		< div id="elemento-9" class="exemplo inline">Elemento 9< /div>
+		
+		< div id="pai">Pai
+			< div id="filho" class="exemplo">Filho				
+			< /div>
+		< /div>
+		</pre>
+	</p>
+	<br><br>
+
+	<h2>POSITION FIXED</h2>	
+	<pre>
+		position: fixed;
+			O elemento preso no mesmo lugar na tela. 
+			Nao respeita os demais elementos. 
+	</pre>
+	<p>
+		<style>
+			#elemento-12 {
+				background-color: orange;
+
+			}
+			#elemento-11 {
+				background-color: lightblue;
+				position: fixed;
+				top: 0;
+				right: 0;		
+			}
+			#elemento-10 {
+				background-color: lightcoral;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+	
+		
+			}
+		</style>
+		<div id="elemento-10" class="exemplo inline">Elemento 10 | position: fixed;</div>
+		<div id="elemento-11" class="exemplo inline">Elemento 11 | position: fixed;</div>
+		<div id="elemento-12" class="exemplo inline">Elemento 12</div>
+
+		<pre>	
+			< style>
+			#elemento-12 {
+				background-color: orange;
+
+			}
+			#elemento-11 {
+				background-color: lightblue;
+				position: fixed;
+				top: 0;
+				right: 0;		
+			}
+			#elemento-10 {
+				background-color: lightcoral;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+	
+		
+			}
+		< /style>
+		< div id="elemento-10" class="exemplo inline">Elemento 10 | position: fixed;< /div>
+		< div id="elemento-11" class="exemplo inline">Elemento 11 | position: fixed;< /div>
+		< div id="elemento-12" class="exemplo inline">Elemento 12< /div>
+		</pre>
+
+	</p>
+	<br><br>
+
+	<h2>POSITION STICKY</h2>	
+	<pre>
+		position: sticky;
+		top, right, left ou bottom 0;
+
+			O elemento fica preso ao movimento scrol do mouse na tela.
+				TEm que determinar o limite [ex. top: 0;] pra ele. Exemplo:
+				Elemento 13 = top:0;  | Elemento 14 = bottom:0;
+			
+	</pre>
+	<p>
+
+		<style>
+			#elemento-13 {
+				background-color: blue;
+				color: white;
+				font-weight: bold;
+				position: sticky;
+				top: 0;				
+			}
+			#elemento-14 {
+				background-color: lightblue;
+				position: sticky;
+				bottom: 0;							
+			}
+			#elemento-15 {
+				background-color: lightcoral;
+	
+		
+			}
+		</style>
+		<div id="elemento-13" class="exemplo inline">Elemento 13| position: sticky;</div>
+		<div id="elemento-14" class="exemplo inline">Elemento 14| position: sticky;</div>
+		<div id="elemento-15" class="exemplo inline">Elemento 15</div>
+			<pre>
+				< style>
+					#elemento-13 {
+						background-color: blue;
+						color: white;
+						font-weight: bold;
+						position: sticky;
+						top: 0;				
+					}
+					#elemento-14 {
+						background-color: lightblue;
+						position: sticky;
+						bottom: 0;							
+					}
+					#elemento-15 {
+						background-color: lightcoral;
+			
+				
+					}
+				< /style>
+				< div id="elemento-13" class="exemplo inline">Elemento 13| position: sticky;< /div>
+				< div id="elemento-14" class="exemplo inline">Elemento 14| position: sticky;< /div>
+				< div id="elemento-15" class="exemplo inline">Elemento 15< /div>
+		
+			</pre>
+	</p>
+	<br><br>
+
+	<h2>Z-INDEX</h2>	
+	<pre>
+		z-index: 1;
+
+			O zindex determina a posição de uma camada, quando vários elementos,
+			estão no mesmo lugar. 
+				Cada numero representa uma camada-posição.
+
+	</pre>
+	<p>
+		<style>
+			.elemento-pai {
+				background-color:white;	
+				box-sizing: border-box;
+				border: 1px solid black;
+				position: sticky;
+				height: 250px;
+				top: 0;
+			}
+			#elemento-16 {
+				background-color: orange;
+				opacity: 0.5;
+				position: absolute;
+				z-index: 1;
+				left: 10px;
+				top: 10px;
+				border-bottom: 2px solid black;
+				border-right: 2px solid black;
+			}
+			#elemento-17 {
+				background-color: lightblue;
+				opacity: 0.5;
+				position: absolute;
+				z-index: 2;
+				left: 20px;
+				top: 20px;
+				border-bottom: 2px solid black;
+				border-right: 2px solid black;
+			}
+			#elemento-18 {
+				background-color: lightcoral;	
+				opacity: 0.5;
+				position: absolute;
+				z-index: 3;
+				left: 30px;
+				top: 30px;
+				border-bottom: 2px solid black;
+				border-right: 2px solid black;	
+			}
+			#elemento-19 {
+				background-color: lightcoral;	
+				opacity: 0.5;
+				position: absolute;
+				z-index: 4;
+				left: 40px;
+				top: 40px;	
+				border-bottom: 2px solid black;
+				border-right: 2px solid black;
+			}
+			#elemento-20 {
+				background-color: lightcoral;	
+				opacity: 0.5;
+				position: absolute;
+				z-index: 5;
+				left: 50px;
+				top: 50px;
+				border-bottom: 2px solid black;
+				border-right: 2px solid black;	
+			}
+			#elemento-21 {
+				background-color: lightcoral;	
+				opacity: 0.5;
+				position: absolute;
+				z-index: 6;
+				left: 60px;
+				top: 60px;
+				border-bottom: 2px solid black;
+				border-right: 2px solid black;	
+			}
+		</style>
+	<div class="elemento-pai">
+		<div id="elemento-16" class="exemplo">Elemento 16</div>
+		<div id="elemento-17" class="exemplo">Elemento 17</div>
+		<div id="elemento-18" class="exemplo">Elemento 18</div>
+		<div id="elemento-19" class="exemplo">Elemento 19</div>
+		<div id="elemento-20" class="exemplo">Elemento 20</div>
+		<div id="elemento-21" class="exemplo">Elemento 21</div>
+	</div>
+			<pre>
+				< style>
+					.elemento-pai {
+						background-color:white;	
+						box-sizing: border-box;
+						border: 1px solid black;
+						position: relative;
+						height: 250px;
+					}
+					#elemento-16 {
+						background-color: orange;
+						opacity: 0.5;
+						position: absolute;
+						z-index: 1;
+						left: 10px;
+						top: 10px;
+						border-bottom: 2px solid black;
+						border-right: 2px solid black;
+					}
+					#elemento-17 {
+						background-color: lightblue;
+						opacity: 0.5;
+						position: absolute;
+						z-index: 2;
+						left: 20px;
+						top: 20px;
+						border-bottom: 2px solid black;
+						border-right: 2px solid black;
+					}
+					#elemento-18 {
+						background-color: lightcoral;	
+						opacity: 0.5;
+						position: absolute;
+						z-index: 3;
+						left: 30px;
+						top: 30px;
+						border-bottom: 2px solid black;
+						border-right: 2px solid black;	
+					}
+					#elemento-19 {
+						background-color: lightcoral;	
+						opacity: 0.5;
+						position: absolute;
+						z-index: 4;
+						left: 40px;
+						top: 40px;	
+						border-bottom: 2px solid black;
+						border-right: 2px solid black;
+					}
+					#elemento-20 {
+						background-color: lightcoral;	
+						opacity: 0.5;
+						position: absolute;
+						z-index: 5;
+						left: 50px;
+						top: 50px;
+						border-bottom: 2px solid black;
+						border-right: 2px solid black;	
+					}
+					#elemento-21 {
+						background-color: lightcoral;	
+						opacity: 0.5;
+						position: absolute;
+						z-index: 6;
+						left: 60px;
+						top: 60px;
+						border-bottom: 2px solid black;
+						border-right: 2px solid black;	
+					}
+				< /style>
+			< div class="elemento-pai">
+				< div id="elemento-16" class="exemplo">Elemento 16< /div>
+				< div id="elemento-17" class="exemplo">Elemento 17< /div>
+				< div id="elemento-18" class="exemplo">Elemento 18< /div>
+				< div id="elemento-19" class="exemplo">Elemento 19< /div>
+				< div id="elemento-20" class="exemplo">Elemento 20< /div>
+				< div id="elemento-21" class="exemplo">Elemento 21< /div>
+			< /div>
+			</pre>
+	</p>
+	<br><br>
+
+
+	</body>
+</html>
+
+

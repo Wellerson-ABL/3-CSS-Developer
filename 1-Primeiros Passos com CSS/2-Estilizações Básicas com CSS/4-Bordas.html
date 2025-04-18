@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORDAS</title>
+</head>
+   	<body> 
+	<h2>TAMANHO DA BORDA</h2>	
+	<pre>
+	<p>
+		<style>
+			        h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+		pre {
+				background-color: rgb(240, 240, 240);
+				padding: 10px;
+				border-radius: 5px;
+				border: rgb(71, 6, 32) solid 1px;
+				font-size: 11px;
+		}
+		body {
+				font-family: roboto, sans-serif;
+			}
+
+		.exemplo {
+				background-color: lightcoral;
+				height: 200px;
+				width: 200px;
+				border-style: solid;
+				border-width: 15px;
+				border-width: thin;   /* borda fina = 1px */
+				border-width: medium; /* borda media = 3px */
+				border-width: thick;  /* borda grossa = 5px */
+				border-width: 10px 20px; /* 10px parte de cima/baixo - 20px dos lados -  */
+
+		}
+		</style>
+		
+		<h3>bordas</h3>
+		<p>Podemos definir as configurações das nossas bordas através das propriedades:</p>
+
+		
+		<ul>
+			<li>border-width</li>
+			<li>border-style</li>
+			<li>border-color</li>
+		</ul>
+		<h3>Exemplo:</h3>
+		<div class="exemplo"></div>
+
+		
+		< style>
+				pre {
+					background-color: rgb(240, 240, 240);
+					padding: 10px;
+					border-radius: 5px;
+					border: rgb(71, 6, 32) solid 1px;
+					font-size: 11px;
+				}
+				body {
+					font-family: roboto, sans-serif;
+				}
+				.exemplo {
+					background-color: lightcoral;
+					height: 200px;
+					width: 200px;
+					border-style: solid;
+					border-width: 15px;
+					border-width: thin;   /* borda fina = 1px */
+					border-width: medium; /* borda media = 3px */
+					border-width: thick;  /* borda grossa = 5px */
+					border-width: 10px 20px; /* 10px parte de cima/baixo - 20px dos lados -  */
+					}
+		< /style>
+			
+			< h3>bordas< /h3>
+			< p>Podemos definir as configurações das nossas bordas através das propriedades:< /p>
+	
+			
+			< ul>
+				< li>border-width< /li>
+				< li>border-style< /li>
+				< li>border-color< /li>
+			< /ul>
+			< h3>Exemplo:< /h3>
+			< div class="exemplo">< /div>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>ESTILO DA BORDA</h2>	
+	<pre>
+	<p>
+		<style>
+			.pre1{
+				display: flex;
+			}
+			.pre2{
+				display: flex;
+			}
+			.exemplo1 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: none;
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo2 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: solid;
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo3 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: dashed; /* */
+				margin-right: 2px;	
+				border-width: thick;
+			}
+			
+			.exemplo4 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: dotted;
+				margin-right: 2px;	
+				border-width: thick;
+			}
+			
+			.exemplo5 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: double; /* */
+				margin-right: 2px;
+				border-width: thick;	
+			}
+			
+			.exemplo6 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: groove;
+				margin-right: 2px;	
+				border-width: thick;
+			}
+			
+			.exemplo7 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: hidden; /* */
+				margin-right: 2px;
+				border-width: thick;	
+			}
+			.exemplo8 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: ridge;
+				margin-right: 2px;
+				border-width: thick;	
+			}
+			.exemplo9 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: inset; /* */
+				margin-right: 2px;				
+				border-width: thick;
+			}
+			.exemplo10 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: outset; /* */
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo11 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: dotted dashed solid double; /* */
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo12 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: 15px; /* */
+				margin-right: 2px;
+				border-width: thick;
+			}
+			</style>
+			
+			<h3>Exemplo:</h3>
+		<div class="pre1">
+			<div class="exemplo1">1</div>
+			<div class="exemplo2">2</div>
+			<div class="exemplo3">3</div>
+			<div class="exemplo4">4</div>
+			<div class="exemplo5">5</div>
+			<div class="exemplo6">6</div>
+
+		</div>
+		<div class="pre2">	
+			<div class="exemplo7">7</div>
+			<div class="exemplo8">8</div>
+			<div class="exemplo9">9</div>
+			<div class="exemplo10">10</div>
+			<div class="exemplo11">11</div>
+			<div class="exemplo12">12</div>
+		</div>
+
+		< style>
+			.pre1{
+				display: flex;
+			}
+			.pre2{
+				display: flex;
+			}
+			.exemplo1 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: none;
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo2 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: solid;
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo3 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: dashed; /* */
+				margin-right: 2px;	
+				border-width: thick;
+			}
+			
+			.exemplo4 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: dotted;
+				margin-right: 2px;	
+				border-width: thick;
+			}
+			
+			.exemplo5 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: double; /* */
+				margin-right: 2px;
+				border-width: thick;	
+			}
+			
+			.exemplo6 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: groove;
+				margin-right: 2px;	
+				border-width: thick;
+			}
+			
+			.exemplo7 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: hidden; /* */
+				margin-right: 2px;
+				border-width: thick;	
+			}
+			.exemplo8 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: ridge;
+				margin-right: 2px;
+				border-width: thick;	
+			}
+			.exemplo9 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: inset; /* */
+				margin-right: 2px;				
+				border-width: thick;
+			}
+			.exemplo10 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: outset; /* */
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo11 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: dotted dashed solid double; /* */
+				margin-right: 2px;
+				border-width: thick;
+			}
+			.exemplo12 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-style: 15px; /* */
+				margin-right: 2px;
+				border-width: thick;
+			}
+		< /style>
+			
+			< h3>Exemplo:< /h3>
+		< div class="pre1">
+			< div class="exemplo1">1< /div>
+			< div class="exemplo2">2< /div>
+			< div class="exemplo3">3< /div>
+			< div class="exemplo4">4< /div>
+			< div class="exemplo5">5< /div>
+			< div class="exemplo6">6< /div>
+
+		< /div>
+		< div class="pre2">	
+			< div class="exemplo7">7< /div>
+			< div class="exemplo8">8< /div>
+			< div class="exemplo9">9< /div>
+			< div class="exemplo10">10< /div>
+			< div class="exemplo11">11< /div>
+			< div class="exemplo12">12< /div>
+		< /div>
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>COR DA BORDA</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo13 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-width: 20px;
+				border-style: solid;
+				border-color: blue gray pink yellow;  /* VARIAS COLOR NA MESMO COMANDO*/
+			}
+
+		</style>
+		<div class="exemplo13">13</div>
+
+		< style>
+			.exemplo13 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-width: 20px;
+				border-style: solid;
+				border-color: blue gray pink yellow;  /* VARIAS COLOR NA MESMO COMANDO*/
+			}
+
+		< /style>
+		< div class="exemplo13">13< /div>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo14 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border: 20px solid blue ;   /* varios comando na mesma COMANDO*/
+				border-bottom: 10px double red;
+				border-radius: 5px;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 40px;
+				border-style: dashed;
+				border-top-color: blueviolet;
+			}
+
+		</style>
+		<div class="exemplo14">14</div>
+
+		< style>
+			.exemplo14 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border: 20px solid blue ;   /* varios comando na mesma COMANDO*/
+				border-bottom: 10px double red;
+				border-radius: 5px;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 40px;
+				border-style: dashed;
+				border-top-color: blueviolet;
+			}
+
+		< /style>
+		< div class="exemplo14">14< /div>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>ARREDONDANDO OS CANTOS COM A PROPRIEDADE BORDER RADIUS</h2>	
+	<pre>
+	<p>
+
+		<style>
+			.exemplo15 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-width: 20px;
+				border: 10px solid blueviolet;
+				border-radius: 50px/100px;  /* DEIXA AS LATERAIS MEIO CORTADAS.*/
+				border-radius: 50%;     /* DEIXA REDONDO*/
+				border-radius: 10px 20px 40px 60px;	
+
+			}
+
+		</style>
+		<div class="exemplo15">15</div>
+
+
+		< style>
+			.exemplo15 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border-width: 20px;
+				border: 10px solid blueviolet;
+				border-radius: 50px/100px;  /* DEIXA AS LATERAIS MEIO CORTADAS.*/
+				border-radius: 50%;     /* DEIXA REDONDO*/
+				border-radius: 10px 20px 40px 60px;	
+
+			}
+
+		< /style>
+		< div class="exemplo15">15< /div>
+
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER IMAGE SOURCE</h2>	
+	<pre>
+	<p>
+
+		<style>
+			.exemplo16 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');              /*Coloca uma imagem nos cantos - borda*/
+			
+			}
+			.exemplo17 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: linear-gradient(red, blue);		
+			}
+
+			
+
+		</style>
+	<div class="pre1"></div>
+		<div class="exemplo16">16</div>
+		<div class="exemplo17">17</div>
+
+		
+		< style>
+			.exemplo16 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');              /*Coloca uma imagem nos cantos - borda*/
+			
+			}
+			.exemplo17 {
+				background-color: lightcoral;
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: linear-gradient(red, blue);		
+			}
+
+			
+
+		< /style>
+		< div class="pre1">
+		< div class="exemplo16">16< /div>
+		< div class="exemplo17">17< /div>
+		</ div>
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER IMAGE SLICE</h2>	
+	<pre>
+	<p>
+
+		
+		<style>
+			.exemplo18 {
+				background-color: rgb(0, 0, 0);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;    /* aqui muda a borda*/
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');	
+				border-image-slice: 169;	
+				color: white;
+			}
+			.exemplo19 {
+				background-color: rgb(0, 0, 0);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');	
+				border-image-slice: 233;	
+				border-image-repeat: repeat;	
+				color: white;	
+			}
+			.exemplo20 {
+				background-color: rgb(0, 0, 0);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 122 fill;	
+				border-image-repeat: repeat;
+				color: white;			
+			}
+			
+
+		</style>
+	<div class="pre1">
+		<div class="exemplo18">18</div>
+		<div class="exemplo19">19</div>
+		<div class="exemplo20">20</div>
+	</div>
+
+
+	< style>
+		.exemplo18 {
+			background-color: rgb(0, 0, 0);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;    /* aqui muda a borda*/
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');	
+			border-image-slice: 169;	
+			color: white;
+		}
+		.exemplo19 {
+			background-color: rgb(0, 0, 0);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');	
+			border-image-slice: 233;	
+			border-image-repeat: repeat;	
+			color: white;	
+		}
+		.exemplo20 {
+			background-color: rgb(0, 0, 0);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 122 fill;	
+			border-image-repeat: repeat;
+			color: white;			
+		}
+		
+
+	< /style>
+< div class="pre1">
+	< div class="exemplo18">18< /div>
+	< div class="exemplo19">19< /div>
+	< div class="exemplo20">20< /div>
+< /div>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER IMAGE WIDTH</h2>	
+	<pre>
+	<p>
+
+		<style>
+		.exemplo21 {
+			background-color: rgb(240, 82, 82);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 122 ;	
+			border-image-repeat: repeat;
+			color: white;
+			border-image-width: 5px 15px 45px 90px ;	/* DEFINIR BORDA NA IMAGEM EM TODOS LADOS*/		
+		}
+	</style>
+
+	<div class="exemplo21">21</div>
+		
+
+	< style>
+		.exemplo21 {
+			background-color: rgb(240, 82, 82);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 122 ;	
+			border-image-repeat: repeat;
+			color: white;
+			border-image-width: 5px 15px 45px 90px ;	/* DEFINIR BORDA NA IMAGEM EM TODOS LADOS*/		
+		}
+	< /style>
+
+	< div class="exemplo21">21< /div>
+	
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER IMAGE REPEAT</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo22 {
+				background-color: rgb(240, 82, 82);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				color: white;
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 233 ;
+				border-image-repeat: repeat; 		/* vai dividir a imagem e preencher as laterais	*/
+				}
+			.exemplo23 {
+				background-color: rgb(114, 157, 182);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 233 ;
+				color: white;			
+				border-image-repeat:round;				/* vai evitar cortar a imagem e vai redimensionar pra caber na borda.*/
+				}
+			.exemplo24 {
+				background-color: rgb(26, 7, 7);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 233 ;
+				color: white;				
+				border-image-repeat:stretch;   /*vai esticar pra caber na borda. os meios: (5/6/7/8) */
+				}
+			.exemplo25 {
+				background-color: rgb(207, 207, 207);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 3px;	
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 233 ;
+				color: white;			
+				border-image-repeat:space; /* se area nao for preenchida por completa pela imagem/borda ele vai adicionar espaços para ajustar*/
+				}
+		</style>
+	
+	<div class="pre1">
+		<div class="exemplo22">22 - repeat</div>
+		<div class="exemplo23">23 - round</div>
+		<div class="exemplo24">24 - stretch</div>
+		<div class="exemplo25">25 - space</div>
+	</div>
+
+
+	< style>
+		.exemplo22 {
+			background-color: rgb(240, 82, 82);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			color: white;
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 233 ;
+			border-image-repeat: repeat; 		/* vai dividir a imagem e preencher as laterais	*/
+			}
+		.exemplo23 {
+			background-color: rgb(114, 157, 182);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 233 ;
+			color: white;			
+			border-image-repeat:round;				/* vai evitar cortar a imagem e vai redimensionar pra caber na borda.*/
+			}
+		.exemplo24 {
+			background-color: rgb(26, 7, 7);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 233 ;
+			color: white;				
+			border-image-repeat:stretch;   /*vai esticar pra caber na borda. os meios: (5/6/7/8) */
+			}
+		.exemplo25 {
+			background-color: rgb(207, 207, 207);
+			height: 150px;
+			width: 150px;
+			border: 30px solid;
+			margin: 3px;	
+			border-image-source: url('./img/ACDC.jpg');
+			border-image-slice: 233 ;
+			color: white;			
+			border-image-repeat:space; /* se area nao for preenchida por completa pela imagem/borda ele vai adicionar espaços para ajustar*/
+			}
+	< /style>
+
+< div class="pre1">
+	< div class="exemplo22">22 - repeat< /div>
+	< div class="exemplo23">23 - round< /div>
+	< div class="exemplo24">24 - stretch< /div>
+	< div class="exemplo25">25 - space< /div>
+< /div>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER IMAGE OUTSET P1</h2>	
+	<pre>
+	<p>
+
+		<style>
+			.exemplo26 {
+				background-color: rgb(240, 82, 82);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 40px auto;	
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 233 ;	
+				border-image-repeat: round;
+				color: white;
+				border-image-outset: 35px 45px 60px 90px ;	/* DEFINIR BORDA NA 'IMAGEM de dentro' EM TODOS LADOS*/		
+			}
+		</style>
+	
+		< div class="exemplo26">26< /div>
+
+		< style>
+			.exemplo26 {
+				background-color: rgb(240, 82, 82);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 40px auto;	
+				border-image-source: url('./img/ACDC.jpg');
+				border-image-slice: 233 ;	
+				border-image-repeat: round;
+				color: white;
+				border-image-outset: 35px 45px 60px 90px ;	/* DEFINIR BORDA NA 'IMAGEM de dentro' EM TODOS LADOS*/		
+			}
+		< /style>
+	
+		< div class="exemplo26">26< /div>
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE BORDER IMAGE OUTSET P2</h2>	
+	<pre>
+	<p>
+
+
+		<style>
+			.exemplo27 {
+				background-color: rgb(240, 82, 82);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 40px auto;					
+				color: white;
+				
+				border-image: url('./img/ACDC.jpg') 169 / 10px 20px 30px 40px / 1 2 3 4 round;
+													/* 169 =space   10,20,30,40px=border-image-width    1 2 3 4= border=image-outset */  
+			}
+		</style>
+	
+		<div class="exemplo27">27 - resumo</div>
+	
+	
+		< style>
+			.exemplo27 {
+				background-color: rgb(240, 82, 82);
+				height: 150px;
+				width: 150px;
+				border: 30px solid;
+				margin: 40px auto;					
+				color: white;
+				
+				border-image: url('./img/ACDC.jpg') 169 / 10px 20px 30px 40px / 1 2 3 4 round;
+							/* 169 =space   10,20,30,40px=border-image-width    1 2 3 4= border=image-outset */  
+			}
+		< /style>
+	
+		< div class="exemplo27">27 - resumo< /div>
+	
+	</p>
+	</pre>	<br><br>
+
+	</body>
+</html>
+
+

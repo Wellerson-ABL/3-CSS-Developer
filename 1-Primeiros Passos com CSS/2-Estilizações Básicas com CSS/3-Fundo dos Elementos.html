@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+   	<body> 
+
+	<h2>ALTERANDO O FUNDO DOS ELEMENTOS.</h2>	
+	<pre>
+	<p>	
+		<STYLE>
+			        h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+			pre {
+				background-color: rgb(240, 240, 240);
+				padding: 10px;
+				border-radius: 5px;
+				border: rgb(71, 6, 32) solid 1px;
+			}
+			nav {
+				display: flex;
+			}
+			div {
+				margin-bottom: 30px;
+				margin-inline-start: 10px;	
+				margin-inline-end: 10px;		
+								
+			}
+			.exemplo {
+				width: 950px;
+				height:500px;
+				background-color: pink;
+				background-image: url('./img/ACDC.jpg'), url('./img/logo_grande.jpg');
+				background-repeat: no-repeat, no-repeat;
+				background-position: center, center;
+				}
+			.exemplo1 {
+			    width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image: linear-gradient(violet, lightblue, lightgreen, lightyellow, lightpink, lightgray, lightblue);
+			}
+			.exemplo2 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image: radial-gradient(violet, lightblue, lightgreen, lightyellow, lightpink, lightgray, lightblue);
+			}
+			.exemplo3 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image: image-set(url('./img/ACDC.jpg') 1x, url('./img/ACDC.jpg') 4x, url('./img/ACDC.jpg') 6x);
+			}
+			.exemplo4 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image : conic-gradient(violet, lightblue, lightgreen, lightyellow, lightpink, lightgray, lightblue);
+			}
+			.exemplo5 {
+				width: 200px;
+				height: 200px;
+			    background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+							radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),#8a3;
+				background-size: 50px 20px;
+			}
+		</STYLE>
+	<div class="flex"> 
+			<div class="exemplo">Exemplo</div><br>
+		<nav>
+			<div class="exemplo1"> 1</div>
+			<div class="exemplo2"> 2</div>
+			<div class="exemplo3"> 3</div>
+			<div class="exemplo4"> 4</div>
+			<div class="exemplo5"> 5</div>
+		</nav>
+			
+	</div>
+
+	<p>	
+		< STYLE>
+			nav {
+				display: flex;
+			}
+			div {
+				margin-bottom: 30px;
+				margin-inline-start: 10px;	
+				margin-inline-end: 10px;		
+								
+			}
+			.exemplo {
+				width: 950px;
+				height:500px;
+				background-color: pink;
+				background-image: url('./img/ACDC.jpg'), url('./img/logo_grande.jpg');
+				background-repeat: no-repeat, no-repeat;
+				background-position: center, center;
+				}
+			.exemplo1 {
+			    width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image: linear-gradient(violet, lightblue, lightgreen, lightyellow, lightpink, lightgray, lightblue);
+			}
+			.exemplo2 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image: radial-gradient(violet, lightblue, lightgreen, lightyellow, lightpink, lightgray, lightblue);
+			}
+			.exemplo3 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image: image-set(url('./img/ACDC.jpg') 1x, url('./img/ACDC.jpg') 4x, url('./img/ACDC.jpg') 6x);
+			}
+			.exemplo4 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-image : conic-gradient(violet, lightblue, lightgreen, lightyellow, lightpink, lightgray, lightblue);
+			}
+			.exemplo5 {
+				width: 200px;
+				height: 200px;
+			    background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+							radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),#8a3;
+				background-size: 50px 20px;
+			}
+		< /STYLE>
+	< div class="flex"> 
+			< div class="exemplo">< /div><br>
+		< nav>
+			< div class="exemplo1">< /div>
+			< div class="exemplo2">< /div>
+			< div class="exemplo3">< /div>
+			< div class="exemplo4">< /div>
+			< div class="exemplo5">< /div>
+		< /nav>
+			
+	< /div>
+	</p>
+
+	<p> O código acima mostra como alterar o fundo de um elemento HTML.
+		A propriedade background-color define a cor de fundo, enquanto a propriedade 
+		background-image define a imagem de fundo.
+		O exemplo utiliza uma imagem chamada "ACDC.jpg" localizada na pasta "img".</p>
+			
+	Site: Para patterns css3 variadas.
+	http://project.verou.me/css3patterns	
+
+	
+	</p>
+	</pre><br><br>
+
+	
+	<h2>REDIMENSIONANDO AS IMAGENS DE FUNDO DOS ELEMENTOS.</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo6 {
+				width: 300px;
+				height: 300px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: auto; /* padrão */ 
+				color: white;
+
+			}
+			.exemplo7 {
+				width: 300px;
+				height: 300px;
+				background-image: url(./img/logo.png), url('./img/ACDC.jpg');  /* duas imagens de fundo */
+									 /* a primeira imagem é redimensionada automaticamente, enquanto a segunda(ACDC) cobre todo o elemento. */		
+				background-size: 70% 50%, cover; /* Cada imagem é separada por virgula, nesse a os tamanhos tambem por virgula */
+				color: white;
+			}
+			.exemplo8 {
+				width: 300px;
+				height: 300px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: contain; /* mantém a proporção da imagem  - porém quando a imagem é pequena, ele duplica. */
+				background-size: 100% 115%; /* Nesse caso, mantém a size determinada.*/
+				color: white;
+			}
+
+		</style>
+
+		<div class="exemplo6"> 6</div><br>
+			background-size: auto;
+		<div class="exemplo7"> 7</div><br>
+			background-size: cover;
+			background-size: 70% 50%, cover; (Duas imagens separadas por vírgula)
+		<div class="exemplo8"> 8</div><br>
+			background-size: contain;
+			background-size: 100% 115%; (Prevalence esse.!)
+	</p>
+
+
+	<p>
+		< style>
+			.exemplo6 {
+				width: 300px;
+				height: 300px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: auto; /* padrão */ 
+
+
+			}
+			.exemplo7 {
+				width: 300px;
+				height: 300px;
+				background-image: url(./img/logo.png), url('./img/ACDC.jpg');  /* duas imagens de fundo */
+									 /* a primeira imagem é redimensionada automaticamente, enquanto a segunda(ACDC) cobre todo o elemento. */		
+				background-size: 70% 50%, cover; /* Cada imagem é separada por virgula, nesse a os tamanhos tambem por virgula */
+
+			}
+			.exemplo8 {
+				width: 300px;
+				height: 300px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: contain; /* mantém a proporção da imagem  - porém quando a imagem é pequena, ele duplica. */
+				background-size: 100% 115%; /* Nesse caso, mantém a size determinada.*/
+			}
+
+		< /style>
+
+		< div class="exemplo6">< /div><br>
+			background-size: auto;
+		< div class="exemplo7">< /div><br>
+			background-size: cover;
+			background-size: 70% 50%, cover; (Duas imagens separadas por vírgula)
+		< div class="exemplo8">< /div><br>
+			background-size: contain;
+			background-size: 100% 115%; (Prevalence esse.!)
+	</p>
+
+	</pre><br><br>
+
+
+	
+	<h2>REPETIÇÕES DAS IMAGENS DE FUNDO</h2>	
+	<pre>
+		<p>
+			<style>
+	
+				.exemplo9 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: repeat;
+				}
+				.exemplo10 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: repeat-x; /* repete apenas na horizontal */
+				}
+				.exemplo11 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: repeat-y; /* repete apenas na vertical */
+				}
+				.exemplo12 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: no-repeat; /* não repete */
+				}
+				.exemplo13 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: space; /* repete, mas com espaço entre as imagens */
+				}
+	
+			</style>
+	    		background-repeat: repeat;
+
+				<div class="exemplo9">9</div><br>
+					background-repeat: repeat-x; /* repete apenas na horizontal */
+				<div class="exemplo10">10</div><br>
+					background-repeat: repeat-y; /* repete apenas na vertical */
+				<div class="exemplo11">11</div><br>
+					background-repeat: no-repeat; /* não repete */
+				<div class="exemplo12">12</div><br>
+					background-repeat: space;    /* repete, mas com espaço entre as imagens */
+				<div class="exemplo13">13</div><br>
+
+		</p>
+
+		<p>
+			< style>
+	
+				.exemplo9 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: repeat;
+				}
+				.exemplo10 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: repeat-x; /* repete apenas na horizontal */
+				}
+				.exemplo11 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: repeat-y; /* repete apenas na vertical */
+				}
+				.exemplo12 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: no-repeat; /* não repete */
+				}
+				.exemplo13 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+
+					border: 1px solid red;
+					background-repeat: space; /* repete, mas com espaço entre as imagens */
+				}
+	
+			< /style>
+	    		background-repeat: repeat;
+
+				< div class="exemplo9">9< /div><br>
+					background-repeat: repeat-x; /* repete apenas na horizontal */
+				< div class="exemplo10">10< /div><br>
+					background-repeat: repeat-y; /* repete apenas na vertical */
+				< div class="exemplo11">11< /div><br>
+					background-repeat: no-repeat; /* não repete */
+				< div class="exemplo12">12< /div><br>
+					background-repeat: space;    /* repete, mas com espaço entre as imagens */
+				< div class="exemplo13">13< /div><br>
+
+		</p>
+
+
+	</pre><br><br>
+
+
+	
+	<h2>POSICIONAMENTO DAS IMAGENS DE FUNDO</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo14 {
+					width: 200px;
+					height: 200px;
+					background-size: 50px;
+					background-image: url('./img/snicker.jpg');
+					border: 1px solid red;
+					background-repeat: no-repeat;
+
+					background-position: center; /* centraliza a imagem de fundo */
+					background-position: top; /* alinha a imagem de fundo ao topo */
+					background-position: bottom; /* alinha a imagem de fundo ao fundo */
+					background-position: left; /* alinha a imagem de fundo a esquerda */
+					background-position: right; /* alinha a imagem de fundo a direita */
+					background-position: top left; /* alinha a imagem de fundo, ao topo a esquerda */
+					background-position: top right; /* alinha a imagem de fundo, ao topo a direita */
+					background-position: bottom 18px left 25px; /* alinha a imagem de fundo, ao fundo 18px a esquerda 25px */
+				}
+		</style>
+
+
+		<div class="exemplo14"></div><br>
+
+
+		<p>
+			< style>
+				.exemplo14 {
+						width: 200px;
+						height: 200px;
+						background-size: 50px;
+						background-image: url('./img/snicker.jpg');
+						border: 1px solid red;
+						background-repeat: no-repeat;
+	
+						background-position: center; /* centraliza a imagem de fundo */
+						background-position: top; /* alinha a imagem de fundo ao topo */
+						background-position: bottom; /* alinha a imagem de fundo ao fundo */
+						background-position: left; /* alinha a imagem de fundo a esquerda */
+						background-position: right; /* alinha a imagem de fundo a direita */
+						background-position: top left; /* alinha a imagem de fundo, ao topo a esquerda */
+						background-position: top right; /* alinha a imagem de fundo, ao topo a direita */
+						background-position: bottom 18px left 25px; /* alinha a imagem de fundo, ao fundo 18px a esquerda 25px */
+					}
+			< /style>
+	
+	
+			< div class="exemplo14">14< /div><br>
+
+	</p>
+	</pre><br><br>
+
+
+	
+	<h2>PROPRIEDADE BACKGROUND ATTACHMENT</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo15 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/snicker.jpg');
+				background-size: 500px;
+				background-attachment: fixed; /* fixa a imagem de fundo */
+				border: 1px solid red;
+				overflow: auto; /* rola a imagem de fundo junto com o elemento */
+			}
+			.exemplo16 {
+				width: 200px;
+				height: 200px;
+				background-size: 300px;
+				background-image: url('./img/snicker.jpg');
+				background-attachment: scroll; /* rola a imagem de fundo */
+				border: 1px solid red;
+				overflow: auto; /* rola a imagem de fundo */
+			}
+			.exemplo17 {
+				width: 200px;
+				height: 200px;
+				background-size: 300px;
+				background-image: url('./img/snicker.jpg');
+				background-attachment: local; /* rola a imagem de fundo junto com o elemento */
+				border: 1px solid red;
+				overflow: auto; /* rola a imagem de fundo junto com o elemento */
+			}
+		</style>
+		<code>background-attachment: fixed; /* fixa a imagem de fundo */</code>
+		<div class="exemplo15">
+commodi magnam animi dicta fuga aut iste voluptatum beatae, dolores,
+corporis ullam non facere, modi ad explicabo nobis. Quis, qui maxime?
+orem ipsum dolor sit amet consectetur adipisicing elit. Magni cupid
+itate est velit, ducimus corporis quaerat exercitationem eos tempore 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias 
+deserunt eius culpa eum sit voluptates id vero harum placeat quis? Deleniti?
+		</div><br>
+		<code>background-attachment: scroll; /* rola a imagem junto com a tela, mexe so o conteudo. */</code>
+			<div class="exemplo16">		
+commodi magnam animi dicta fuga aut iste voluptatum beatae, dolores,
+corporis ullam non facere, modi ad explicabo nobis. Quis, qui maxime?
+orem ipsum dolor sit amet consectetur adipisicing elit. Magni cupid
+itate est velit, ducimus corporis quaerat exercitationem eos tempore 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias 
+deserunt eius culpa eum sit voluptates id vero harum placeat quis? Deleniti?
+		</div><br>
+		<code>background-attachment: local; /* rola a imagem de fundo junto com o elemento */</code>
+		<div class="exemplo17">	
+commodi magnam animi dicta fuga aut iste voluptatum beatae, dolores,
+corporis ullam non facere, modi ad explicabo nobis. Quis, qui maxime?
+orem ipsum dolor sit amet consectetur adipisicing elit. Magni cupid
+itate est velit, ducimus corporis quaerat exercitationem eos tempore 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias 
+deserunt eius culpa eum sit voluptates id vero harum placeat quis? Deleniti?
+		</div><br>
+	
+		< style>
+			.exemplo15 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/snicker.jpg');
+				background-size: 500px;
+				background-attachment: fixed; /* fixa a imagem de fundo */
+				border: 1px solid red;
+				overflow: auto; /* rola a imagem de fundo junto com o elemento */
+			}
+			.exemplo16 {
+				width: 200px;
+				height: 200px;
+				background-size: 300px;
+				background-image: url('./img/snicker.jpg');
+				background-attachment: scroll; /* rola a imagem de fundo */
+				border: 1px solid red;
+				overflow: auto; /* rola a imagem de fundo */
+			}
+			.exemplo17 {
+				width: 200px;
+				height: 200px;
+				background-size: 300px;
+				background-image: url('./img/snicker.jpg');
+				background-attachment: local; /* rola a imagem de fundo junto com o elemento */
+				border: 1px solid red;
+				overflow: auto; /* rola a imagem de fundo junto com o elemento */
+			}
+		< /style>
+
+		<code>background-attachment: fixed; /* fixa a imagem de fundo */</code>
+		
+		< div class="exemplo15">
+commodi magnam animi dicta fuga aut iste voluptatum beatae, dolores,
+corporis ullam non facere, modi ad explicabo nobis. Quis, qui maxime?
+orem ipsum dolor sit amet consectetur adipisicing elit. Magni cupid
+itate est velit, ducimus corporis quaerat exercitationem eos tempore 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias 
+deserunt eius culpa eum sit voluptates id vero harum placeat quis? Deleniti?
+		< /div><br>
+
+		<code>background-attachment: scroll; /* rola a imagem junto com a tela, mexe so o conteudo. */</code>
+	
+		< div class="exemplo16">		
+commodi magnam animi dicta fuga aut iste voluptatum beatae, dolores,
+corporis ullam non facere, modi ad explicabo nobis. Quis, qui maxime?
+orem ipsum dolor sit amet consectetur adipisicing elit. Magni cupid
+itate est velit, ducimus corporis quaerat exercitationem eos tempore 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias 
+deserunt eius culpa eum sit voluptates id vero harum placeat quis? Deleniti?
+		< /div><br>
+
+		<code>background-attachment: local; /* rola a imagem de fundo junto com o elemento */</code>
+	
+		< div class="exemplo17">	
+commodi magnam animi dicta fuga aut iste voluptatum beatae, dolores,
+corporis ullam non facere, modi ad explicabo nobis. Quis, qui maxime?
+orem ipsum dolor sit amet consectetur adipisicing elit. Magni cupid
+itate est velit, ducimus corporis quaerat exercitationem eos tempore 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias 
+deserunt eius culpa eum sit voluptates id vero harum placeat quis? Deleniti?
+		< /div><br>
+
+
+	</p>
+	</pre><br><br>
+
+
+	
+	<h2>PROPRIEDADE BACKGROUND ORIGIN</h2>	
+	<pre>
+	<p>
+
+		<style>
+			.exemplo18 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				color: white;
+				
+			}
+			.exemplo19 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				color: white;
+			}
+			.exemplo20 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				color: white;
+			}
+			#padding {
+				background-origin: padding-box; /* a imagem de fundo é desenhada dentro do padding */
+			}
+			#border {
+				background-origin: border-box; /* a imagem de fundo é desenhada dentro da borda */
+			}
+			#content {
+				background-origin: content-box; /* a imagem de fundo é desenhada dentro do conteúdo */
+			}
+
+		</style>
+		<code>background-origin: padding-box; /* a imagem de fundo é desenhada dentro do padding */</code>
+		<div id="padding" class="exemplo18">18</div><br>
+		<code>background-origin: border-box; /* a imagem de fundo é desenhada dentro da borda */</code>
+		<div id="border" class="exemplo19">19</div><br>
+		<code>background-origin: content-box; /* a imagem de fundo é desenhada dentro do conteúdo */</code>
+		<div id="content" class="exemplo20">20</div><br>
+	
+
+		< style>
+			.exemplo18 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				color: white;				
+			}
+			.exemplo19 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				color: white;
+			}
+			.exemplo20 {
+				width: 200px;
+				height: 200px;
+				background-image: url('./img/ACDC.jpg');
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				color: white;
+			}
+			#padding {
+				background-origin: padding-box; /* a imagem de fundo é desenhada dentro do padding */
+			}
+			#border {
+				background-origin: border-box; /* a imagem de fundo é desenhada dentro da borda */
+			}
+			#content {
+				background-origin: content-box; /* a imagem de fundo é desenhada dentro do conteúdo */
+			}
+
+		< /style>
+
+				<code>background-origin: padding-box; /* a imagem de fundo é desenhada dentro do padding */</code>
+		< div id="padding" class="exemplo18">1< /div><br>
+				<code>background-origin: border-box; /* a imagem de fundo é desenhada dentro da borda */</code>
+		< div id="border" class="exemplo19">2< /div><br>
+				<code>background-origin: content-box; /* a imagem de fundo é desenhada dentro do conteúdo */</code>
+		< div id="content" class="exemplo20">3< /div><br>
+	
+
+
+	</p>
+	</pre><br><br>
+
+
+	
+	<h2>PROPRIEDADE BACKGROUND CLIP</h2>	
+	<pre>
+	<p>
+
+		
+		<style>
+			.exemplo21 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;			
+				
+			}
+			.exemplo22 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+			}
+			.exemplo23 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+			}
+			.exemplo24 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+
+				/* FUNDO PERSONALIZADO RETIRADO DO SITE */	
+				background:
+				radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+				radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+				#8a3;
+				background-size: 20px 20px;
+			
+			}
+			#padding1 {
+				background-clip: padding-box; /* a imagem de fundo é desenhada dentro do padding */
+			}
+			#border2 {
+				background-clip: border-box; /* a imagem de fundo é desenhada dentro da borda */
+			}
+			#content3 {
+				background-clip: content-box; /* a imagem de fundo é desenhada dentro do conteúdo */
+			}
+			#text {
+				background-clip: text; /* a imagem de fundo é desenhada dentro do texto */
+				-webkit-background-clip: text; /* para o safari */
+				color: transparent; /* torna o texto transparente */
+			}
+			
+
+		</style>
+
+		<div id="padding1" class="exemplo21"> 21 TRILHA<br>CSS</div><br>
+		<div id="border2" class="exemplo22">  22 TRILHA<br>CSS</div><br>
+		<div id="content3" class="exemplo23"> 23 TRILHA<br>CSS</div><br>
+		<div id="text" class="exemplo24"> 24 TRILHA<br>CSS</div><br>
+	
+
+		< style>
+			.exemplo21 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;			
+				
+			}
+			.exemplo22 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+			}
+			.exemplo23 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+			}
+			.exemplo24 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				background-size: 100% 100%;
+				border: 1px solid red;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				background-repeat: no-repeat;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+
+				/* FUNDO PERSONALIZADO RETIRADO DO SITE */	
+				background:
+				radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+				radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+				#8a3;
+				background-size: 20px 20px;
+			
+			}
+			#padding1 {
+				background-clip: padding-box; /* a imagem de fundo é desenhada dentro do padding */
+			}
+			#border2 {
+				background-clip: border-box; /* a imagem de fundo é desenhada dentro da borda */
+			}
+			#content3 {
+				background-clip: content-box; /* a imagem de fundo é desenhada dentro do conteúdo */
+			}
+			#text {
+				background-clip: text; /* a imagem de fundo é desenhada dentro do texto */
+				-webkit-background-clip: text; /* para o safari */
+				color: transparent; /* torna o texto transparente */
+			}
+			
+
+		< /style>
+
+		< div id="padding1" class="exemplo21"> 21 TRILHA<br>CSS< /div><br>
+		< div id="border2" class="exemplo22">  22 TRILHA<br>CSS< /div><br>
+		< div id="content3" class="exemplo23"> 23 TRILHA<br>CSS< /div><br>
+		< div id="text" class="exemplo24"> 24 TRILHA<br>CSS</div><br>
+	
+
+	</p>
+	</pre><br><br>
+
+
+	
+	<h2>MESCLAGEM</h2>	
+	<pre>
+	<p>
+		<style>
+			.exemplo25 {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				padding: 30px;
+				border: 15px dashed lightblue;
+				font-size: 40px;
+				font-weight: 900;
+				color : white;
+				background-image: url('./img/ACDC.jpg');	
+				background-blend-mode: color;   
+				background-blend-mode: luminosity;
+				background-blend-mode: screen; 
+				background-blend-mode: multiply; 
+				background-blend-mode: overlay; 
+				background-blend-mode: darken; 
+				background-blend-mode: lighten; 
+				background-blend-mode: difference;/
+				background-blend-mode: exclusion;/
+				background-blend-mode: hue;/
+				background-blend-mode: saturation; 
+				background-blend-mode: color-burn;/
+				background-blend-mode: color-dodge;
+				
+				/* mescla a imagem de fundo com a cor de fundo | Cada color acima tem efeito*/
+			}
+		</style>
+
+
+		<div class="exemplo25"> 25 TRILHA<br>CSS</div><br>
+	</p>
+	
+	< style>
+		.exemplo25 {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			padding: 30px;
+			border: 15px dashed lightblue;
+			font-size: 40px;
+			font-weight: 900;
+			color : white;
+			background-image: url('./img/ACDC.jpg');	
+			background-blend-mode: color;   
+			background-blend-mode: luminosity;
+			background-blend-mode: screen; 
+			background-blend-mode: multiply; 
+			background-blend-mode: overlay; 
+			background-blend-mode: darken; 
+			background-blend-mode: lighten; 
+			background-blend-mode: difference;/
+			background-blend-mode: exclusion;/
+			background-blend-mode: hue;/
+			background-blend-mode: saturation; 
+			background-blend-mode: color-burn;/
+			background-blend-mode: color-dodge;
+			
+			/* mescla a imagem de fundo com a cor de fundo | Cada color acima tem efeito*/
+		}
+	< /style>
+
+
+	< div class="exemplo25"> 25 TRILHA<br>CSS< /div><br>
+
+
+	</pre><br><br>
+
+	</body>
+</html>
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTROS</title>
+</head>
+<body> 
+
+
+<h2>APLICANDO TRANSPARENCIA AOS ELEMENTOS </h2>	
+<pre>
+<p>
+    
+    <STYLE>
+        h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .exemplo img{
+            width: 20%;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: 2px solid white;
+        }
+        .image{
+            display: inline-flex;
+            
+        }
+        .exemplo {
+            background-color: rgb(44, 41, 44, .5);  /* MUDAR A TRANSPARENCIA DO COR DE FUNDO PARA NAO PREJUDICAR O CONTEUDO. DICA MICHELLE.*/
+            border: 5px solid orange;
+            color: white;
+            padding: 20px;
+            opacity: 0.9;
+        }
+
+    </STYLE>
+
+
+    <div class="exemplo">
+        <h3>Trilha CSS</h3>
+        <p>
+            Conhecendo as propriedades CSS - Opacity
+        </p>
+        <div class="image">
+            <img src="./img/ACDC.jpg" alt="banda acdc foto">
+            <img src="./img/ACDC.jpg" alt="banda acdc foto">
+            <img src="./img/ACDC.jpg" alt="banda acdc foto">
+            <img src="./img/ACDC.jpg" alt="banda acdc foto">
+        </div>
+    </div>
+
+
+ 
+</p>
+</pre>	<br><br>
+
+<h2>PROPRIEDADE OVERFLOW </h2>	
+
+<p>
+
+    <style>
+        .flex{
+            display: flex;
+        }
+        .exemplo2 {            
+            background-color: orange;
+            border: 3px solid black;
+            margin-right: 5px;
+            padding: 10px;
+            width: 150px;
+            height: 100px;
+
+        }
+        #hidden{
+            overflow: hidden;
+        }
+        #scrol{
+            overflow: scroll; /* Aparece uma barra de rolagem em qualquer tamanho de texto.*/
+        }
+        #auto {
+            overflow: auto;   /* Parecida com Scroll; o 'auto' so aparece a barra quando o texto ultrapassa o limite do bloco. */
+        }                       /*overflow-y = barra na vertical*/
+        #overflow-y {
+            overflow: auto;
+        }
+    </style>
+    
+    <div class="flex">
+        <div class="exemplo2">
+            <code>overflow: visible;</code>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Sapiente sed, dolores in minus tempore debitis dicta sunt
+             ipsa eaque amet possimus cumque eius voluptatum iure vel 
+             eos aliquam, ullam nulla! </p>
+             <p>
+        </div>
+
+        <div id="hidden" class="exemplo2">
+            <code>overflow: hidden;<br> /* esconde o texto ultrapassado do limite */</code>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Sapiente sed, dolores in minus tempore debitis dicta sunt
+             ipsa eaque amet possimus cumque eius voluptatum iure vel 
+             eos aliquam, ullam nulla! </p>
+             
+        </div>
+
+        <div id="auto" class="exemplo2">
+            <code>overflow: auto; <br>
+                /* Parecida com Scroll; o 'auto' so aparece a barra quando o texto ultrapassa o limite do bloco. */</code>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Sapiente sed, dolores in minus tempore debitis dicta sunt
+             ipsa eaque amet possimus cumque eius voluptatum iure vel 
+             eos aliquam, ullam nulla! </p>
+             
+        </div>
+
+        <div id="scrol" class="exemplo2">
+            <code>overflow: scroll;<br>/* Aparece uma barra de rolagem em qualquer tamanho de texto.*/</code>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Sapiente sed, dolores in minus tempore debitis dicta sunt
+             ipsa eaque amet possimus cumque eius voluptatum iure vel 
+             eos aliquam, ullam nulla! </p>
+        </div>
+             
+        <div id="overflow-y" class="exemplo2">
+            <code>overflow-y: scroll;<br>/* Só Aparece a barra de rolagem na vertical */</code>
+            <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sapiente sed, dolores in minus tempore debitis dicta sunt
+                     ipsa eaque amet possimus cumque eius voluptatum iure vel 
+                     eos aliquam, ullam nulla! </p>
+        </div>
+        
+    </div>
+
+</p>
+	<br><br>
+
+<h2>REDEFINIINDO AS PROPRIEDADES PADRÕES DOS NAVEGADORES </h2>	
+<pre>
+<p>
+
+    ** Devido cada navegador existente, possuir uma forma de comportamento individual para cada elemento.
+       Foi necessario criar um arquivo css: reset.css | para que os navegadores coletem dele as
+       configurações padrao pré determinadas por mim.
+
+    Criar um reset. CSS
+
+    * {
+        padding: 0;
+        margin: 0;
+        vertical-align: baseline;
+        list-style: none;
+        border: 0;
+    }
+
+</p>
+</pre>	<br><br>
+
+</body>
+</html>

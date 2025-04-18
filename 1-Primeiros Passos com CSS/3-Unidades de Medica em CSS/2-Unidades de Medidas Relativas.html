@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+   	<body> 
+
+	<h2>PORCENTAGEM</h2>	
+	
+	<p>
+
+		<style>
+			.exemplo-pixel {
+				font-size: 30px;
+				background-color: lightblue;
+				width: 300px;
+			}
+			.exemplo-porcentagem{
+				font-size: 30px;
+				background-color: lightpink;
+				width: 50%;
+			}
+			#elemento-pai{
+				width: 500px;
+				font-size: 40px;
+				border:5px solid black;
+			}
+		</style>
+
+
+
+		<p>Pixel vs Porcenagem</p>
+		
+			<div class="exemplo-pixel">
+				width: 300px;
+			</div>
+			<div class="exemplo-porcentagem">
+				width: 50%;
+			</div>		
+		
+
+
+		<br><br><br><br>
+
+		<p>Elemnto pai possui 500px de largura e uma fonte de 50%</p>
+		<div id="elemento-pai">
+			<div class="exemplo-pixel">
+				width: 300px;
+			</div>
+			<div class="exemplo-porcentagem" style="font-size: 50%;">
+				width: 50%;
+			</div>		
+		</div>
+
+
+	</p>
+	<br><br>
+
+	<h2>Unidade de Medida Em</h2>	
+	<pre>
+	<p>
+
+		em duplica sempre o pai.
+		quando nao hovuer o pai, por padrao o navegador vai determinar
+		para 1em = 16px
+			2em = 32px
+					se o pai for 30px
+						entao, filho= 1em = 60px
+
+
+	</p>
+	</pre><br><br>
+
+	<h2>UNIDADE DE MEDIDA REM</h2>	
+	<pre>
+	<p>
+
+		ele sempre vai duplicar o pixels padrao do navegador - elemento raiz do html = 16px
+		entao ele sempre vai duplicar esse elemento.
+
+		Entao, ele nao vai duplicar o elemento pai como base, vai sempre duplicar o elemento raiz, 
+		diferente da Medida Em.
+
+		1rem = 16
+		2rem = 32
+		
+					se o pai for 30px
+						entao, filho= 1em = 16px
+
+	</p>
+	</pre><br><br>
+
+	<h2>DIFERENCA ENTRE REM E EM</h2>	
+	
+	<p><pre>
+		Rem pode multiplar o Em - e vice e versa.
+
+		Na palavras da Michelle e conclusão;
+			Rem é bom para melhor usabilidade do usuario, assim respeitando as configurações do usuario quanto ao browser. 
+			também é bom para acessibilidade.
+			WELL = Concorda!</pre>
+		<style>
+			.rem1 {
+				font-size: 0.85rem;
+			}
+			.rem2 {
+				font-size: 2.4rem;
+			}
+			.rem3 {
+				font-size: 3.5rem;
+			}
+			.rem4 {
+				font-size: 4rem;
+			}
+			.rem5 {
+				font-size: 5rem;
+			}
+			.rem6 {
+				font-size: 20rem;
+			}
+
+		</style>
+
+
+		<p class="rem1"> Texte REM</p>
+		<p class="rem2"> Texte REM</p>
+		<p class="rem3"> Texte REM</p>
+		<p class="rem4"> Texte REM</p>
+		<p class="rem5"> Texte REM</p>
+		<p class="rem6"> Texte REM</p>
+
+	</p>
+	<br><br>
+
+	<h2>VIEWPORT</h2>	
+	<pre>
+	<p>
+		Viewport é a area visivel de uma pagina de web, 
+		podendo variar de dispositivo para dispositivo. 
+		As unidades de medida Viewport, vão ser calculadas
+		em relação ao tamanho da área em qe o usuárioestá vendo sua 
+		página.
+
+		Viewport width: 375px = largura de celular
+		Viewport Height: 812px = Altura de ...
+	</p>
+	</pre><br><br>
+
+	<h2>UNIDADE DE MEDIDA EX e CH</h2>	
+	<pre>
+	<p>
+		EX= A unidade de medidda 'ex' irá usar o tamanho 
+		da Alturado caractere X(em maiúsculo) da fonte
+		do elemento.
+
+
+		CH= O 'ch' é uma unidade de medida que possui como referencia
+		o caractere O da fonte qu esta sendo utilizada no elemento.
+
+	</p>
+	</pre><br><br>
+
+	<h2></h2>	
+	<p>
+
+		<style>
+			div {
+				background-color: aquamarine;
+				padding: 1%;
+			}
+			.e-pai{
+				background-color: yellow;
+				width: 300px;
+				box-sizing: border-box;
+				border: 0.01rem solid black; 	/*1px = 0.01rem*/
+			}
+			.e-filho{
+				background-color: palevioletred;
+				box-sizing: border-box;
+				width: calc(100% - 1rem);
+			}
+
+
+		</style>
+
+		<p>usando a Calc do CSS </p>
+		<div class="e-pai">
+			Elemento Pai
+			<div class="e-filho">
+				Elemento filho
+			</div>		
+		</div>
+
+	</p>
+	<br><br>
+
+</body>
+</html>
+
+

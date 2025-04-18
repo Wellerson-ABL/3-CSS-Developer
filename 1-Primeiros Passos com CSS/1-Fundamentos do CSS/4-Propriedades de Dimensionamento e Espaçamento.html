@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+   	<body> 
+		<h2>Largura e Altura </h2>	
+	
+	<p> 
+		<style>
+			button{	
+				width: 200px;
+				height: initial; /* Initial mostra o tamanhoa paadrao para altura ou largura*/
+			}
+			div {
+				width: auto;
+				height: auto; /* auto, mostra o limite minimo da largura */
+				background-color: gray;
+			}
+			#div-01{
+				width: 150px;
+				height: 150px;
+				background: lightblue;
+			}
+			#div-02{
+				background: lightgreen;
+				width: 100px;
+				height: inherit; /* inherit, herda o tamanho do elemento pai */
+				                  /*a vantagem disso, é que voce pode organizar varios espaçamentos para acompanharo tamanho do pai.
+								  	assim, voce padronizar e pode alterar apenas o 'pai', e todos ligados a ele vao alterar tb.*/
+			}
+			</style>
+
+		<div>Trilha do CSS - Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,
+			Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,
+			Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,</div>
+			<br>
+		<button>Botao trilha</button>
+			<br>
+			<br>
+		<div id="div-01">
+			Sou a Div 01
+			<div id="div-02">
+				Sou a Div 02
+			</div>
+		</div>
+		<pre>
+		< style>
+			button{	
+				width: 200px;
+				height: initial; /* Initial mostra o tamanhoa paadrao para altura ou largura*/
+			}
+			div {
+				width: auto;
+				height: auto; /* auto, mostra o limite minimo da largura */
+				background-color: gray;
+			}
+			#div-01{
+				width: 150px;
+				height: 150px;
+				background: lightblue;
+			}
+			#div-02{
+				background: lightgreen;
+				width: 100px;
+				height: inherit; /* inherit, herda o tamanho do elemento pai */
+				            /*a vantagem disso, é que voce pode organizar varios espaçamentos para acompanharo 
+							tamanho do pai. Assim, voce padronizar e pode alterar apenas o 'pai', e todos 
+							ligados a ele vao alterar tb.*/
+			}
+			< /style>
+
+		< div>Trilha do CSS - Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,
+			Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,
+			Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,Teste,< /div>
+
+		< button>Botao trilha< /button>
+
+		< div id="div-01">
+			Sou a Div 01
+			< div id="div-02">
+				Sou a Div 02
+			< /div>
+		< /div>
+		</pre>
+	</p>
+	
+
+	<br>
+	<br>
+
+	
+	<h2>Altura e Largura Maxima e minima</h2>	
+	
+	<p> 
+		<style>
+			#b-01 {
+				min-height: 100px; /* min-height (Min. ALTURA), define o tamanho minimo do elemento. ou seja, se o conteudo for menor que 200px, o botao continuara com 200px */
+				max-height: 200px; /* max-height,(Max. ALTURA) define o tamanho maximo do elemento. ou seja, se o conteudo for maior que 100px, o botao continuara com 100px */
+			}
+			#b-02 {
+				min-width: 200px; /* min-width, (Min. LARGURA) define o tamanho minimo*/
+				max-width: 200px; /* max-width, ( Max. LARGURA) define o tamanho maximo */
+					
+			}
+			</style>
+
+		<button id="b-01">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt eum,
+			 necessitatibus voluptatem odit doloremque neque, esse asperiore
+		</button>
+
+			<button id="b-02">Loraipsum</button> 
+
+			<div>Trilha Div</div>
+		</div>
+
+	</p>
+	<p> <pre>
+		< style>
+			#b-01 {
+				min-height: 100px; /* min-height (Min. ALTURA), define o tamanho minimo do elemento. ou 
+								seja, se o conteudo for menor que 200px, o botao continuara com 200px */
+				max-height: 200px; /* max-height,(Max. ALTURA) define o tamanho maximo do elemento. 
+								ou seja, se o conteudo for maior que 100px, o botao continuara com 100px */
+			}
+			#b-02 {
+				min-width: 200px; /* min-width, (Min. LARGURA) define o tamanho minimo*/
+				max-width: 200px; /* max-width, ( Max. LARGURA) define o tamanho maximo */
+					
+			}
+			< /style>
+
+		< button id="b-01">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt eum,
+			 necessitatibus voluptatem odit doloremque neque, esse asperiore
+		< /button>
+
+			< button id="b-02">Loraipsum< /button> 
+
+			< div>Trilha Div< /div>
+		</ div>
+		</pre>
+	</p>
+
+	<br>
+	<br>
+
+	<h2>Margin (margem)</h2>	
+	
+	<p> 
+
+		<style>
+			div {
+				width: 300px;
+				height: 300px;
+			}
+
+			#elemento-01 {
+				background: orange;
+				margin-bottom: 20px; /* margin-bottom, define a margem inferior do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+				margin-left: 40px; /* margin-left, define a margem esquerda do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+				margin: 20px; /* margin, define a margem de todos os lados do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+				margin: 20px 20px; /* o primeiro valor define a margem superior e inferior, o segundo valor para os lados */				
+				margin: 20px 20px 20px; /* o primeiro valor define a margem superior, o segundo valor define os lados, Terceiro valor define lado Inferior */
+				margin: 20px 20px 20px 20px; /* o primeiro valor define a margem superior, o segundo lado direito, Terceiro inferior, quarto lado esqueri(Segue sentido anti-horario) */
+				margin: auto; /* auto, define a margem automaticamente. ou seja, o elemento vai ocupar todo o espaço disponivel  (Centralizando)*/
+				margin: inherit; /* inherit, herda o tamanho do elemento pai */
+				margin: 20px auto; /* o primeiro valor define a margem superior e inferior, o segundo valor para os lados (Centralizadona Horizontal)*/	
+			}
+
+			#elemento-02 {
+				background: purple;
+				margin: px; /* margin, define a margem de todos os lados do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+				margin-right: 50px; /* margin-right, define a margem direita do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+				margin-top: 20px; /* margin-top, define a margem superior do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+				margin-left: 50px; /* margin-left, define a margem esquerda do elemento. ou seja, o espaçamento entre o elemento e o proximo elemento */
+			}
+
+		</style>
+
+			<div id="elemento-01"></div>
+			<div id="elemento-02"></div>
+
+
+	</p>
+
+	<p> 
+		<pre>
+		< style>
+			div {
+				width: 300px;
+				height: 300px;
+			}
+
+			#elemento-01 {
+				background: orange;
+
+				margin-bottom: 20px;  	/* margin-bottom, define a margem inferior do elemento. ou seja, 
+							o espaçamento entre o elemento e o proximo elemento */
+
+				margin-left: 40px;  	/* margin-left, define a margem esquerda do elemento. ou seja, o 
+							espaçamento entre o elemento e o proximo elemento */
+
+				margin: 20px;  	/* margin, define a margem de todos os lados do elemento. ou seja, 
+							o espaçamento entre o elemento e o proximo elemento */
+
+				margin: 20px 20px;  	/* o primeiro valor define a margem superior e inferior, o segundo 
+							valor para os lados */		
+
+				margin: 20px 20px 20px; 	/* o primeiro valor define a margem superior, o segundo valor 
+							define os lados, Terceiro valor define lado Inferior */
+
+				margin: 20px 20px 20px 20px;	 /* o primeiro valor define a margem superior, o segundo 
+							lado direito, Terceiro inferior, quarto lado esqueri(Segue sentido anti-horario) */
+
+				margin: auto; 	/* auto, define a margem automaticamente. ou seja, o elemento vai ocupar 
+							todo o espaço disponivel  (Centralizando)*/
+
+				margin: inherit; 	/* inherit, herda o tamanho do elemento pai */
+
+				margin: 20px auto; 	/* o primeiro valor define a margem superior e inferior, o segundo 
+							valor para os lados (Centralizadona Horizontal)*/	
+			}
+
+			#elemento-02 {
+				background: purple;
+
+				margin: px; 	/* margin, define a margem de todos os lados do elemento. ou seja, o 
+						espaçamento entre o elemento e o proximo elemento */
+
+				margin-right: 50px; 	/* margin-right, define a margem direita do elemento. ou seja, 
+							o espaçamento entre o elemento e o proximo elemento */
+
+				margin-top: 20px; 	/* margin-top, define a margem superior do elemento. ou seja, 
+							o espaçamento entre o elemento e o proximo elemento */
+
+				margin-left: 50px; 	/* margin-left, define a margem esquerda do elemento. ou seja, 
+							o espaçamento entre o elemento e o proximo elemento */
+			}
+
+		< /style>
+
+			< div id="elemento-01">< /div>
+			< div id="elemento-02">< /div>
+
+			</pre>
+	</p>
+	
+
+	<br>
+	<br>
+
+
+
+	<h2>Padding</h2>	
+	
+	<p> 
+
+		<style>
+			
+			div {
+				width: 200px;
+				height: 200px;
+				color: red;
+			}
+
+			#elemento-01 {
+				background: gray;
+				padding: 20px; /* padding, define o espaçamento interno do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+				padding-left: 10px; /* padding-left, define o espaçamento interno do lado esquerdo do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+				padding-right: 20px; /* padding-right, define o espaçamento interno do lado direito do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */		
+				padding-top: 30px; /* padding-top, define o espaçamento interno do lado superior do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+				padding-bottom: 40px; /* padding-bottom, define o espaçamento interno do lado inferior do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+			}				
+							/*'PADDING' É A MAGEM INTERNA, ENQUANTO QUE A 'MARGIN' É A MARGEM EXTERNA*/
+
+			#elemento-02 {
+				background: blue;
+
+			}
+
+		</style>
+
+			<div id="elemento-01">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt explicabo, nulla officiis in perferendis vel inventore pariatur. Eius non deleniti, provident neque quas officia ipsum ad sequi, sunt animi aut!</div>
+			<div id="elemento-02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae error saepe tenetur reiciendis, minus vitae recusandae quidem accusantium iusto cupiditate explicabo illum dignissimos voluptates laborum voluptatem consectetur! Sint, accusantium ipsa.</div>
+
+	</p>
+	
+
+	<p> <pre>
+
+		< style>
+			
+			div {
+				width: 200px;
+				height: 200px;
+				color: red;
+			}
+
+			#elemento-01 {
+				background: gray;
+				padding: 20px; 	/* padding, define o espaçamento interno do elemento. ou seja, 
+						o espaçamento entre o elemento e o conteudo do elemento */
+
+				padding-left: 10px;	 /* padding-left, define o espaçamento interno do lado esquerdo 
+						do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+
+				padding-right: 20px;	 /* padding-right, define o espaçamento interno do lado direito 
+						do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+
+				padding-top: 30px;	 /* padding-top, define o espaçamento interno do lado superior do
+						 elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+
+				padding-bottom: 40px;	 /* padding-bottom, define o espaçamento interno do lado inferior
+						 do elemento. ou seja, o espaçamento entre o elemento e o conteudo do elemento */
+
+			}				
+							/*'PADDING' É A MAGEM INTERNA, ENQUANTO QUE A 'MARGIN' É A MARGEM EXTERNA*/
+
+			#elemento-02 {
+				background: blue;
+
+			}
+
+		< /style>
+
+			< div id="elemento-01">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt explicabo,
+			 nulla officiis in perferendis vel inventore pariatur. Eius non deleniti, provident neque quas 
+			 officia ipsum ad sequi, sunt animi aut!< /div>
+
+			< div id="elemento-02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae error saepe 
+			tenetur reiciendis, minus vitae recusandae quidem accusantium iusto cupiditate explicabo illum 
+			dignissimos voluptates laborum voluptatem consectetur! Sint, accusantium ipsa.< /div>
+		</pre>
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>Box Sizing</h2>	
+	
+	<p> 
+
+		<style>
+			
+			div {
+				width: 200px;
+				height: 200px;
+				color: red;
+			}
+
+			#elemento-01 {
+				background: orange;
+				box-sizing: border-box; /* box-sizing, define como o tamanho do elemento vai ser calculado. ou seja, se o tamanho do elemento vai ser calculado com a borda e o padding ou sem eles */
+				box-sizing: content-box; /* box-sizing, define como o tamanho do elemento vai ser calculado. ou seja, se o tamanho do elemento vai ser calculado com a borda e o padding ou sem eles */
+				}				
+	
+
+			#elemento-02 {
+				background: blue;
+
+			}
+
+		</style>
+
+			<div id="elemento-01">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt explicabo, nulla officiis in perferendis vel inventore pariatur. Eius non deleniti, provident neque quas officia ipsum ad sequi, sunt animi aut!</div>
+			<div id="elemento-02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae error saepe tenetur reiciendis, minus vitae recusandae quidem accusantium iusto cupiditate explicabo illum dignissimos voluptates laborum voluptatem consectetur! Sint, accusantium ipsa.</div>
+
+
+	</p>
+
+
+	<p> <pre>
+
+		< style>
+			
+			div {
+				width: 200px;
+				height: 200px;
+				color: red;
+			}
+
+			#elemento-01 {
+				background: orange;
+
+				box-sizing: border-box; 	/* box-sizing, define como o tamanho do elemento vai ser calculado. 
+						ou seja, se o tamanho do elemento vai ser calculado com a borda e o padding ou sem eles */
+
+				box-sizing: content-box; 	/* box-sizing, define como o tamanho do elemento vai ser calculado. 
+						ou seja, se o tamanho do elemento vai ser calculado com a borda e o padding ou sem eles */
+
+				}				
+	
+
+			#elemento-02 {
+				background: blue;
+
+			}
+
+		< /style>
+
+			< div id="elemento-01">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+			Nesciunt explicabo, nulla officiis in perferendis vel inventore pariatur. Eius non deleniti,
+			 provident neque quas officia ipsum ad sequi, sunt animi aut!< /div>
+
+			< div id="elemento-02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae error 
+			saepe tenetur reiciendis, minus vitae recusandae quidem accusantium iusto cupiditate explicabo
+			illum dignissimos voluptates laborum voluptatem consectetur! Sint, accusantium ipsa.< /div>
+
+		</pre>
+	</p>
+
+	<br>
+	<br>
+
+	</body>
+</html>
+
+

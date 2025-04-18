@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+   	<body> 
+		<style>			
+		h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        } 
+		pre {
+			font-weight: bold;
+		}
+		</style>
+		<h2>Avaliando o comportamento do <code>Display:</code></h2>	
+	<h2>DISPLAY BLOCK</h2>	
+
+	
+
+		
+		<pre>
+			Display: block;
+
+			Ocupa uma bloco inteiro da esquerda a direita da tela.
+			
+			Exemplos de display block que ja vem por padrao= div , p 
+
+
+			
+		</pre>
+
+	<style>
+		.exemplo {
+			background-color: blueviolet;
+			color: white;
+		}
+	</style>
+
+		<div class="exemplo">DIV</div>
+		<p class="exemplo">Paragrafo</p>
+		<span class="exemplo">SPAN</span>
+		<span class="exemplo">SPAN</span>
+		<span class="exemplo" style="display: block;">SPAN com display: block;</span>
+		<b class="exemplo" >Negrito-B</b>
+		<em class="exemplo" >Italico Em</em>
+		<u class="exemplo" >Underline</u>
+		<strong class="exemplo" >Negrito Strong</strong>
+		<i class="exemplo" >Italico</i>
+	
+	<pre>
+		< style>
+		.exemplo {
+			background-color: blueviolet;
+			color: white;
+		}
+		< /style>
+
+		<  div class="exemplo">DIV< /div>
+		< p class="exemplo">Paragrafo< /p>
+		< span class="exemplo">SPAN< /span>
+		< span class="exemplo">SPAN< /span>
+		< span class="exemplo" style="display: block;">SPAN com display: block;< /span>
+		< b class="exemplo" >Negrito-B< /b>
+		< em class="exemplo" >Italico Em< /em>
+		< u class="exemplo" >Underline< /u>
+		<  strong class="exemplo" >Negrito Strong< /strong>
+		< i class="exemplo" >Italico< /i>
+	</pre>
+	
+	<br><br>
+
+
+	<h2>DISPLAY INLINE</h2>	
+	
+	<pre>
+		Display: inline;
+
+		Coloca cada um deles lado a lado.
+
+		( São elementos que vao ocupar a mesma linha )
+
+		Porem NÃO é possivel usar para altura <code>'wadth' 'height'</code> nos elementos. (NAO ACEITA)
+	</pre>
+
+		<style>
+			.exemplo1 {
+			background-color: blueviolet;
+			color: white;
+			display: inline;
+			margin: 20px;
+			width: 100px;
+			height: 100px;
+			}
+			</style>
+			
+			<div class="exemplo1">DIV</div>
+			<p class="exemplo1">Paragrafo</p>
+			<span class="exemplo1">SPAN</span>
+			<span class="exemplo1">SPAN</span>
+			<span class="exemplo1" style="display: block;">SPAN com display: block;</span>
+			<b class="exemplo1" >Negrito-B</b>
+			<em class="exemplo1">Italico Em</em>
+			<u class="exemplo1">Underline</u>
+			<strong class="exemplo1">Negrito Strong</strong>
+			<i class="exemplo1">Italico</i>
+			
+			<pre>
+				<  style>
+					.exemplo1 {
+					background-color: blueviolet;
+					color: white;
+					display: inline;
+					margin: 20px;
+					width: 100px;
+					height: 100px;
+					}
+					< /style>
+					
+					< div class="exemplo1">DIV< /div>
+					< p class="exemplo1">Paragrafo< /p>
+					<  span class="exemplo1">SPAN< /span>
+					< span class="exemplo1">SPAN< /span>
+					< span class="exemplo1" style="display: block;">SPAN com display: block;< /span>
+					<  b class="exemplo1" >Negrito-B< /b>
+					< em class="exemplo1">Italico Em< /em>
+					< u class="exemplo1">Underline< /u>
+					< strong class="exemplo1">Negrito Strong< /strong>
+					< i class="exemplo1">Italico<  /i>
+			</pre>
+
+
+	<br><br>
+
+	<h2>DISPLAY INLINE BLOCK</h2>	
+	<pre>
+		Display: inline-block;
+
+		Coloca cada um deles lado a lado. 
+		
+		Porem é possivel USAR o <code>'wadth' 'height' 'margin'</code> nos elementos.
+		
+		( Vao ocupar a mesma linha )
+
+	</pre>
+
+		<style>
+			.exemplo2 {
+			background-color: blueviolet;
+			color: white;
+			display:inline-block;
+			margin: 20px;
+			width: 100px;
+			height: 100px;
+			}
+			.menu{
+				background-color: gray;
+			}
+			.menu ul li{
+				display: inline-block;
+				padding: 20px 40px;
+				background-color: aquamarine;
+			}
+			</style>
+			
+			<div class="exemplo2">DIV</div>
+			<p class="exemplo2">Paragrafo</p>
+			<span class="exemplo2">SPAN</span>
+			<span class="exemplo2">SPAN</span>
+			<span class="exemplo2" style="display: block;">SPAN com display: block;</span>
+			<b class="exemplo2" >Negrito-B</b>
+			<em class="exemplo2" >Italico Em</em>
+			<u class="exemplo2" >Underline</u>
+			<strong class="exemplo2" >Negrito Strong</strong>
+			<i class="exemplo2" >Italico</i>
+			<pre>
+				< style>
+					.exemplo2 {
+					background-color: blueviolet;
+					color: white;
+					display:inline-block;
+					margin: 20px;
+					width: 100px;
+					height: 100px;
+					}
+					.menu{
+						background-color: gray;
+					}
+					.menu ul li{
+						display: inline-block;
+						padding: 20px 40px;
+						background-color: aquamarine;
+					}
+					< /style>
+					
+					< div class="exemplo2">DIV< /div>
+					< p class="exemplo2">Paragrafo< /p>
+					< span class="exemplo2">SPAN< /span>
+					< span class="exemplo2">SPAN< /span>
+					< span class="exemplo2" style="display: block;">SPAN com display: block;< /span>
+					< b class="exemplo2" >Negrito-B< /b>
+					< em class="exemplo2" >Italico Em< /em>
+					< u class="exemplo2" >Underline< /u>
+					< strong class="exemplo2" >Negrito Strong< /strong>
+					< i class="exemplo2" >Italico< /i>
+		
+				
+			</pre>
+
+
+			<hr>
+		<pre>
+			<h3>Sobre a menu = nav:</h3>
+				Uma forma de organizar um menu de um site, usando inline-block:
+		</pre>
+	
+		<nav class="menu">
+			<ul>
+				<li><a href="#">item 1</a></li>
+				<li><a href="#">item 2</a></li>
+				<li><a href="#">item 3</a></li>
+			</ul>
+		</nav>
+		<pre>
+			
+		< nav class="menu">
+			< ul>
+				< li>< a href="#">item 1< /a>< /li>
+				< li>< a href="#">item 2< /a>< /li>
+				< li>< a href="#">item 3< /a>< /li>
+			< /ul>
+		< /nav>
+		</pre>
+	<br><br>
+
+	<h2>DISPLAY NONE</h2>	
+	<pre>
+		display: none;
+			Para esconder qualquer elemento.
+			Se, no elemento tiver filhos, tb serao escondidos.
+	
+	</pre>
+	<p>
+		<style>
+		.exemplo3 {
+			background-color: blueviolet;
+			color: white;
+		}
+		#item-2 {
+			display: none;
+		}
+		</style>
+			
+		<div>
+			<span id="item-1" class="exemplo3">Item 1</span>
+			<span id="item-2" class="exemplo3">Item 2</span>
+			<span id="item-3" class="exemplo3">Item 3</span>
+		</div>		
+	</p>
+	<pre>
+		< style>
+			.exemplo3 {
+				background-color: blueviolet;
+				color: white;
+			}
+			#item-2 {
+				display: none;
+			}
+			< /style>
+				
+			< div>
+				< span id="item-1" class="exemplo3">Item 1< /span>
+				< span id="item-2" class="exemplo3">Item 2< /span>
+				< span id="item-3" class="exemplo3">Item 3< /span>
+			< /div>
+			
+	</pre>
+	<br><br>
+
+	<h2>DISPLAY NONE VS VISIBILITY HIDDEN</h2>	
+	<pre>
+		display: none;	
+			Esconde o item-5 e retira o espaço-bloco. Exemplo acima. 
+
+		visibility: hidden;
+			Esconde o item-5 tambem, porém ele mantem o espaço em branco. Exemplo abaixo:
+	</pre>
+	<p>
+		<style>
+			.exemplo3 {
+				background-color: blueviolet;
+				color: white;
+			}
+			#item-5 {
+				/*display: none;*/
+				visibility: hidden;
+			}
+			</style>
+				
+			<div>
+				<span id="item-4" class="exemplo3">Item 4</span>
+				<span id="item-5" class="exemplo3">Item 5</span>
+				<span id="item-6" class="exemplo3">Item 6</span>
+			</div>
+			
+	</p>
+	<br><br>
+
+	<h2>ALINHAMENTO DE ELEMENTOS INLINE</h2>	
+	<pre>
+		<b>vertical-align: top, middle ou bottom;</b>
+			É o alinhamento vertical na linha que o texto ou imagem fica:
+				[ top=cima | middle=meio | bottom=baixo ]
+
+		<b>text-align: left, right ou center;</b>
+			É o alinhameto horizontal na linha que o texto ou imagem fica:
+				[ right=direito | center=meio | left=esquerda ]
+
+	</pre>
+	<p>
+		<style>
+			.exemplo4 {
+				background-color: blueviolet;
+				color: white;
+				padding: 0px 15px;
+			}
+			#item-7 {
+				vertical-align:top;
+			}
+			#item-8 {
+				vertical-align:middle;
+			}
+			#item-9 {
+				vertical-align:bottom;
+			}
+			.container1{
+				border: 1px solid red;
+				text-align: left;
+			}
+			.container2{
+				text-align: center;
+				border: 1px solid red;
+				}
+			.container3{
+				text-align: right;
+				border: 1px solid red;
+				}
+
+			</style>
+				
+			<div class="container1">
+				<span id="item-7" class="exemplo4">
+					<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="" width="30">					
+				</span>
+				<span id="item-7" class="exemplo4">Item 7</span>
+				<span id="item-7" class="exemplo4">Item 7.1</span>
+				
+			<div class="container2">
+				<span id="item-8" class="exemplo4">Item 8</span>
+				<span id="item-8" class="exemplo4">Item 8.1</span>
+			<div class="container3">
+				<span id="item-9" class="exemplo4">Item 9</span>
+				<span id="item-9" class="exemplo4">Item 9.1</span>
+			</div></div></div>
+			<pre>
+				< style>
+				.exemplo4 {
+					background-color: blueviolet;
+					color: white;
+					padding: 0px 15px;
+				}
+				#item-7 {
+					vertical-align:top;
+				}
+				#item-8 {
+					vertical-align:middle;
+				}
+				#item-9 {
+					vertical-align:bottom;
+				}
+				.container1{
+					border: 1px solid red;
+					text-align: left;
+				}
+				.container2{
+					text-align: center;
+					border: 1px solid red;
+					}
+				.container3{
+					text-align: right;
+					border: 1px solid red;
+					}
+	
+				< /style>
+					
+				< div class="container1">
+					< span id="item-7" class="exemplo4">
+						< img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="" width="30">					
+					< /span>
+					< span id="item-7" class="exemplo4">Item 7< /span>
+					< span id="item-7" class="exemplo4">Item 7.1< /span>
+					
+				< div class="container2">
+					< span id="item-8" class="exemplo4">Item 8< /span>
+					< span id="item-8" class="exemplo4">Item 8.1< /span>
+				< div class="container3">
+					< span id="item-9" class="exemplo4">Item 9< /span>
+					< span id="item-9" class="exemplo4">Item 9.1< /span>
+				< /div>< /div>< /div>
+
+			</pre>
+	</p>
+	<br><br>
+
+	<h2>FLEXBOX VS GRID LAYOUT</h2>	
+	<pre>
+		PESQUISA NA DOCUMENTAÇÃO SOBRE; GRID, FLEXBOX:
+
+			DISPLAY: FLEX; é uma forma de organizar os elementos em uma pagina dentro 
+			de containers e de forma dinamica,organizandoos elementos em uma 
+			dimensao: ou horizontalmente (as linhas)
+			ou verticalmente (em colunas).
+
+			Display: GRID; No CSS conseguimos trabalhar o nosso layout utilizando
+			o conceito de gris. o Grid layout vai organizar os elementos das nossas 
+			paginas em duas dimensões: de forma horizontal e vertical.
+			Definindo linhas e colunas para que os conteudos da pagina sejam posicionados.
+			
+	</pre>
+	<p>
+		<style>
+		</style>
+
+		<div class="test">
+			<li>Item 1</li>
+			<li>Item 2</li>
+				<div class="test2">
+					<span>Teste</span>
+					<span>Teste</span>
+					<span>Teste</span>
+					<del>321321</del>
+				</div>
+
+		</div>
+	</p>
+	<br><br>
+
+	</body>
+</html>
+
+

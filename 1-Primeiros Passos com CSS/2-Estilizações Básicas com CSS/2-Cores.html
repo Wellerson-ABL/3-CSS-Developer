@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+</head>
+
+   	<body> 
+		
+		<h2>Cores Todas</h2>	
+	<pre>
+	<p>
+		<style>
+		h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+			
+			body {
+				background-color: #85df85;
+			}
+			#pre-definidas {
+				color: gray;
+
+			} li{
+				background: lightpink;
+				color: lightskyblue;
+			}
+			#current-color {
+				background: transparent; /*vai pegar fundo como base o background do body*/
+				border: 2px solid yellow;
+				color: gray;
+			}
+			#rgb {       					/*Verificar no Codigo a cor que aparece*/
+				color: rgb(255, 0, 0); 	/*Rgb Vermelho*/
+				color: rgb(0, 255, 0); 	/*Rbg Verde | .*/
+				color: rgb(0, 0, 255); 	/* Rgb Azul | Pode-se misturar as cores ex. 183, 0 ,140 = rosa*/
+				color: rgb(255, 255, 0); 	/* Rgb Amarelo*/
+				color: rgb(255, 0, 255); 	/* Rgb Magenta*/
+				color: rgb(0, 255, 255); 	/* Rgb Ciano*/
+			}
+			#rgba {
+				color: rgba(255, 0, 0, 0.5);	 /* Rgb Vermelho com 50% de opacidade*/
+				color: rgba(0, 255, 0, 0.5); 	/* Rgb Verde com 50% de opacidade*/
+				color: rgba(0, 0, 255, 0.5); 	/* Rgb Azul com 50% de opacidade*/
+				color: rgba(255, 255, 0, 0.5); /* Rgb Amarelo com 50% de opacidade*/
+				color: rgba(255, 0, 255, 0.5); 	/* Rgb Magenta com 50% de opacidade*/
+				color: rgba(0, 255, 255, 0.5); 	/* Rgb Ciano com 50% de opacidade*/
+			}
+			#hex { /*00 = PRETO | FF = BRANCO*/
+				color: #000000; /* Preto */
+				color: #FFFFFF; /* Branco */
+				color: #FF0000; /* Vermelho */
+				color: #00FF00; /* Verde */
+				color: #0000FF; /* Azul */
+				color: #FFFF00; /* Amarelo */
+			}
+			#hsl {
+				color: hsl(hue, saturation, lightness);
+				color: hsl(0, 100%, 50%); /* Vermelho */
+				color: hsl(120, 100%, 50%); /* Verde */
+				color: hsl(240, 100%, 50%); /* Azul */
+				color: hsl(60, 100%, 50%); /* Amarelo */
+				color: hsl(300, 100%, 50%); /* Magenta */
+				
+			}
+			#hsla{
+				color: hsla(hue, saturation, lightness, alpha);
+				color: hsla(0, 100%, 50%, 0.5); /* Vermelho com 50% de opacidade */
+				color: hsla(120, 100%, 50%, 0.5); /* Verde com 50% de opacidade */
+				color: hsla(240, 100%, 50%, 0.5); /* Azul com 50% de opacidade */
+				color: hsla(60, 100%, 50%, 0.5); /* Amarelo com 50% de opacidade */
+				color: hsla(300, 100%, 50%, 0.5); /* Magenta com 50% de opacidade */
+
+			}
+			
+		</style>
+	<UL>
+		<li id="pre-definidas">Cores pré-definidas</li>
+		<li id="current-color">Por palavra Chave'currentcolor'</li>
+		<li id="hex">Hexadecimal</li>
+		<li id="hex-transparencia">Hexadecimal color</li>
+		<li id="rgb">RGB</li>
+		<li id="rgba">RGBA</li>
+		<li id="hsl">HSL</li>
+		<li id="HSLA">HSLA</li>
+	</UL>
+	</p>
+	</pre>
+	<pre>
+		< p>
+			< style>
+				
+				body {
+					background-color: #85df85;
+				}
+				#pre-definidas {
+					color: red;
+	
+				} li{
+					background: lightcoral;
+					color: lightskyblue;
+				}
+				#current-color {
+					background: transparent; /*vai pegar fundo como base o background do body*/
+					border: 2px solid yellow;
+					color: gray;
+				}
+				#rgb {       					/*Verificar no Codigo a cor que aparece*/
+					color: rgb(255, 0, 0); 	/*Rgb Vermelho*/
+					color: rgb(0, 255, 0); 	/*Rbg Verde | .*/
+					color: rgb(0, 0, 255); 	/* Rgb Azul | Pode-se misturar as cores ex. 183, 0 ,140 = rosa*/
+					color: rgb(255, 255, 0); 	/* Rgb Amarelo*/
+					color: rgb(255, 0, 255); 	/* Rgb Magenta*/
+					color: rgb(0, 255, 255); 	/* Rgb Ciano*/
+				}
+				#rgba {
+					color: rgba(255, 0, 0, 0.5);	 /* Rgb Vermelho com 50% de opacidade*/
+					color: rgba(0, 255, 0, 0.5); 	/* Rgb Verde com 50% de opacidade*/
+					color: rgba(0, 0, 255, 0.5); 	/* Rgb Azul com 50% de opacidade*/
+					color: rgba(255, 255, 0, 0.5); /* Rgb Amarelo com 50% de opacidade*/
+					color: rgba(255, 0, 255, 0.5); 	/* Rgb Magenta com 50% de opacidade*/
+					color: rgba(0, 255, 255, 0.5); 	/* Rgb Ciano com 50% de opacidade*/
+				}
+				#hex { /*00 = PRETO | FF = BRANCO*/
+					color: #000000; /* Preto */
+					color: #FFFFFF; /* Branco */
+					color: #FF0000; /* Vermelho */
+					color: #00FF00; /* Verde */
+					color: #0000FF; /* Azul */
+					color: #FFFF00; /* Amarelo */
+				}
+				#hsl {
+					color: hsl(hue, saturation, lightness);
+					color: hsl(0, 100%, 50%); /* Vermelho */
+					color: hsl(120, 100%, 50%); /* Verde */
+					color: hsl(240, 100%, 50%); /* Azul */
+					color: hsl(60, 100%, 50%); /* Amarelo */
+					color: hsl(300, 100%, 50%); /* Magenta */
+					
+				}
+				#hsla{
+					color: hsla(hue, saturation, lightness, alpha);
+					color: hsla(0, 100%, 50%, 0.5); /* Vermelho com 50% de opacidade */
+					color: hsla(120, 100%, 50%, 0.5); /* Verde com 50% de opacidade */
+					color: hsla(240, 100%, 50%, 0.5); /* Azul com 50% de opacidade */
+					color: hsla(60, 100%, 50%, 0.5); /* Amarelo com 50% de opacidade */
+					color: hsla(300, 100%, 50%, 0.5); /* Magenta com 50% de opacidade */
+	
+				}
+				
+			< /style>
+		< UL>
+			< i id="pre-definidas">Cores pré-definidas</li>
+			< li id="current-color">Por palavra Chave'currentcolor'</li>
+			< li id="hex">Hexadecimal</li>
+			< li id="hex-transparencia">Hexadecimal color</li>
+			< li id="rgb">RGB</li>
+			< li id="rgba">RGBA</li>
+			< li id="hsl">HSL</li>
+			< li id="HSLA">HSLA</li>
+		< /UL>
+		< /p>
+		</pre>
+
+	</body>
+</html>
+
+

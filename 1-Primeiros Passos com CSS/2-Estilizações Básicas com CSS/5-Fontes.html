@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FONTES</title>
+	
+</head>
+
+<style>
+	        h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+	pre {
+			background-color: rgb(240, 240, 240);
+			padding: 10px;
+			border-radius: 5px;
+			border: rgb(71, 6, 32) solid 1px;
+			font-size: 11px;
+	}
+	
+	</style>
+   	
+	<body> 
+
+	<h2>ONDE ENCONTRAR FONTES PERSONALIZADAS?</h2>	
+	<pre>
+	<p>
+		<h3>  < H3> = batata  =arial
+		FONTES QUE IREMOS ABORDAR:
+
+		Serif; 
+			Exemplo de fontes: Times new roman e Georgia.
+
+		Sans-Serif;
+			Fonte: ARIAL
+
+		Display;
+			Consideradas fontes decorativas, comemorativas. Aquelas
+			que tem suas particulariedade. 
+
+		Handwiting;
+			Fontes tipo manuscritas, similares a escrita a mão ou cursivas.
+		
+		Monospace;
+			Toda a familia mono-espaçadas tem a mesma largura.
+
+		Para catálagos de fontes conhecidas:
+			Google Fonts.
+				<a href="http://fonts.google.com">Google Fonts</a>
+		</h3>
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PERSONALIZANDO AS FONTES DO NOSSO SITE</h2>	
+	<pre>
+	<p>
+		<style>
+			p {
+				font-family: cursive;   /*TIPO ESCRITA A MAO*/
+				font-family: fantasy;  /* LETRAS ENFEITADAS */
+				font-family: "Times New Roman", " arial", fantasy;   /*Muito importante: quando a primeira fonte nao for 
+					reconhedida pelo navegador do usuário, ele ira buscar a próxima. */
+			}
+
+		</style>
+
+
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+		Esse recusandae at iste tempora eveniet ratione unde corporis quidem odit illum accusantium fugiat obcaecati,
+		 hic libero ex eaque necessitatibus quos minus.
+
+		
+		< style>
+			p {
+				font-family: cursive;   /*TIPO ESCRITA A MAO*/
+				font-family: fantasy;  /* LETRAS ENFEITADAS */
+				font-family: "Times New Roman", " arial", fantasy;   /*Muito importante: quando a primeira fonte nao for 
+					reconhedida pelo navegador do usuário, ele ira buscar a próxima. */
+			}
+
+		< /style>
+
+
+		
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>APLICANDO FONTES PERSONALIZADAS COM @Font-Face</h2>	
+	<pre>
+	<p>
+		<style>
+			
+	@font-face {
+				font-family: Dog;   /* APELIDO DA FONTE */
+				src: local(Underdog.Regular), url("./fonts/Underdog-Regular.ttf");
+				font-weight: lighter; /*Espessura FINA* Nao funcionou!*/
+			}
+
+	@font-face {
+				font-family: BATATA;   /* APELIDO DA FONTE */
+				src: url("./fonts/Roboto/Roboto/static/Roboto-Medium.ttf");
+				font-weight: normal;   /*Espessura MEDIA* - nao funcionou!*/
+				
+	}
+	@font-face {
+				font-family: BATATA-BOLD;   /* APELIDO DA FONTE */
+				src: url("./fonts/Roboto/Roboto/static/Roboto-Bold.ttf");
+				font-weight: bold;   /* Espesssura GROSSa* Nao funcionou! */				
+	}
+	.lighte {
+		font-family: Dog;  /*aplicando apelido da fonte BATATA */
+	}
+	.norma {
+		font-family: BATATA;  /*aplicando apelido da fonte DOG*/
+	}				
+	.bol {
+		font-family: BATATA-BOLD;  /*aplicando apelido da fonte BATATA */
+	}
+	</style>
+
+		<div class="lighte">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+		Esse recusandae at iste tempora eveniet ratione unde corporis quidem 
+		odit illum accusantium fugiat 
+		obcaecati, hic libero ex eaque necessitatibus quos minus.
+		</div>
+		
+		<div class="norma">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+		Esse recusandae at iste tempora eveniet ratione unde corporis quidem 
+		odit illum accusantium fugiat 
+		obcaecati, hic libero ex eaque necessitatibus quos minus.
+			</div>
+		
+		<div class="bol">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+		Esse recusandae at iste tempora eveniet ratione unde corporis quidem 
+		odit illum accusantium fugiat 
+		obcaecati, hic libero ex eaque necessitatibus quos minus.
+			</div>
+	
+	
+			< style>
+			
+				@font-face {
+							font-family: Dog;   /* APELIDO DA FONTE */
+							src: local(Underdog.Regular), url("./fonts/Underdog-Regular.ttf");
+							font-weight: lighter; /*Espessura FINA* Nao funcionou!*/
+						}
+			
+				@font-face {
+							font-family: BATATA;   /* APELIDO DA FONTE */
+							src: url("./fonts/Roboto/Roboto/static/Roboto-Medium.ttf");
+							font-weight: normal;   /*Espessura MEDIA* - nao funcionou!*/
+							
+				}
+				@font-face {
+							font-family: BATATA-BOLD;   /* APELIDO DA FONTE */
+							src: url("./fonts/Roboto/Roboto/static/Roboto-Bold.ttf");
+							font-weight: bold;   /* Espesssura GROSSa* Nao funcionou! */				
+				}
+				.lighte {
+					font-family: Dog;  /*aplicando apelido da fonte BATATA */
+				}
+				.norma {
+					font-family: BATATA;  /*aplicando apelido da fonte DOG*/
+				}				
+				.bol {
+					font-family: BATATA-BOLD;  /*aplicando apelido da fonte BATATA */
+				}
+				< /style>
+			
+					< div class="lighte">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Esse recusandae at iste tempora eveniet ratione unde corporis quidem 
+					odit illum accusantium 
+					fugiat obcaecati, hic libero ex eaque necessitatibus quos minus.
+					< /div>
+					
+					< div class="norma">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Esse recusandae at iste tempora eveniet ratione unde corporis quidem 
+					odit illum accusantium 
+					fugiat obcaecati, hic libero ex eaque necessitatibus quos minus.
+						< /div>
+					
+					< div class="bol">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Esse recusandae at iste tempora eveniet ratione unde corporis quidem 
+					odit illum accusantium 
+					fugiat obcaecati, hic libero ex eaque necessitatibus quos minus.
+						< /div>
+	
+	
+	
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>APLICANDO FONTES PERSONALIZADAS COM @import url()</h2>	
+	<pre>
+	<p>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
+		.import {
+			font-family:display;  /* Escolhe a familia: ( serif, sans-serif, fantasy, display, handwiting, monospace */
+			font-weight:normal ;  /* Escolhe: Bold, bolder, lighter, normal */
+			font-style:italic;    /* Escolhe: Italic, Normal, oblique */
+
+		}
+
+		</style>
+
+		<div class="import">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, nulla omnis 
+			voluptatem, commodi eum quia minima ad assumenda minus quasi 
+			non! Quia officiis corporis impedit totam temporibus 
+			unde voluptatem autem.
+
+		</div>
+		<h1>
+	<u> DICA DE OURO DA MICHELLE: </u>
+	"CRIAR UMA GLOBAL.CSS SO PARA FONTES, E NELE VOCE 
+	ADMINISTRAR SO AS FONTES DO PROJETO".
+	para chamar use o comando:
+		
+		> dentro da style.css  no cabeçario: chame:
+			@import url("./global.css")
+		</h1>
+	</p>
+
+	
+	< style>
+		@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
+	.import {
+		font-family:display;  /* Escolhe a familia: ( serif, sans-serif, fantasy, display, handwiting, monospace */
+		font-weight:normal ;  /* Escolhe: Bold, bolder, lighter, normal */
+		font-style:italic;    /* Escolhe: Italic, Normal, oblique */
+
+	}
+
+	< /style>
+
+	< div class="import">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, nulla omnis voluptatem, 
+		commodi eum quia minima ad assumenda minus quasi non! Quia officiis corporis impedit totam temporibus unde 
+		voluptatem autem.
+
+	< /div>
+
+
+	</pre>	<br><br>
+
+	 
+	<h2>ALTERANDO O TAMANHO DAS FONTES COM FONT-SIZE</h2>	
+	<pre>
+	<p>
+		<style>
+
+			#tamanho{
+				font-size: 20px;
+			}
+			#xx-small{
+				font-size:xx-small;
+			}
+			#x-small{
+				font-size:x-small;
+			}
+			#small{
+				font-size:small;
+			}
+			#medium{
+				font-size:medium;
+			}
+			#large{
+				font-size:large;
+			}
+			#x-large{
+				font-size:x-large;
+			}
+			#xx-large{
+				font-size:xx-large;
+			}
+			div {
+				font-size: 20px;
+			}
+			.filho {
+				font-size: smaller;   /* Smaller= é menor que o elemento Pai /  Larger = Maior que o elemento pai. (
+									Nesse caso o Pai é base paramentro) */
+				font-size: larger;
+			}
+
+		</style>
+
+		<p id="tamanho">tamanho</p>
+		<p id="xx-small">xx-small</p>
+		<p id="x-small">x-small</p>
+		<p id="small">small</p>
+		<p id="medium">medium</p>
+		<p id="large">large</p>
+		<p id="x-large">x-large</p>
+		<p id="xx-large">xx-large</p>
+		
+		<hr>		
+		<div>
+		Elemento Pai
+			<p class="filho">
+			Elemento Filho
+			</p>
+		</div>
+
+
+		< style>
+
+			#tamanho{
+				font-size: 20px;
+			}
+			#xx-small{
+				font-size:xx-small;
+			}
+			#x-small{
+				font-size:x-small;
+			}
+			#small{
+				font-size:small;
+			}
+			#medium{
+				font-size:medium;
+			}
+			#large{
+				font-size:large;
+			}
+			#x-large{
+				font-size:x-large;
+			}
+			#xx-large{
+				font-size:xx-large;
+			}
+			div {
+				font-size: 20px;
+			}
+			.filho {
+				font-size: smaller;   /* Smaller= é menor que o elemento Pai /  Larger = Maior que o elemento pai. 
+								(Nesse caso o Pai é base paramentro) */
+				font-size: larger;
+			}
+
+		< /style>
+
+		< p id="tamanho">tamanho< /p>
+		< p id="xx-small">xx-small< /p>
+		< p id="x-small">x-small< /p>
+		< p id="small">small< /p>
+		< p id="medium">medium< /p>
+		< p id="large">large< /p>
+		< p id="x-large">x-large< /p>
+		< p id="xx-large">xx-large< /p>
+		
+		< hr>		
+		< div>
+		Elemento Pai
+			< p class="filho">
+			Elemento Filho
+			< /p>
+		< /div>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>ESTILO DE FONTES (FONT-STYLE)</h2>	
+	<pre>
+	<p>
+		<style>
+			#normal{
+				font-style: normal;
+				font-size: 20px;
+			}
+			#italic{
+				font-style: italic;
+				font-size: 20px;
+			}
+			#oblique{
+				font-style: oblique;
+				font-size: 20px;
+			}
+		</style>
+
+		<p id="normal">Normal</p>
+		<p id="italic">Italic</p>
+		<p id="oblique">Oblique</p>
+	
+
+		
+		< style>
+			#normal{
+				font-style: normal;
+				font-size: 20px;
+			}
+			#italic{
+				font-style: italic;
+				font-size: 20px;
+			}
+			#oblique{
+				font-style: oblique;
+				font-size: 20px;
+			}
+		< /style>
+
+		< p id="normal">Normal< /p>
+		< p id="italic">Italic< /p>
+		< p id="oblique">Oblique< /p>
+	
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>ESPESSURA DAS FONTES COM FONT-WEIGHT</h2>	
+	<pre>
+	<p>
+		
+		<style>
+
+			
+			#fweight{
+				font-weight: 900;  /*Define o peso da espessura de 100 a 900 - obs. nem todas as fontes tem todos os tamanahos*/
+			}
+			#fnormal{
+				font-weight: 500;
+			}
+			#fbold{
+				font-weight: 900;
+			}
+			.div-pai {
+				font-weight: normal;				
+			}
+			.p-filho {
+				font-weight: lighter; /* Vai mais forte ou mais fraco de acordo com o pai div*/
+;
+			}
+
+		</style>
+		Site:
+		developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+		<p id="fweight"> Tamanho Espessura</p>
+		<p id="fnormal">Normal</p>
+		<p id="fbold">Bold</p>
+		
+		<hr>		
+		<div class="div-pai">
+		Elemento Pai - Weight
+			<p class="p-filho">
+			Elemento Filho - Weight
+			</p>
+		</div>
+
+
+		< style>
+
+			
+			#fweight{
+				font-weight: 900;  /*Define o peso da espessura de 100 a 900 - obs. nem todas as fontes tem todos os tamanahos*/
+			}
+			#fnormal{
+				font-weight: 500;
+			}
+			#fbold{
+				font-weight: 900;
+			}
+			.div-pai {
+				font-weight: normal;				
+			}
+			.p-filho {
+				font-weight: lighter; /* Vai mais forte ou mais fraco de acordo com o pai div*/
+;
+			}
+
+		< /style>
+		Site:
+		developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+		< p id="fweight"> Tamanho Espessura< /p>
+		< p id="fnormal">Normal< /p>
+		< p id="fbold">Bold< /p>
+		
+		< hr>		
+		< div class="div-pai">
+		Elemento Pai - Weight
+			< p class="p-filho">
+			Elemento Filho - Weight
+			< /p>
+		< /div>
+
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>VARIAÇÃO DAS FONTES COM FONT-VARIANT</h2>	
+	<pre>
+	<p>
+		<style>
+			#fvariant{
+				font-variant: small-caps;  /* DEIXA TODAS AS LETRAS MAIOUSCULAS*/
+				font-size: 20px;
+			}
+			#fnormal{
+				font-variant: normal; /* VOLTAR AO NORMAL DE ANTES*/
+				font-size: 20px;
+			}
+			</style>
+
+		<p id="fvariant">
+			LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+			Deserunt voluptatem facere sed nostrum labore. Consequatur
+			 nemo unde repellendus aspernatur dolores illo? Voluptatum 
+			 excepturi quam molestias eligendi, consectetur at ad 
+			 incidunt.
+		</p>
+		<p id="fnormal">
+			LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+			Deserunt voluptatem facere sed nostrum labore. Consequatur 
+			nemo unde repellendus aspernatur dolores illo? Voluptatum 
+			excepturi quam molestias eligendi, consectetur at ad
+			 incidunt.
+		</p>
+
+		
+		< style>
+			#fvariant{
+				font-variant: small-caps;  /* DEIXA TODAS AS LETRAS MAIOUSCULAS*/
+				font-size: 20px;
+			}
+			#fnormal{
+				font-variant: normal; /* VOLTAR AO NORMAL DE ANTES*/
+				font-size: 20px;
+			}
+			< /style>
+
+		< p id="fvariant">
+			LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+			Deserunt voluptatem facere sed nostrum labore. Consequatur
+			 nemo unde repellendus aspernatur dolores illo? Voluptatum 
+			 excepturi quam molestias eligendi, consectetur at ad 
+			 incidunt.
+		< /p>
+		< p id="fnormal">
+			LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+			Deserunt voluptatem facere sed nostrum labore. Consequatur 
+			nemo unde repellendus aspernatur dolores illo? Voluptatum 
+			excepturi quam molestias eligendi, consectetur at ad
+			 incidunt.
+		< /p>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE FONT-STRETCH</h2>	
+	<pre>
+	<p>
+	nao vi utilidade!
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>CUSTOMIZANDO A ALTURA DA LINHA COM LINE-HEIGHT (Espaçamento)</h2>	
+	<pre>
+	<p>
+		<style>
+			#line{
+				line-height: 50px;   /* espaçamento entre linhas*/
+				font-size: 20px;
+			}
+
+		</style>
+
+		<p id="line">
+		LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+		Deserunt voluptatem facere sed nostrum labore. Consequatur 
+		nemo unde repellendus aspernatur dolores illo? Voluptatum 
+		excepturi quam molestias eligendi, consectetur at ad
+		 incidunt.</p>
+	
+		 
+		< style>
+			#line{
+				line-height: 50px;   /* espaçamento entre linhas*/
+				font-size: 20px;
+			}
+
+		< /style>
+
+		< p id="line">
+		LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+		Deserunt voluptatem facere sed nostrum labore. Consequatur 
+		nemo unde repellendus aspernatur dolores illo? Voluptatum 
+		excepturi quam molestias eligendi, consectetur at ad
+		 incidunt.< /p>
+
+	</p>
+	</pre>	<br><br>
+
+	 
+	<h2>PROPRIEDADE RESUMIDA FONT</h2>	
+	<pre>
+	<p>
+		<style>
+			#resumo{
+				font: italic small-caps bold 24px/2 georgia, serif;
+				/* font-style font-variant font-weight font-size/line-height font-family */
+			}
+
+		</style>
+
+		ACEITA EM UMA ÚNICA LINHA TODOS OS COMANDOS.
+		<ul>
+			<li>font-style</li>
+			<li>font-variant</li>
+			<li>font-weight</li>
+			<li>font-size/line-height</li>
+			<li>font-family</li>
+			</ul>
+
+			Exemplo Nessa Ordem:
+			
+				#resumo{
+					font: italic small-caps bold 24px/2 georgia, serif;
+			
+					/* font-style font-variant font-weight font-size/line-height font-family */
+				}
+	
+			
+	
+
+			<p id="resumo">
+		LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+		Deserunt voluptatem facere sed nostrum labore. Consequatur 
+		nemo unde repellendus aspernatur dolores illo? Voluptatum 
+		excepturi quam molestias eligendi, consectetur at ad
+		 incidunt.</p>
+
+
+		 < style>
+			#resumo{
+				font: italic small-caps bold 24px/2 georgia, serif;
+				/* font-style font-variant font-weight font-size/line-height font-family */
+			}
+
+		< /style>
+
+		ACEITA EM UMA ÚNICA LINHA TODOS OS COMANDOS.
+		< ul>
+			< li>font-style< /li>
+			< li>font-variant< /li>
+			< li>font-weight< /li>
+			< li>font-size/line-height< /li>
+			< li>font-family< /li>
+			< /ul>
+
+			
+			< p id="resumo">
+				LOREM ipsum dolor sit amet consectetur adipisicing elit. 
+				Deserunt voluptatem facere sed nostrum labore. Consequatur 
+				nemo unde repellendus aspernatur dolores illo? Voluptatum 
+				excepturi quam molestias eligendi, consectetur at ad
+				 incidunt.< /p>
+			
+
+	</p>
+	</pre>	<br><br>
+
+	</body>
+</html>

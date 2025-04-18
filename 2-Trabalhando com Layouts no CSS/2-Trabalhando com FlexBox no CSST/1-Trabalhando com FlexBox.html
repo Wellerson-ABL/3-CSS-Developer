@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+   	<body> 
+		<style>
+			h2{
+				border: 1px solid yellow;
+				background-color: black;
+				color: white;
+				text-align: center;
+			}
+			pre{
+				font-weight: bold;
+			}
+		</style>
+
+		<h2>ENTENDENDO OS CONCEITOS DO FLEXBOX</h2>	
+		<pre>
+			Flexbox conceitos:
+				Permite posicionar os elementos dentro de outro elemento (container);
+				Os elementos dentro do 'container' são conhecidos como 'itens'.
+
+				display: flex; (os itens ficam lado a lado, quando dentro do mesmo container)
+					Porem quando a outros container, os container ficam abaixo um do outro. 
+					Exemplo: 
+
+							O 'Container 2' tb tem Irmãos e está para 'display:flex',
+							 nesse caso ficam abaixo um do outro.
+
+				display: inline-flex; (Ficam lado a lado, os container e os items.)
+					Mesmo com outros container ficará lado a lado, porem se der zoom, ele fica abaixo.
+					Exemplo:
+
+					 		A dois 'Container 1' = [Irmãos] | Eles ficam lado a lado porque esta estilizado em
+					 		'display: inline-flex'.
+
+
+		</pre>
+		<p>
+			<style>
+				.container1 {
+					background-color: palegreen;
+					padding: 20px;
+					display: inline-flex;
+				}
+				.container2 {
+					background-color: palegreen;
+					padding: 20px;
+					display: flex;
+				}
+				.item {
+					background-color: orange;
+					margin: 5px;
+				}
+			</style>
+			
+			<div class="container1">Container 1 [display: inline-flex;]
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+			<div class="container1">Container 1
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+
+			<div class="container2">Container 2 [display: flex;]
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+			<div class="container2">Container 2 [display: flex;]
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+		</p>
+		<br><br>
+
+
+		<h2>OS EIXOS DO FLEXBOX</h2>	
+		<pre>
+			OBS: Na duvida veja o video: CSS Developer / Trabalhando com Flexbox no Css / Os eixos do flexbox
+
+				Exitem dois tipo de visao sobre o comportamento do eixos.
+
+			* Quando os elementos(Itens) estao pra vertical, entao o TRANSVERSAL dele será na horizontal. Exemplo: Coluna 2 
+
+			* Quando os elementos(Itens) estao pra horizontal, entao o TRANSVERSAL dele será na vertical. Exemplo: Coluna 1
+	
+			obs: é bom ficar atento quanto: a regra de leitura Ocidental/Oriental.
+		</pre>
+		<p>
+			<style>
+				.container3 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					display: flex;
+				}
+				.item {
+					background-color: orange;
+					margin: 5px;
+				}
+				#coluna1 {
+					flex-direction: row;
+				}
+				#coluna2 {
+					flex-direction: column;
+				}
+			</style>
+			Coluna 1:
+			<div class="container3" id="coluna1">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+			Coluna 2:
+			<div class="container3" id="coluna2">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+		</p>
+		<br><br>
+
+
+		<h2>DEFININDO A DIREÇÃO DO FLEXBOX COM A PROPRIEDADE FLEX-DIRECTION</h2>	
+		<pre>			
+				flex-direction:
+				row  		   (vertical: da esquerda para direta)
+				row-reverse	   (Vertical: da direita para esquerda)
+				column  	   (horizontal: da esquerda para direta)
+				column-reverse     (horizontal: da direita para esquerda)
+
+				Determina a orientação dos itens no container. Vertical ou Horizontal.
+		</pre>
+		<p>
+			<style>
+				.container4 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					display: flex;
+				}
+				.item {
+					background-color: orange;
+					margin: 5px;
+				}
+				#horizontal1 {
+					flex-direction: row;
+				}
+				#horizontal2 {
+					flex-direction: row-reverse;
+				}				
+				#vertical1 {
+					flex-direction: column;
+				}
+				#vertical2 {
+					flex-direction: column-reverse;
+				}
+				u {
+					background-color: white;
+				}
+			</style>
+			<h3>Observe: a ordem dos itens tb muda.</h3>
+			Horizontal 1: flex-direction: row;
+			<div class="container4" id="horizontal1">
+				<div class="item"><u>Item 1</u></div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				</div>
+			Horizontal 2: flex-direction: row-reverse;
+			<div class="container4" id="horizontal2">
+				<div class="item"><u>Item 1</u></div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+			Vertical 1: flex-direction: column;
+			<div class="container4" id="vertical1">
+				<div class="item"><u>Item 1</u></div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				</div>
+			Vertical 2: flex-direction: column-reverse;
+			<div class="container4" id="vertical2">
+				<div class="item"><u>Item 1</u></div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+
+
+		</p>
+		<br><br>
+
+
+		<h2>QUEBRA DE LINHAS E COLUNAS COM FLEX-WRAP</h2>	
+		<pre>
+			Quando houver quebra de linhas, pode usar o 
+			flex-wrap: wrap ou wrap-reverse;
+			para organizar os elementos. Exemplos abaixo:
+		</pre>
+		<p>
+			<style>
+				.container5 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					display: flex;
+					/*width: 300px;*/
+					/*flex-wrap: wrap;*/
+				}				
+				.container6 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					display: flex;
+					/*width: 300px;*/
+					flex-wrap: wrap;
+				}
+				.item {
+					background-color: orange;
+					margin: 5px;
+				}
+				#coluna1 {
+					flex-direction: row;
+					width: 100px;
+				}
+				#coluna2 {
+					flex-direction: column;
+					height: 100px;
+				}
+				.div {
+					border: 1px solid red;
+					padding: 10px;
+					margin-bottom: 30px;
+				}
+			</style>
+		<div class="div">
+			ANTES de usar: <b>flex-wrap: wrap;</b> os elementos estavam ultrapassando o container:<BR>
+			Coluna 1:
+			<div class="container5" id="coluna1">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+			Coluna 2:
+			<div class="container5" id="coluna2">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+				<div class="item">Item 4</div>
+				<div class="item">Item 5</div>
+				<div class="item">Item 6</div>
+			</div>
+		</div>
+			<div class="div">
+				DEPOIS de usar:  <b>flex-wrap: wrap;</b> os itens ficaram organizados assim:<BR>			
+				Coluna 1
+				<div class="container6" id="coluna1">
+					<div class="item">Item 1</div>
+					<div class="item">Item 2</div>
+					<div class="item">Item 3</div>
+					<div class="item">Item 4</div>
+					<div class="item">Item 5</div>
+					<div class="item">Item 6</div>
+				</div>
+				Coluna 2:
+				<div class="container6" id="coluna2">
+					<div class="item">Item 1</div>
+					<div class="item">Item 2</div>
+					<div class="item">Item 3</div>
+					<div class="item">Item 4</div>
+					<div class="item">Item 5</div>
+					<div class="item">Item 6</div>
+				</div>
+			</div>
+		</p>
+		<br><br>
+
+
+		<h2>JUNTANDO A PROPRIEDADE FLEX-DIRECTION E FLEX-WRAP</h2>	
+		<pre>
+			Com o FLEX-FLOW pode-se unir FLEX-DIRECTION + FLEX-WRAP
+				
+				 e pode-se colocar varios codigos, são varias forma de organizar os elementos, exemplo:
+		
+			flex-flow: column;            flex-flow: column nowrap;  
+			flex-flow: column-reverse;    flex-flow: column row-reverse;
+			flex-flow: nowrap;            flex-flow: nowrap column-reverse;
+			flex-flow: row;           
+			flex-flow: row-reverse;   		** São varias formas...
+			flex-flow: wrap;          
+			flex-flow: wrap-reverse;
+		</pre>
+		<p>
+			
+			<style>
+				.container7 {
+					background-color: palegreen;
+					padding: 0px;
+					display: flex;
+					width: 100%;				
+				}
+				.item {
+					background-color: orange;
+					margin: 5px;
+				}
+				#coluna3 {					
+					height: 50px;
+					flex-flow: row;
+				}
+				#coluna4 {
+					flex-flow: row-reverse;
+					height: 50px;
+				}
+				#coluna5 {
+					flex-flow: column wrap;
+					height: 50px;
+				}
+				#coluna6 {
+					flex-flow: column wrap-reverse;
+					height: 50px;
+				}
+				#coluna7 {
+					flex-flow: column nowrap;
+					height: 50px;
+				}
+				#coluna8 {
+					flex-flow: column;
+					height: 50px;
+				}
+				#coluna9 {
+					flex-flow: column-reverse;
+					height: 50px;
+				}
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+		<div class="div">
+			Exemplo: <b>flex-flow: row;</b> fica assim <br>
+			<div class="container7" id="coluna3">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		<div class="div">
+			Exemplo: <b>flex-flow: row-reverse;</b> fica assim <br>
+			<div class="container7" id="coluna4">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		<div class="div">
+			Exemplo: <b>flex-flow: column wrap;</b> fica assim <br>
+			<div class="container7" id="coluna5">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		<div class="div">
+			Exemplo: <b>flex-flow: column wrap-reverse;</b> fica assim <br>
+			<div class="container7" id="coluna6">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		<div class="div">
+			Exemplo: <b>flex-flow: column nowrap;</b> fica assim <br>
+			<div class="container7" id="coluna7">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		<div class="div">
+			Exemplo: <b>flex-flow: column;</b> fica assim <br>
+			<div class="container7" id="coluna8">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		<div class="div">
+			Exemplo: <b>flex-flow: column-reverse;</b> fica assim <br>
+				<div class="container7" id="coluna9">
+				<div class="item">Item 1</div>
+				<div class="item">Item 2</div>
+				<div class="item">Item 3</div>
+			</div>
+		</div>
+		
+		</p>
+		<br><br>
+
+
+		<h2>ALINHANDO OS ELEMENTOS NO EIXO PRINCIPAL COM JUSTIFY-CONTENT</h2>	
+		<pre>
+			justify-content:
+
+				Ele ajustas os elementos dentro do container.
+					Obs: Os container estão para horizontal. = Transversal:Vertical
+		</pre>
+		<p>
+			<style>
+				.container8 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					display: flex;
+				}
+				.item {
+					background-color: orange;
+					margin: 5px;
+				}
+				#coluna10 {
+					justify-content: flex-start;
+				}
+				#coluna11 {
+					justify-content: flex-end;					
+				}				
+				#coluna12 {
+					justify-content: center;	
+				}
+				#coluna13 {
+					justify-content: space-between;
+					
+				}
+				#coluna14 {
+					justify-content: space-around;
+					
+				}
+				#coluna15 {
+					justify-content: space-evenly;
+					
+				}
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+					<div class="div">
+						Exemplo: <b>justify-content: flex-start;</b> fica assim <br>
+						<div class="container8" id="coluna10">
+							<div class="item">Item 1</div>
+							<div class="item">Item 2</div>
+							<div class="item">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>justify-content: flex-end;	</b> fica assim <br>
+						<div class="container8" id="coluna11">
+							<div class="item">Item 1</div>
+							<div class="item">Item 2</div>
+							<div class="item">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>justify-content: center;</b> fica assim <br>
+						<div class="container8" id="coluna12">
+							<div class="item">Item 1</div>
+							<div class="item">Item 2</div>
+							<div class="item">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>justify-content: space-between;</b> fica assim <br>
+						<div class="container8" id="coluna13">
+							<div class="item">Item 1</div>
+							<div class="item">Item 2</div>
+							<div class="item">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>justify-content: space-around;</b> fica assim <br>
+						<div class="container8" id="coluna14">
+							<div class="item">Item 1</div>
+							<div class="item">Item 2</div>
+							<div class="item">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>justify-content: space-evenly;</b> fica assim <br>
+							<div class="container8" id="coluna15">
+							<div class="item">Item 1</div>
+							<div class="item">Item 2</div>
+							<div class="item">Item 3</div>
+						</div>
+					</div>
+		</p>
+		<br><br>
+
+
+		<h2>ALINHAMENTO DE ELEMENTOS NO EIXO TRANSVERSAL COM ALIGN-ITEMS</h2>	
+		<pre>
+				align-iten:
+
+					Ele ajusta os itens dentro do container.  
+						Obs: o Container está para Vertical. = Transversal: Horizontal
+		
+						SE VOCE ADICIONAR 'flex-direction: column ou row' organizara em COLUNA- ultimo exemplo:
+		
+					</pre>
+		<p>
+			<style>
+				.container9 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					display: flex;
+					width: 300px;
+					height: 200px;
+				}
+				.item1 {
+					background-color: orange;
+					margin: 5px;
+					height: 50px;
+					width: 80px;
+					font-size: small;
+				}
+				.item2 {
+					background-color: orange;
+					margin: 5px;
+					height: 40px;
+					width: 70px;
+					font-size: medium;					
+
+				}
+				.item3 {
+					background-color: orange;
+					margin: 5px;
+					height: 70px;
+					width: 50px;
+					font-size: large;
+
+				}
+				#coluna16 {
+					align-items: flex-start;
+				}
+				#coluna17 {
+					align-items: flex-end;								
+				}				
+				#coluna18 {
+					align-items: center;			
+				}
+				#coluna19 {		
+					align-items: stretch;				
+				}
+				#coluna20 {
+					align-items: baseline;		
+				}
+				#coluna21 {
+					align-items: stretch;
+					flex-direction: column;
+					font-size:small;
+					text-align: center;		
+				}
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+					<div class="div">
+						Exemplo: <b>align-items: flex-start;</b> fica assim <br>
+						<div class="container9" id="coluna16">
+							<div class="item1">Item 1</div>
+							<div class="item2">Item 2</div>
+							<div class="item3">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>align-items: flex-end;</b> fica assim <br>
+						<div class="container9" id="coluna17">
+							<div class="item1">Item 1</div>
+							<div class="item2">Item 2</div>
+							<div class="item3">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>align-items: center;</b> fica assim <br>
+						<div class="container9" id="coluna18">
+							<div class="item1">Item 1</div>
+							<div class="item2">Item 2</div>
+							<div class="item3">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>align-items: stretch;</b> fica assim <br>
+						<div class="container9" id="coluna19">
+							<div class="item1">Item 1</div>
+							<div class="item2">Item 2</div>
+							<div class="item3">Item 3</div>
+						</div>
+					</div>
+					
+					<div class="div">
+						Exemplo: <b>align-items: baseline;	</b> fica assim <br>
+						<div class="container9" id="coluna20">
+							<div class="item1">Item 1</div>
+							<div class="item2">Item 2</div>
+							<div class="item3">Item 3</div>
+						</div>
+					</div>
+					<div class="div">
+						Exemplo: <b>align-items: stretch; e flex-direction: column;	</b> fica assim <br>
+						<div class="container9" id="coluna21">
+							Vendas do Mês: Havaianas
+							<div class="item1">Sandália Verão</div>
+							<div class="item2">Sandália Primavera</div>
+							<div class="item3">Sandália Inverno</div>
+						</div>
+					</div>
+		</p>
+		<br><br>
+
+
+		<h2>ALINHAMENTO AS LINHAS NO CONTAINER COM ALIGN-CONTENT</h2>	
+		<pre>
+			o align-content nao funciona sozinho, 
+				somente com outras configurações, observe o codigo;
+
+			Tambem nao funciona quando so tem 1 linhas somente.
+
+			Porque ele trabalhar e posiciona as linhas. Exemplo:
+				
+			align-content:space-between; trabalha cada linha na extremidade.
+
+		</pre>
+		<p>
+			<style>
+				.container10 {
+					background-color: palegreen;
+					padding: 20px;
+					margin: 20px;
+					width: 300px;
+					height: 200px;
+					border-radius: 5px;
+					
+					display: flex;
+					justify-content: space-around;
+					
+					flex-direction: row;
+					flex-wrap: wrap;
+
+					align-items: flex-start;
+				}
+				.item4 {
+					background-color: orange;
+					max-height: 50px;
+					max-width: 90px;
+					margin: 5px;
+					text-align: center;
+					border-radius: 5px;
+				}
+				#coluna22 {
+					align-content:flex-start;
+					
+				}
+				#coluna23 {	
+					align-content:flex-end;				
+				}				
+				#coluna24 {								
+					align-content:center;				
+				}				
+				#coluna25 {				
+					align-content:stretch;					
+				}
+				#coluna26 {		
+					align-content:space-between;
+				}
+				#coluna27 {		
+					align-content:space-around;					
+				}
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>	
+					<div class="div">
+						Exemplo: <b>align-content:flex-start;</b> fica assim <br>
+						<div class="container10" id="coluna22">
+							<div class="item4">Sandália Verão</div>
+							<div class="item4">Sandália Primavera</div>
+							<div class="item4">Sandália Inverno</div>
+							<div class="item4">Sandália outono</div>
+						</div>
+					</div>				
+					<div class="div">
+						Exemplo: <b>align-content:flex-end;	</b> fica assim <br>
+						<div class="container10" id="coluna23">
+							<div class="item4">Sandália Verão</div>
+							<div class="item4">Sandália Primavera</div>
+							<div class="item4">Sandália Inverno</div>
+							<div class="item4">Sandália outono</div>
+						</div>
+					</div>
+					<div class="div">
+						Exemplo: <b>align-content:center;</b> fica assim <br>
+						<div class="container10" id="coluna24">
+							<div class="item4">Sandália Verão</div>
+							<div class="item4">Sandália Primavera</div>
+							<div class="item4">Sandália Inverno</div>
+							<div class="item4">Sandália outono</div>
+						</div>
+					</div>
+					<div class="div">
+						Exemplo: <b>align-content:stretch;</b> fica assim <br>
+						<div class="container10" id="coluna25">
+							<div class="item4">Sandália Verão</div>
+							<div class="item4">Sandália Primavera</div>
+							<div class="item4">Sandália Inverno</div>
+							<div class="item4">Sandália outono</div>
+						</div>
+					</div>
+					<div class="div">
+						Exemplo: <b>align-content:space-between;</b> fica assim <br>
+						<div class="container10" id="coluna26">
+							<div class="item4">Sandália Verão</div>
+							<div class="item4">Sandália Primavera</div>
+							<div class="item4">Sandália Inverno</div>
+							<div class="item4">Sandália outono</div>
+						</div>
+					</div>
+					<div class="div">
+						Exemplo: <b>align-content:space-around;</b> fica assim <br>
+						<div class="container10" id="coluna27">
+							<div class="item4">Sandália Verão</div>
+							<div class="item4">Sandália Primavera</div>
+							<div class="item4">Sandália Inverno</div>
+							<div class="item4">Sandália outono</div>
+						</div>
+					</div>
+
+		</p>
+		<br><br>
+
+
+		<h2>CONTROLANDO OS ESPAÇOS ENTRE OS ITENS COM GAP</h2>	
+		<pre>
+			gap: 10px;
+				 ou gap: 10px 60px;
+				 	 ou row-gap: 10px;'
+
+			Uma forma de controlar os espaços do itens dentro do container. gap.
+			Os espaços envolta ele nao controla.
+				Gap é similar a margin.
+		</pre>
+		<p>
+			<style>
+				.container11 {
+					background-color: palegreen;
+					padding: 10px;
+					margin: 20px;
+					width: 300px;
+					height: 250px;
+					border-radius: 5px;
+					
+					display: flex;
+									
+					flex-direction: row;
+					flex-wrap: wrap;
+}
+				.item4 {
+					background-color: orange;
+					max-height: 50px;
+					max-width: 90px;
+					margin: 5px;
+					text-align: center;
+					border-radius: 5px;
+				}
+				#coluna28 {
+					row-gap: 60px; 					
+				}
+				#coluna29 {	
+					gap: 5px 40px;  
+				}	
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+			<div class="div">
+				Exemplo: <b>row-gap: 60px; [ Linhas horizontais | Quanto mais aumentar, os itens vao diminuindo para caber dentro do container ]</b> fica assim <br>
+				<div class="container11" id="coluna28">
+					<div class="item4">Sandália Verão</div>
+					<div class="item4">Sandália Primavera</div>
+					<div class="item4">Sandália Inverno</div>
+					<div class="item4">Sandália outono</div>
+					<div class="item4">Sandália Inverno</div>
+					<div class="item4">Sandália outono</div>
+					<div class="item4">Sandália Inverno</div>
+					<div class="item4">Sandália outono</div>
+				</div>
+			</div>
+			<div class="div">
+				Exemplo: <b>gap: 5px 40px; [ 5px = espaços linhas horizontal | 40px = espaços na vertical ]</b> fica assim <br>
+						(outro exemplo:	gap: 20px; aplica espaços todos os lados entre os elemento )
+				<div class="container11" id="coluna29">
+					<div class="item4">Sandália Verão</div>
+					<div class="item4">Sandália Primavera</div>
+					<div class="item4">Sandália Inverno</div>
+					<div class="item4">Sandália outono</div>
+					<div class="item4">Sandália Inverno</div>
+					<div class="item4">Sandália outono</div>
+					<div class="item4">Sandália Inverno</div>
+					<div class="item4">Sandália outono</div>
+				</div>
+			</div>
+		</p>
+		<br><br>
+
+
+		<h2>ORDENANDO OS ITENS COM A PROPRIEDADE ORDER</h2>	
+		<pre>
+
+			order: 0;
+
+			Uma forma de organizar os flex-items, ou seja os 'filhos' do container.
+			A organização para fins de entendimento funciona assim: Eixo: 0
+
+			order: -3; posição primeiro
+			order: -2; posição segundo
+			order: -1; posição terceiro
+			order: 0; posição neutra-Padrao
+			order: 1; posição quarta
+			order: 2; posição quinta
+			order: 3; posição sexto
+
+		</pre>
+		<p>
+			<style>
+				.container11 {
+					background-color: palegreen;
+					padding: 10px;
+					margin: 20px;
+					width: 300px;
+					height: 250px;
+					border-radius: 5px;
+					
+					display: flex;
+									
+					flex-direction: row;
+					flex-wrap: wrap;
+}
+				.item4 {
+					background-color: orange;
+					max-height: 50px;
+					max-width: 90px;
+					margin: 5px;
+					text-align: center;
+					border-radius: 5px;
+				}
+				#coluna30 {
+					row-gap: px;	
+				}
+				#o01 {
+					order: 1;
+					background-color:bisque;
+				}
+				#o02 {
+					order: 2;
+					background-color:bisque;
+				}
+				#o03 {
+					order: 3;
+					background-color:bisque;
+				}
+				#o04 {
+					order: 4;
+					background-color:bisque;
+				}
+				#o05 {
+					order: -1;
+					background-color:bisque;
+				}
+				
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+			<div class="div">
+				Exemplo: <b>item 5 = order: -1; | Item 1 = order: 1; | Item 2 = order: 2; | Item 3 = order: 3; </b> fica assim <br>
+				<div class="container11" id="coluna30">
+					<div class="item4" id="o01">1 Sandália Verão</div>
+					<div class="item4" id="o02">2 Sandália Primavera</div>
+					<div class="item4" id="o03">3 Sandália Inverno</div>
+					<div class="item4" id="o04">4 Sandália outono</div>
+					<div class="item4" id="o05">5 Sandália Inverno</div>
+					<div class="item4" id="o06">6 Sandália outono</div>
+					<div class="item4" id="o07">7 Sandália Inverno</div>
+					<div class="item4" id="o08">8 Sandália outono</div>
+					<div class="item4" id="o09">9 Sandália Inverno</div>
+					<div class="item4" id="010">10 Sandália outono</div>
+					<div class="item4" id="011">11 Sandália Inverno</div>
+					<div class="item4" id="012">12 Sandália outono</div>
+				</div>
+		</p>
+		<br><br>
+
+
+		<h2>PROPRIEDADE FLEX-GROW</h2>	
+		<pre>flex-grow: 1;
+
+			flex-grow, é uma forma de preencher & controlar o maximo de espacço disponivel
+			entre os elementos & items no container.
+
+				flex-flow: 1; exemplo:
+				
+				.item6 {  = Item 2
+					background-color: orange;
+					margin: 5px;
+					height: 50px;
+					width: 150px;
+					font-size: medium;					
+					flex-grow: 1;     
+				}
+
+					o item 2, está ocupando todo o espaço disponivel na horizontal E Vertical.
+
+		</pre>
+		<p>
+			<style>
+				.container12 {
+					background-color: palegreen;
+					padding: 10px;
+					margin bottom: 10px;
+					display: flex;					
+					height: 250px;
+				}
+				.item5 {
+					background-color: orange;
+					margin: 5px;
+					height: 50px;
+					width: 150px;
+					flex-grow: 0;  /*Esta respeitando o limite max-width*/
+				}
+				.item6 {
+					background-color: yellow;
+					margin: 5px;
+					height: 50px;
+					width: 150px;
+					flex-grow: 1;
+					border: 2px solid blue;
+				}
+				.item7 {
+					background-color: lightskyblue;
+					margin: 5px;
+					height: 50px;
+					width: 150px;
+					flex-grow: 0;
+				}
+				#coluna31 {
+					flex-direction: column;						
+				}
+				#coluna32 {
+					flex-direction: row;
+				}	
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+					<div class="div">
+						Exemplo: <b>flex-grow: 1; na vertical</b> fica assim <br>
+						<div class="container12" id="coluna31">
+							<div class="item5">Item 1</div>
+							<div class="item6">Item 2</div>
+							<div class="item7">Item 3</div>
+						</div>
+					</div><div class="div">
+						Exemplo: <b>flex-grow: 1; na horizontal</b> fica assim <br>
+						<div class="container12" id="coluna32">
+							<div class="item5">Item 1</div>
+							<div class="item6">Item 2</div>
+							<div class="item7">Item 3</div>
+						</div>
+					</div>				
+		</p>
+		<br><br>
+
+
+		<h2>PROPRIEDADE FLEX-SHRINK</h2>	
+		<pre>
+			flex-shring
+
+			Essa propriedade vai controlar o quanto o item vai diminuir, 
+			caso sejanecessario.
+
+			Se o container nao possuir espaços suficiente para 
+			acomodar os elementos, eles irao diminuir pra caber.
+
+			.item9 {  = Item 2
+				background-color: yellow;
+				margin: 5px;
+				height: 50px;
+				width: 150px;
+				flex-grow: 0;
+				border: 2px solid blue;
+				flex-shrink: 2;
+			}
+				Flex-shring: 2 está diminuindo o elemento-espaço.
+
+				Ou seja;
+				* flex-shring diminui o elemento, distribuindo os espaços sobrando para os demais items .
+				* flex-grow  calcula o espaço vazio no container e adiciona no elemento item no qual acomoda o codigo.
+
+		</pre>
+		<p>
+			<style>
+			.container13 {
+				background-color: blueviolet;
+				padding: 10px;
+				margin bottom: 20px;
+				display: flex;					
+				height: 300px;
+				width: 300px;
+				gap: 10px;
+			}
+			.item8 {
+				background-color: orange;
+				margin: 5px;
+				height: 50px;
+				width: 150px;
+				flex-grow: 0;
+				flex-shrink: 1;
+
+			}
+			.item9 {
+				background-color: yellow;
+				margin: 5px;
+				height: 50px;
+				width: 150px;
+				flex-grow: 0;
+				border: 2px solid blue;
+				flex-shrink: 6;
+			}
+			.item10 {
+				background-color: lightskyblue;
+				margin: 5px;
+				height: 50px;
+				width: 150px;
+				flex-grow: 0;
+			}
+			#coluna33 {
+				flex-direction: column;						
+			}
+			#coluna34 {
+				flex-direction: row;
+			}	
+			.div {
+				border: 1px solid red;
+				padding: 20px 5px;
+				margin-bottom: 40px;
+			}
+		</style>
+				<div class="div">
+					Exemplo: <b></b> fica assim <br>
+					<div class="container13" id="coluna33">
+						<div class="item8">Item 1</div>
+						<div class="item9">Item 2</div>
+						<div class="item10">Item 3</div>
+					</div>
+				</div><div class="div">
+					Exemplo: <b></b> fica assim <br>
+					<div class="container13" id="coluna34">
+						<div class="item8">Item 1</div>
+						<div class="item9">Item 2</div>
+						<div class="item10">Item 3</div>
+					</div>
+				</div>			
+
+		</p>
+		<br><br>
+
+
+		<h2>PROPRIEDADE FLEX-BASIS</h2>	
+		<pre>
+			flex-basis
+
+			A propriedade define qual o tamanho inicial dos itens do nosso flexbox, 
+			antes que o espaço de seja redistribuido no  container, de acordo
+			com sua dimensão.
+
+			Esse flex sobreescreve o height e width, porem respeita [max e min-width e height]
+
+			.item12 {  =Item 2
+				background-color: yellow;
+				margin: 5px;
+				width: 100px;
+				border: 2px solid blue;
+				text-align: center;
+
+				flex-basis: 190px;
+			}
+
+				Observe que o flex-basis faz aumentar o elemento somente.
+				
+				Pode-se usar tb: 
+					flex-basis: min-content;  o minimo permitido.
+					flex-basis: max-content;  o maximo permitido.
+
+		</pre>
+		<p>
+			<style>
+				.container14 {
+					background-color: blueviolet;
+					padding: 10px;
+					margin bottom: 20px;
+					display: flex;					
+					height: 300px;
+					width: 300px;
+					gap: 10px;
+					align-items: flex-start;					
+				}
+				.item11 {
+					background-color: orange;
+					margin: 5px;
+					width: 100px;
+					text-align: center;		
+				}
+				.item12 {
+					background-color: yellow;
+					margin: 5px;
+					width: 100px;
+					border: 2px solid blue;
+					text-align: center;					
+					flex-basis: 190px;
+					}
+				.item13 {
+					background-color: lightskyblue;
+					margin: 5px;
+					width: 100px;
+					text-align: center;
+					flex: 1;
+						
+				}
+				#coluna35 {
+					flex-direction: column;						
+				}
+				#coluna36 {
+					flex-direction: row;
+				}	
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+					<div class="div">
+						Exemplo: <b></b> fica assim <br>
+						<div class="container14" id="coluna35">
+							<div class="item11">Item 1</div>
+							<div class="item12">Item 2</div>
+							<div class="item13">Item 3</div>
+						</div>
+					</div><div class="div">
+						Exemplo: <b></b> fica assim <br>
+						<div class="container14" id="coluna36">
+							<div class="item11">Curto</div>
+							<div class="item12">Texto Médio</div>
+							<div class="item13">Meu Texto Longoooo</div>
+						</div>
+					</div>	
+
+
+		</p>
+		<br><br>
+
+
+		<h2>SHORTHAND FLEX</h2>	
+		<pre>
+			usando o [flex]
+					a um tipo de uniao e respeito entre os tres abaixo.
+					ex. 
+						flex:  flex-grow   flex-shring  flex-basis
+						
+						<h3>Apliquei o flex: 1; no .item 13 acima. observe la;</h3>
+
+						.item13 {  = Item 3
+							background-color: lightskyblue;
+							margin: 5px;
+							width: 100px;
+							text-align: center;
+							flex: 1;
+								
+						}
+
+							Obs: em cada item que tiver o 'flex' eles vao automaticamente ocupar o espaço 
+							disponivel, de cada conforme os flex que voce colocar em cada item.
+		</pre>
+		<p>
+		</p>
+		<br><br>
+
+
+		<h2>PROPRIEDADE ALIGN-SELF</h2>	
+		<pre>
+				align-self
+
+					Faz com que um único item se comporte diferente na container.
+						Exemplo: 
+
+						.item15 {   =Item 2
+							background-color: yellow;
+							margin: 5px;
+							width: 100px;
+							border: 2px solid blue;
+							text-align: center;
+
+							align-self: flex-end;
+						}
+		</pre>
+		<p>
+
+			<style>
+				.container14 {
+					background-color: blueviolet;
+					padding: 10px;
+					margin bottom: 20px;
+					display: flex;					
+					height: 300px;
+					width: 300px;
+					gap: 10px;
+					align-items: flex-start;					
+				}
+				.item14 {
+					background-color: orange;
+					margin: 5px;
+					width: 100px;
+					text-align: center;						
+				}
+				.item15 {
+					background-color: yellow;
+					margin: 5px;
+					width: 100px;
+					border: 2px solid blue;
+					text-align: center;
+					align-self: flex-end;
+					}
+				.item16 {
+					background-color: lightskyblue;
+					margin: 5px;
+					width: 100px;
+					text-align: center;
+					flex: 1;						
+				}
+				#coluna37 {
+					flex-direction: row;						
+				}
+				.div {
+					border: 1px solid red;
+					padding: 20px 5px;
+					margin-bottom: 40px;
+				}
+			</style>
+					<div class="div">
+						Exemplo: <b></b> fica assim <br>
+						<div class="container14" id="coluna37">
+							<div class="item14">Item 1</div>
+							<div class="item15">Item 2</div>
+							<div class="item16">Item 3</div>
+						</div>
+
+		</p>
+		<br><br>
+
+
+	</body>
+</html>
+
+

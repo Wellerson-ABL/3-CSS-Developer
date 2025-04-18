@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+   	<body> 
+	<h2>Agrupamento de Seletores</h2>	
+	<pre>
+	
+		<p> 
+			<style>
+			.texto {
+				color: aquamarine;
+			}
+			.texto.teste {
+				color: azure;
+			}
+			h1, p, div, #portugues {
+				color:  blue;
+			}
+			</style>
+
+				<div class="texto teste">
+				<h1 id="texto">Testando Ferramenta</h1>
+				<p class="texto teste">Testamento outra Ferramenta</p>
+				<a id="portugues" href="#"></a>
+				</div>
+			
+			h1, p, div, #portugues { = Nesse caso aplica alterações em todos as variaveis ali dentro. Lembrando que href use-se #.
+			.texto.teste { = Nesse caso, ele idenfica as duas variaveis a frente. < div class="texto teste">
+				
+		</p>
+		
+	< p> 
+	< style>
+	.texto {
+		color: aquamarine;
+	}
+	.texto.teste {
+		color: azure;
+	}
+	h1, p, div, #portugues {
+		color:  blue;
+	}
+	< /style>
+		< div class="texto teste">
+		< h1 id="texto">Testando Ferramenta< /h1>
+		< p class="texto teste">Testamento outra Ferramenta< /p>
+		< a id="portugues" href="#">< /a>
+		< /div>
+	
+	h1, p, div, #portugues { = Nesse caso aplica alterações em todos as variaveis ali dentro. Lembrando que href use-se #.
+	.texto.teste { = Nesse caso, ele idenfica as duas variaveis a frente. < div class="texto teste">
+		
+	< /p>
+	</pre><br><br>
+
+	
+	 
+	<h2>Combinador Descendente</h2>	
+	<pre>
+		<p> 
+			<style>
+				li {     /* <u>Vai alterar todos que tiverem li (pai, filho e subjacentes)</u> */
+					color: red;
+				} 
+				li li {  /* <u>Vai alterar apenas o segundo li (li < esse) (apenas o filho, pai nao!)</u> */
+					color: azure;
+				}
+				#lista-01 li { /* <u>vai alterar todos os li dentro da id="lista-01"  (filhos)</u> */
+					color: blue;
+				}
+				.fundo-verde li { /* <u>vai alterar todos os li dentro da < li=class"fundo-verde"> (apenas filhos )</u> */
+					background: lightgreen;
+				}
+				.fundo-azul li { /* <u>vai alterar todos os li dentro da < li=class"fundo-verde"> (apenas filhos)</u> */
+					background: lightblue;
+				}
+				.fundo-verde #sublista-01 li { /* <u>vai alterar todos os li dentro da  < ul id="sublista-1"> que fica dentro da < li class="fundo-verde" (apenas os filhos)</u> */
+					color: black;
+				}	
+			</style>
+	
+		<ul>
+			<li class="fundo-verde" id="lista-01">
+				<div>Item 1</div>
+				<ul id="sublista-1">
+					<li>Subitem A</li>
+					 <li>Subitem b</li>
+				</ul>
+			</li>
+	
+			<li class="fundo-verde" id="lista-02">
+				<div>Item 1</div>
+				<ul id="sublista-2">
+					<li>Subitem A</li>
+					 <li>Subitem b</li>
+				</ul>
+			</li>
+		</ul>
+	
+		</p>
+		
+		< p> 
+		< style>
+			li {     /* <u>Vai alterar todos que tiverem li (pai, filho e subjacentes)</u> */
+				color: aquama rine;
+			} 
+			li li {  /* <u>Vai alterar apenas o segundo li (li < esse) (apenas o filho, pai nao!)</u> */
+				color: azure;
+			}
+			#lista-01 li { /* <u>vai alterar todos os li dentro da id="lista-01"  (filhos)</u> */
+				color: blue;
+			}
+			.fundo-verde li { /* <u>vai alterar todos os li dentro da < li=class"fundo-verde"> (apenas filhos )</u> */
+				background: lightgreen;
+			}
+			.fundo-azul li { /* <u>vai alterar todos os li dentro da < li=class"fundo-verde"> (apenas filhos)</u> */
+				background: lightblue;
+			}
+			.fundo-verde #sublista-01 li { /* <u>vai alterar todos os li dentro da  < ul id="sublista-1"> que fica dentro da < li class="fundo-verde" (apenas os filhos)</u> */
+				color: black;
+			}	
+		< /style>
+
+	< ul>
+		< li class="fundo-verde" id="lista-01">
+			< div>Item 1< /div>
+			< ul id="sublista-1">
+				< li>Subitem A< /li>
+		 		< li>Subitem b< /li>
+			< /ul>
+		< /li>
+
+		< li class="fundo-verde" id="lista-02">
+			< div>Item 1< /div>
+			< ul id="sublista-2">
+				< li>Subitem A< /li>
+		 		< li>Subitem b< /li>
+			< /ul>
+		< /li>
+	< /ul>
+
+	< /p>
+	</pre><br><br>
+
+	 
+	<h2>Combinador Filho</h2>	
+	<pre><p> 
+
+		<style>
+			div p {
+			 background: light green;	 /* Vai aplicar em todas 'p' dentro da 'div' e suas subjacentes  */
+			}
+			div > p {  /* Vai aplicar somente nas 'p' filhos da div. [a 'p' dentro da Span é  filho da span, nao se aplica.] */
+		 	    background: red;
+				color: yellow;
+			}
+			
+			</style>
+
+			<div>
+				<p>Paragrafo 1 Dentro da Div</p>
+				<p>Paragrafo-2 dentro da div</p>
+				<span>
+					<p>Paragrafo 3 dentro da div, dentro da span</p>
+				</span>				
+			</div>
+
+			<p>Paragrafo 4 fora da div</p>
+			<p>Paragrafo 5 fora da div</p>
+
+	</p>
+	< p> 
+
+		< style>
+			div p {
+			 background: light green;	 /* Vai aplicar em todas 'p' dentro da 'div' e suas subjacentes  */
+			}
+			div > p {  /* Vai aplicar somente nas 'p' filhos da div. [a 'p' dentro da Span é  filho da span, nao se aplica.] */
+		 	    background: red;
+				color: yellow;
+			}
+			
+			< /style>
+
+			< div>
+				< p>Paragrafo 1 Dentro da Div</ p>
+				< p>Paragrafo-2 dentro da div< /p>
+				 < span>
+					< p>Paragrafo 3 dentro da div, dentro da span< /p>
+				< /span>				
+			< /div>
+
+			< p>Paragrafo 4 fora da div< /p>
+			< p>Paragrafo 5 fora da div< /p>
+
+	< /p>
+	</pre><br><br>
+
+	 
+	<h2>Combinador Irmão</h2>	
+	<pre><p> 
+	<style>
+		div + p {  /* Vao aplicar somente irmao adjacente, ou seja o proximo 'p = paragrafo 4' que estão fora da div. */
+		background: blueviolet;
+		color: white;	
+	}
+	div ~ p {  /* Vao aplicar em todos irmãos adjacentes, ou seja todos os proximos 'p = paragrafos' que estão fora da div. */
+		background: blue;
+		color: white;	
+	}
+	.fundo-verde span p { /* Vai aplicar somente 'p = paragrafo 3' está dentro da span. */
+		background:green;
+		color: yellow;
+	} 
+	.fundo-verde span ~ p { /* Vai aplicar somente irmao adjacente 'p = paragrafo 3.2', o segundo 'p' que está fora do span. */
+		background:gray;
+	} 
+	.fundo-verde span + p { /* Vai aplicar somente irmao adjacente 'p = paragrafo 3.1' o primeiro 'p' que está fora da span. */
+		background:pink;
+	} 
+	</style>
+
+	<div class="fundo-verde">
+		<p>Paragrafo 1 Dentro da Div</p>
+		<p>Paragrafo-2 dentro da div</p>
+		<span>
+			<p>Paragrafo 3 dentro da div, dentro da span</p>
+		</span>	
+		<p>Paragrafo 3.1 dentro da div, fora da span</p>
+		<p>Paragrafo 3.2 dentro da div, fora da span</p>
+
+	</div>
+
+	<p>Paragrafo 4 fora da div</p>
+	<p>Paragrafo 5 fora da div</p>
+	</p>
+
+	
+	< style>
+		div + p {  /* <u>Vao aplicar somente irmao adjacente, ou seja o proximo 'p = paragrafo 4' que estão fora da div.</u> */
+		background: blueviolet;
+		color: white;	
+	}
+	div ~ p {  /* <u>Vao aplicar em todos irmãos adjacentes, ou seja todos os proximos 'p = paragrafos' que estão fora da div.</u> */
+		background: blue;
+		color: white;	
+	}
+	.fundo-verde span p { /* <u>Vai aplicar somente 'p = paragrafo 3' está dentro da span.</u> */
+		background:green;
+		color: yellow;
+	} 
+	.fundo-verde span ~ p { /* <u>Vai aplicar somente irmao adjacente 'p = paragrafo 3.2', o segundo 'p' que está fora do span.</u> */
+		background:gray;
+	} 
+	.fundo-verde span + p { /* <u>Vai aplicar somente irmao adjacente 'p = paragrafo 3.1' o primeiro 'p' que está fora da span.</u> */
+		background:pink;
+	} 
+	< /style>
+
+	< div class="fundo-verde">
+		< p>Paragrafo 1 Dentro da Div< /p>
+		< p>Paragrafo-2 dentro da div< /p>
+		< span>
+			< p>Paragrafo 3 dentro da div, dentro da span< /p>
+		< /span>	
+		< p>Paragrafo 3.1 dentro da div, fora da span< /p>
+		< p>Paragrafo 3.2 dentro da div, fora da span< /p>
+
+	< /div>
+
+	< p>Paragrafo 4 fora da div< /p>
+	< p>Paragrafo 5 fora da div< /p>
+	</p>
+	</pre><br><br>
+
+	</body>
+</html>
+
+

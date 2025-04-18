@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMBRAS</title>
+
+</head>
+   	<body> 
+		
+	<h2> EFEITO DE SOMBRA NOS ELEMENTOS </h2>	
+	<pre>
+<p>
+		<STYLE>
+			h2{
+				border: 1px solid yellow;
+				background-color: black;
+				color: white;
+				text-align: center;
+			}
+			.inter {
+				margin-bottom: 5px;				
+			}
+			
+			.s1 {
+				width: 200px;
+				height: 200px;
+				border:10px solid brown;
+				margin: 20px auto;
+				background: yellow;
+				box-shadow: 60px 30px red;
+			}
+			.s2 {
+				width: 200px;
+				height: 200px;
+				border:10px solid brown;
+				margin: 20px auto;
+				background: yellow;
+				box-shadow: 60px 30px 20px red;
+			}
+			.s3 {
+				width: 200px;
+				height: 200px;
+				border:10px solid brown;
+				margin: 20px auto;
+				background: yellow;
+				box-shadow: 60px 30px 20px 20px red;
+			}
+		
+			.s5 {
+				width: 200px;
+				height: 200px;
+				border:10px solid brown;
+				margin: 20px auto;
+				background: yellow;
+				box-shadow: inset 60px 30px 20px 20px red;
+							/*  60px= para lado direito
+								30px= para baixo
+								20px= desfocar 
+								20px= aumentar ou diminuar negativo a expansão do desfocar
+								inset = deixar efeitos para dentro.
+								*/				
+			}
+			.s6 {
+				width: 200px;
+				height: 200px;
+				border:10px solid brown;
+				margin: 20px auto;
+				background: yellow;
+				box-shadow: inset 60px 30px 20px 20px red,  60px 30px 20px 20px red;
+							/*  60px= para lado direito
+								30px= para baixo
+								20px= desfocar 
+								20px= aumentar ou diminuar negativo a expansão do desfocar
+								inset = deixar efeitos para dentro.
+								a virgula permiti mais shadows no elemento. 
+								*/			
+			}
+			img{
+				width: 400px;
+				height: 400px;
+				margin: 20px auto;
+				object-fit: cover;
+				filter: drop-shadow(10px 10px 5px red);
+			
+			}
+
+
+		</STYLE>
+
+
+
+		<div class="inter">
+		<div class="s1">box-shadow: 60px 30px red; </div>
+		<div class="s2">box-shadow: 60px 30px 20px red; </div>
+		<div class="s3">box-shadow: 60px 30px 20px 20px red; </div>
+
+		<div class="s5">box-shadow: inset 60px 30px 20px 20px red; </div>
+		<div class="s6">box-shadow: inset 60px 30px 20px 20px red,  60px 30px 20px 20px red; </div>
+
+		<hr>
+		object-fit: cover;
+		filter: drop-shadow(10px 10px 5px red);
+		
+		<img class="s7" src="./img/logo.png" alt="">
+		<img class="s7" src="./img/ACDC.jpg" alt="">
+		</div>
+
+
+	< STYLE>
+		h2{
+			border: 1px solid yellow;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		.inter {
+			margin-bottom: 5px;				
+		}
+		
+		.s1 {
+			width: 200px;
+			height: 200px;
+			border:10px solid brown;
+			margin: 20px auto;
+			background: yellow;
+			box-shadow: 60px 30px red;
+		}
+		.s2 {
+			width: 200px;
+			height: 200px;
+			border:10px solid brown;
+			margin: 20px auto;
+			background: yellow;
+			box-shadow: 60px 30px 20px red;
+		}
+		.s3 {
+			width: 200px;
+			height: 200px;
+			border:10px solid brown;
+			margin: 20px auto;
+			background: yellow;
+			box-shadow: 60px 30px 20px 20px red;
+		}
+	
+		.s5 {
+			width: 200px;
+			height: 200px;
+			border:10px solid brown;
+			margin: 20px auto;
+			background: yellow;
+			box-shadow: inset 60px 30px 20px 20px red;
+						/*  60px= para lado direito
+							30px= para baixo
+							20px= desfocar 
+							20px= aumentar ou diminuar negativo a expansão do desfocar
+							inset = deixar efeitos para dentro.
+							*/				
+		}
+		.s6 {
+			width: 200px;
+			height: 200px;
+			border:10px solid brown;
+			margin: 20px auto;
+			background: yellow;
+			box-shadow: inset 60px 30px 20px 20px red,  60px 30px 20px 20px red;
+						/*  60px= para lado direito
+							30px= para baixo
+							20px= desfocar 
+							20px= aumentar ou diminuar negativo a expansão do desfocar
+							inset = deixar efeitos para dentro.
+							a virgula permiti mais shadows no elemento. 
+							*/			
+		}
+		img{
+			width: 400px;
+			height: 400px;
+			margin: 20px auto;
+			object-fit: cover;
+			filter: drop-shadow(10px 10px 5px red);
+		
+		}
+
+
+	< /STYLE>
+
+
+
+< div class="inter">
+	< div class="s1">box-shadow: 60px 30px red; < /div>
+	< div class="s2">box-shadow: 60px 30px 20px red; < /div>
+	< div class="s3">box-shadow: 60px 30px 20px 20px red; < /div>
+
+	< div class="s5">box-shadow: inset 60px 30px 20px 20px red; < /div>
+	< div class="s6">box-shadow: inset 60px 30px 20px 20px red,  60px 30px 20px 20px red; < /div>
+
+<hr>
+object-fit: cover;
+filter: drop-shadow(10px 10px 5px red);
+	
+	< img class="s7" src="./img/logo.png" alt="">
+	< img class="s7" src="./img/ACDC.jpg" alt="">
+< /div>
+
+</p>
+	</pre><br><br>
+	
+	<h2>EFEITO DE SOMBRA NOS TEXTOS</h2>	
+	<pre>
+	<p>
+		<style>
+			.so1{
+				width: auto;
+				color: blue;
+				text-align: center;
+				font-size: 40px;
+				text-shadow: 25px 25px 5px red;
+				box-shadow: 10px 10px 5px gray;
+			}
+
+		</style>
+
+		<div class="so1">text-shadow: 25px 25px 5px red; </div>
+
+
+		< style>
+			.so1{
+				width: auto;
+				color: blue;
+				text-align: center;
+				font-size: 40px;
+				text-shadow: 25px 25px 5px red;
+				box-shadow: 10px 10px 5px gray;
+			}
+
+		< /style>
+
+		< div class="so1">text-shadow: 25px 25px 5px red; < /div>
+	
+
+
+	</p>
+	</pre><br><br>
+	</body>
+</html>

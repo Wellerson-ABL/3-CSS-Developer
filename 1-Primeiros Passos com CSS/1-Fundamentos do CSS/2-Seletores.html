@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+   	<body> 
+		<h2>Seletor por Tipo</h2>	
+	<pre>
+
+	<p> 
+		< style>
+		h1 {
+			color: blue;
+			background: white;
+
+		}
+		< /style>
+
+		Esse tipo de style é tag especifico, ou seja, ele só vai afetar o elemento h1.
+	</p>
+
+		
+	<p> 
+		<style>
+		h1 {
+			color: blue;
+			background: white;
+		}
+		</style>
+				<h1>Esse tipo de style é tag especifico,
+ou seja, ele só vai afetar o elemento h1.
+				</h1>
+		</p>
+	</pre>
+
+	<br>
+	<br>
+
+	<h2>Seletor por ID (#)</h2>	
+	<pre>
+	<p> 
+		<style>
+		#titulo {
+			color: blue;
+			background: white;
+		}
+		</style>
+
+		Esse tipo de style é tag especifico, ou seja, vai afetar a tag com id.: Exemplo::
+		<h1 id="titulo">Títulos</h1>
+
+		< style>
+		#titulo {
+			color: blue;
+			background: white;
+		}
+		< /style>
+
+		< h1 id="titulo"> Títulos < /h1>
+	</p>
+	</pre>
+
+	<br>
+	<br>
+
+	
+	<h2>Seletor por Classe (.)</h2>	
+	<pre>
+	<p> <style>
+		.varios {
+			color: blue;
+			background: white;
+		}
+		.texto-maiusculo {
+			text-transform: uppercase;
+		}
+		</style>
+
+		Esse tipo de style é tag especifico, ou seja, vai afetar a tag com class.: Exemplo::
+		<h1 class="varios texto-maiusculo"> Bem Vindo ! </h1>
+
+		< style>
+		.varios {
+			color: blue;
+			background: white;
+		}
+		.texto-maiusculo {
+			text-transform: uppercase;
+		}
+		< /style>
+
+		< h1 class="varios texto-maiusculo"> Bem Vindo ! < /h1>
+
+		TODOS OS ELEMENTOS COM 'ESSAS CLASSES' VAO SER AFETADOS.
+		Na parte Class="varios texto-maiusculo texto-italico" | podem ter varios elementos de identificados. Nesse exemplo tres identificadores: varios, texto-maiusculo, texto-italico 
+		OBS: todos seletores nao permitem espaços entre o nome da classe e o ponto ou nos nomes Exemplo: .varios,.bem-vindo etc.
+
+	</p>
+	</pre>
+
+	<br>
+	<br>
+
+	
+	<h2>Seletor Universal (*)</h2>	
+	<pre>
+	<p> 
+		
+		<style>
+			* {
+				font-weight: bold;
+			} 
+		</style>
+		< style>
+			* {
+				font-weight: bold;
+			} 
+		< /style>
+
+		NESSE CASO: Esse comando faz toda a pagina ficar em NEGRITO.
+		Esse comando (*) faz aplicação universal, em todas as tags, mesmo que elas ja tenhas CSS aplicado.
+	</p>
+	</pre>
+
+	<br>
+	<br>
+
+	
+	<h2>Seletor de Atributo ([atrib])</h2>	
+	
+	<p> 
+		<style>
+/* Obs oculta, so funciona no style */
+
+				[title] {
+					color: aqua;
+					
+				}
+				[title="Netflix"] {
+					color: aqua;
+				}
+				[title="PrimeeVideo"]{
+					color: blue;
+				}
+				[title~="Streaming"] {
+					color: yellow;
+					background: green;
+				}
+				[href^="http://"]{
+					color: bisque;
+					background: black;
+				}
+				[href^="https://"]{
+					color:aqua;
+					background: gray;
+
+				}
+				[href$="login"]{
+					color: bisque;
+					background: gray;
+				}
+					
+
+		</style>
+
+		<div>
+			<ul>
+				<li>
+					<a title="Netflix" href="http://www.netflix.com">
+						Netflix
+					</a>
+				</li>
+				<li>
+					<a title="Streaming Netflix" href="http://www.netflix.com">
+						Streaming Netflix
+					</a>
+				</li>
+				<li>
+					<a title="Prime" href="https://www.Primevideo.com/login">
+					Prime Video
+					</a>					
+				</li>
+				<li>
+					<a title="Prime" href="http://www.Primevideo.com">
+					Prime Video
+					</a>					
+				</li>
+			
+			</ul>
+		</div>
+
+		<pre>
+		< style>
+/* Obs oculta, so funciona no style */
+
+				[title] {
+					color: aqua;
+					
+				}
+				[title="Netflix"] {
+					color: aqua;
+				}
+				[title="PrimeeVideo"]{
+					color: blue;
+				}
+				[title~="Streaming"] {
+					background: green;
+				}
+				[href^="http://"]{
+					color: bisque;
+				}
+				[href^="https://"]{
+					color:aqua;
+				}
+				[href$="login"]{
+					color: bisque;
+				}
+					
+
+		< /style>
+
+		< div>
+			< ul>
+				< li>
+					< a title="Netflix" href="http://www.netflix.com">
+						Netflix
+					< /a>
+				< /li>
+				< li>
+					< a title=" Streaming Netflix" href="http://www.netflix.com">
+						Streaming Netflix
+					< /a>
+				< /li>
+				< li>
+					< a title="Prime" href="https://www.Primevideo.com/login">
+					Prime Video
+					< /a>					
+				< /li>
+				< li>
+					< a title="Prime" href="http://www.Primevideo.com">
+					Prime Video
+					< /a>					
+				< /li>
+			
+			< /ul>
+		< /div>
+
+		[title]: Todos os elemento que conter o atributo  title, vai ser alterado.
+		[title="Nextlix"]: Nesse caso, o title com nome Netflix
+		[title~="Streaming"]: Nesse caso, o tiu vai alterar a palavra sozinha/isolada < a title="Streaming"> ou estiver contida com outras variaveis < a title="Prime Streaming">. 	
+		[title|="Streaming"]: Nesse caso, a barra vai pesquisar a palavra <u>seguido do hifen</u> < a title="Streaming-Netflix">. Se for Netlifx-Streaming ele nao aceita.
+		[href$="login"]: Nesse caso( $ ) = sufixo, vai alterar o que vem depois: < a title="Prime" href="http://www.Primevideo.com/login"> 
+		[href^="http://"]: Nesse caso;( ^ ) = prefixo, vai alterar o que vem antes < a title="Prime" href="http://www.Primevideo.com/login">
+		[href*="https://"]: Nesse caso;( * ) = Nesse caso vai alterar qualquer comando contenha https:// 
+
+	</p>
+	</pre>
+
+	<br>
+	<br>
+
+	
+	</body>
+</html>
+
+

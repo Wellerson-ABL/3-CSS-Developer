@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+   	<body> 
+		<h2>Propriedade Object-Fit</h2>	
+	<pre>
+	<p>
+		<style>
+			        h2{
+            border: 1px solid yellow;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+			div{
+				width: 200px;
+				height: 300px;
+				border: 5px solid blue;
+				
+			}
+			img{
+				width: 100%;
+				height: 100%;
+		
+			}
+			#contain{
+				object-fit: contain;			
+			}
+			#cover{
+				object-fit: cover;
+			}
+			#none{
+				object-fit: none;
+			}
+			#scale-down{
+				object-fit: scale-down;
+			}
+			
+		</style>
+
+		<h1>Propriedade <code>object-fit</code></h1>
+		<code>object-fit: fill;</code> (padrao)   // Reduz a imagem para caber
+		<div>
+			<img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="fill">
+			</div>
+
+		
+		<code>object-fit: fill;</code> (contain) 
+			       		// A imagem é redimensionada para caber dentro do elemento, mantendo a proporção da imagem original. O espaço restante do elemento será
+						//	 preenchido com a cor de fundo do elemento.
+		<div>
+			<img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="contain">
+				</div>
+
+		<code>object-fit: fill;</code> (cover) // A imagem é redimensionada para cobrir completamente o elemento, 
+					 						//	mantendo a proporção da imagem original. A imagem pode ser cortada para caber no elemento.
+		<div>
+			<img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="cover">
+			</div>
+	
+		<code>object-fit: fill;</code> (none) // A imagem não é redimensionada. Ela mantém seu tamanho original, mesmo que isso signifique 
+												// que ela não se encaixa no elemento.
+		<div>
+			<img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="none">
+			</div>
+
+			<code>object-fit: fill;</code> (scale-down) // A imagem é redimensionada para caber dentro do elemento, mas apenas se for maior que o 
+														// elemento. Se a imagem for menor, ela não será redimensionada.
+			<div>
+				<img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="scale-down">
+				</div>
+		
+		
+		</p>
+
+
+
+		< p>
+			< style>
+				div{
+					width: 200px;
+					height: 300px;
+					border: 5px solid blue;
+					
+				}
+				img{
+					width: 100%;
+					height: 100%;
+				}
+				#contain{
+					object-fit: contain;
+				}
+				#cover{
+					object-fit: cover;
+				}
+				#none{
+					object-fit: none;
+				}
+				#scale-down{
+					object-fit: scale-down;
+				}
+				
+			< /style>
+	
+			< h1>Propriedade < code>object-fit< /code>< /h1>
+			< code>object-fit: fill;< /code> (padrao)   // Reduz a imagem para caber
+			< div>
+				< img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="fill">
+				< /div>
+	
+			
+			< code>object-fit: fill;< /code> (contain) 
+							   // A imagem é redimensionada para caber dentro do elemento, mantendo a proporção da imagem original. O espaço restante do elemento será
+							//	 preenchido com a cor de fundo do elemento.
+			< div>
+				< img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="contain">
+					< /div>
+	
+			< code>object-fit: fill;< /code> (cover) // A imagem é redimensionada para cobrir completamente o elemento, 
+												 //	mantendo a proporção da imagem original. A imagem pode ser cortada para caber no elemento.
+			< div>
+				< img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="cover">
+				< /div>
+		
+			< code>object-fit: fill;< /code> (none) // A imagem não é redimensionada. Ela mantém seu tamanho original, mesmo que isso signifique 
+													// que ela não se encaixa no elemento.
+			< div>
+				< img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="none">
+				< /div>
+	
+				< code>object-fit: fill;< /code> (scale-down) // A imagem é redimensionada para caber dentro do elemento, mas apenas se for maior que o 
+															// elemento. Se a imagem for menor, ela não será redimensionada.
+				< div>
+					< img src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="scale-down">
+					< /div>
+			
+			
+			< /p>
+	</pre>
+
+	<br>
+	<br>
+
+
+	
+	<h2>Propriedade <code>Object-Position</code> </h2>	
+	<pre>
+	<p>
+		<style>
+			#img2 {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: right 
+				/* object-position: right; A imagem vai para o lado direito dentro do elemento. */
+				/* object-position: top; A imagem  vai para o lado de cima dentro do elemento. */
+				/* object-position: bottom; A imagem vai para o lado baixo dentro  do elemento. */
+				/* object-position: center; A imagem fica centralizado dentro do elemento. */
+			
+			}
+			
+		</style>
+
+
+<div>
+<img id="img2" src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="padrao">
+</div>
+
+		</p>
+
+		< p>
+			< style>
+				#img2 {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: right 
+					/* object-position: right; A imagem vai para o lado direito dentro do elemento. */
+					/* object-position: top; A imagem  vai para o lado de cima dentro do elemento. */
+					/* object-position: bottom; A imagem vai para o lado baixo dentro  do elemento. */
+					/* object-position: center; A imagem fica centralizado dentro do elemento. */
+				
+				}
+				
+			< /style>
+	
+	
+	< div>
+	< img id="img2" src="https://lojasbrilhante.vteximg.com.br/arquivos/ids/164711-1000-1000/balao-sao-roque-n7-vermelho-50-unidades.png?v=637225694972730000" alt="" id="padrao">
+	< /div>
+	
+			< /p>
+	</pre>
+
+	<br>
+	<br>
+
+	</body>
+</html>
+
+
