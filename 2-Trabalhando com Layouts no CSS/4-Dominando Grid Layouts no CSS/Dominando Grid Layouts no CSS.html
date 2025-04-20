@@ -25,6 +25,7 @@
 	}
 	pre {
 		font-weight: bold;
+		font-size: 1.1em;
 	}
 </style>
 
@@ -146,28 +147,57 @@
 
 			Cada espaço ocupado define um número de COLUNAS do grid:
 			
-				 grid-template-columns: espaço 1  espaço 2  espaço 3; [= a 3 Colunas]. 
-					e a largura[medida] de cada [250px/200px/400px] uma das colunas. 
+			grid-template-columns: espaço 1  espaço 2  espaço 3; [= a 3 Colunas]. 
+			e a largura[medida] de cada [250px/200px/400px] uma das colunas. 
 						
-						Exemplo abaixo: 
-							grid-template-columns: 250px 200px 400px;
+			Exemplo abaixo: 
+			grid-template-columns: 250px 200px 400px;
 
-						A ORIENTAÇÃO: É VERTICAL, MAIS A medida é na HORIZONTAL [mexe os lados.].
+			A ORIENTAÇÃO: É VERTICAL, MAIS A medida é na HORIZONTAL [mexe os lados.].
 
 	
 		<u>grid-template-rows:</u>
 		
 			Cada espaço ocupado define um número de LINHAS do grid:
 			
-				 grid-template-rows: espaço 1  espaço 2; [= a 2 Linhas]. 
+			grid-template-rows: espaço 1  espaço 2; [= a 2 Linhas]. 
 					e a altura[medida] de cada [50px/50px] uma das linhas. 
 						
-						Exemplo abaixo: 
-							grid-template-rows: 50px 50px;
+			Exemplo abaixo: 
+			grid-template-rows: 50px 50px;
 
-						A ORIENTAÇÃO: É HORIZONTAL, MAIS A medida é na VERTICAL [mexe pra cima e pra baixo].
+			A ORIENTAÇÃO: É HORIZONTAL, MAIS A medida é na VERTICAL [mexe pra cima e pra baixo].
 
-		</pre>
+			1fr = unidade de medida do grid, que significa fração.
+			Exemplo: grid-template-columns: 1fr 1fr 2fr;
+		
+			Nem sempre ele terá base para definir 1fr, entao no container deve defini-se por width e height.
+	
+		<u>Função repeat ()</u>
+
+			Uma função que repete o valor definido, no caso abaixo 20 colunas de 1fr.
+				
+			Exemplo: grid-template-columns: repeat(20, 1fr).
+			Exemplo: grid-template-rows: repeat(20, 1fr).
+
+			pode-se usar outras medidas, como px, %, etc.
+			Exemplo: grid-template-columns: repeat(20, 100px).
+
+		<u>repeat(auto-fill, 300px)</u>;
+			
+			Ele vai preencher o espaço disponível com 300px, e se não couber mais, ele vai criar uma nova linha.
+			ele vai preencher o maximo possivel na mesma linha.
+			e vai manter o 'espaço alocado' para os possiveis novos items (forma invisivel). 	
+
+		<u>repeat(auto-fit, 300px)</u>;
+			Porem, no auto-fit ele vai recolher o 'espaço Alocado', não criando novos espaços, só o necessario.
+			E tambem vai preencher o espaço disponível com 300px, e se não couber mais, ele vai criar uma nova linha.
+
+			Conclusao, a olho nu, o auto-fill e o auto-fit são iguais, porem no dev tools do chrome, eles se
+			comportam de forma diferente.
+			Ver no Dev Tools do Chrome, deve diminuir no zoom até ver a diferenca - os traçados.
+	
+	</pre>
 	<p>
 		<style>
 			
@@ -186,7 +216,7 @@
 				margin-bottom: 20px;				
 
 				display: grid;
-				grid-template-columns: 220px 300px 400px 50px;
+				grid-template-columns: 3% 8% 14% 20% 25% 30%;
 				}
 			.container4 {
 				border: 1px solid black;
@@ -195,8 +225,87 @@
 
 				display: grid;
 				grid-template-columns: 200px 300px 400px;
-				grid-template-rows: 50px 100px ;
-			
+				grid-template-rows: 50px 100px ;		
+			}
+			.container5 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: 1fr 1fr 2fr;
+				grid-template-rows: 1fr 1fr;  /* Como ele nao passo base, definir 1fr, no container defini-se por width e height*/
+				height: 250px;  
+			}
+			.container6 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				height: 150px;  
+			}
+			.container7 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: 50px repeat(2, 1fr) 100px;
+				grid-template-rows: repeat(2, 1fr);
+				height: 150px;  
+			}
+			.container8 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: repeat(3, 1fr 2fr);
+				grid-template-rows: repeat(2, 1fr);
+				height: 150px;  
+			}
+			.container9 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: repeat(auto-fill, 300px);
+				grid-template-rows: repeat(2, 1fr);
+				height: 300px;  
+			}
+			.container10 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: repeat(auto-fit, 300px);
+				grid-template-rows: repeat(2, 1fr);
+				height: 300px;  
+			}
+			.container11 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: min-content;
+				grid-template-rows: min-content;
+				height: 300px;  
+			}
+			.container12 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: max-content max-content;
+				grid-template-rows: max-content;
+				height: 300px;  
 			}
 			.item2 {
 				background-color: yellowgreen;
@@ -219,7 +328,7 @@
 			<div class="item item4">Item 3</div>
 		</div><br>
 		Exemplo: display: grid;<br>
-		grid-template-columns: 220px 300px 400px 50px;
+		grid-template-columns:  3% 8% 14% 20% 25% 30%;
 		<div class="container3">
 			<div class="item item2">Item 1</div>
 			<div class="item item2">Item 1</div>
@@ -239,36 +348,322 @@
 			<div class="item item4">Item 3</div>						
 			<div class="item item4">Item 3</div>
 		</div>
+		display: grid;<br>
+		grid-template-columns: 1fr 1fr 2fr;<br>
+		grid-template-rows: 1fr 1fr;
+		<div class="container5">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+		display: grid;<br>
+		grid-template-columns: repeat(4, 1fr);<br>
+		grid-template-rows: repeat(2, 1fr);
+		<div class="container6">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+		display: grid; <br>
+		grid-template-columns: 50px repeat(2, 1fr) 100px;<br>
+		grid-template-rows: repeat(2, 1fr);
+		<div class="container7">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+		display: grid;<br>
+		grid-template-columns: repeat(3, 1fr 2fr);<br>
+		grid-template-rows: repeat(2, 1fr);
+		<div class="container8">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+		display: grid;<br>
+		grid-template-columns: repeat(auto-fill, 300px); <br>
+		grid-template-rows: repeat(2, 1fr);<br><br>
+		
+		o auto-fill vai preencher o espaço máximo possível, conforme a quantidade disponivel de espaço na tela.
+		<div class="container9">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+		display: grid;<br>
+		grid-template-columns: repeat(auto-fit, 300px);<br>
+		grid-template-rows: repeat(2, 1fr);<br><br>
 
+		o auto-fit vai ocupar o espaço máximo possível, conforma a quantidade disponivel de espaço na tela.
+		<div class="container10">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+
+		display: grid;<br>
+		grid-template-columns: min-content;<br>
+		grid-template-rows: min-content;<br><br>
+
+		observe que o grid não vai ocupar todo o espaço disponível,
+		ele vai ocupar o espaço mínimo necessário para os itens.
+		<div class="container11">
+			<div class="item item2">trilha CSS oi</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+		</div>
+
+		display: grid;<br>
+		grid-template-columns: max-content max-content;<br>
+		grid-template-rows: max-content;<br><br>
+
+		Observe que ele ocupa o espaço máximo possível, conforme a quantidade de caracteres.
+		<div class="container12">
+			<div class="item item2">Trilha CSS oi</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Tudo bem com voce?</div>						
+			<div class="item item4">Item 3</div>
+		</div>
 	</p>
 
 	<br>
 	<br>
 
 	<h2>Grid implícito e explícito</h2>	
-	<pre></pre>
-	<p></p>
+	<p>
+		<style>			
+			.container13 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				height: 500px; 
+				
+				grid-auto-flow: row; /* Faz com que os itens extras sejam alocados em linhas. */
+				grid-auto-rows: 1fr; /* Define a altura das linhas automáticas. */
+				grid-auto-columns:0px; /* Define a largura das colunas automáticas. */
+			}
+		</style>
+		<pre>
+		grid-auto-flow: column; 	Faz com que os itens extras sejam alocados em colunas. 
+		grid-auto-rows: 1fr;    	Define a altura das linhas automáticas.
+		grid-auto-columns: 0px; 	Define a largura das colunas automáticas.
+	</pre>
+		Nesse caso, toda vez que um item for adicionado,
+		ele vai ocupar 1fr <b>grid-auto-rows: 1fr;</b> e na nova linha ou coluna <b>grid-auto-flow: row;</b> ou <b>grid-auto-columns:column;</b>  de forma automatica.
+
+		<div class="container13">
+			<div class="item item2">Item 1</div>
+			<div class="item item2">Item 1</div>
+			<div class="item item3">Item 2</div>
+			<div class="item item3">Item 2</div>			
+			<div class="item item4">Item 3</div>						
+			<div class="item item4">Item 3</div>
+
+			<div class="item item4">Informação nova 1 </div>						
+			<div class="item item4">Informação nova 2</div>
+		</div>
+	</p>
 
 	<br>
 	<br>
 
 	<h2>Definindo o tamanho mínimo e máximo das faixas</h2>	
 	<pre></pre>
-	<p></p>
+	<p>	
+		<style>			
+			.container14 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				display: grid;
+				grid-template-columns: repeat(3, minmax(200px, 150px));
+				grid-template-rows: minmax(1ft, auto);
+				height: 500px;
+
+				}
+		</style>	
+		display: grid;<br>
+		grid-template-columns: repeat(3, minmax(200px, 150px));<br>
+		grid-template-rows: minmax(1ft, auto);<br>
+		height: 500px;<br>
+		<br>
+		Observe que o <b>grid-template-rows: minmax(1ft, auto);</b> programou o minimo de 500px de altura= 1ft, <br>e programou <b>auto</b> para esse espaço aumentar automaticamente conforme o conteudo adicionado. 
+		<div class="container14">
+		<div class="item item2">Trilha CSS oi</div>
+		<div class="item item2">Item 1</div>
+		<div class="item item3">Item 2</div>
+		<div class="item item3">Item 2</div>			
+		<div class="item item4">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque, inventore suscipit aut sed facilis, debitis quisquam quidem libero pariatur accusamus numquam nulla non ut harum blanditiis reiciendis dolore autem?
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque, inventore suscipit aut sed facilis, debitis quisquam quidem libero pariatur accusamus numquam nulla non ut harum blanditiis reiciendis dolore autem?
+		</div>						
+		<div class="item item4">Item 3</div>
+	</div></p>
 
 	<br>
 	<br>
 
 	<h2>Alocando os itens do Grid nas posições específicas</h2>	
-	<pre></pre>
-	<p></p>
+	<pre>
+
+		grid-column-start: 1; 		 Inicia na coluna 1 
+		grid-column-end: 3; 		 Termina na coluna 3 
+		grid-row-start: 1;		 Inicia na linha 1 
+		grid-row-end: 3; 		 Termina na linha 3 
+
+		Essas grids facilitam a alocação dos itens do grid.
+	
+	
+	</pre>
+	<p>
+		<style>			
+			.container15 {
+				border: 2px solid black;
+				margin-bottom: 20px;
+				
+				display: grid;
+				grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+				grid-template-rows: 100px 100px 100px;
+				height: 300px;
+			}
+			.item-0 {
+				background-color: aqua;
+			}
+			.item0 {
+				text-align: center;
+				background-color: lightcoral;
+				grid-column-start: 1;
+				grid-column-end: 5;
+				grid-row-start: 3;
+				grid-row-end: 4;
+			}
+			.item01 {
+				text-align: center;
+				background-color: lightcoral;
+			
+				grid-column: 1 / span 3;  /* Start e End na Vertical */
+				grid-row: 1 / span 2; /* Start e End na horizontal */
+			}
+			.selecionado {
+				background-color: yellow;
+				grid-column: 2 / 3;
+				grid-row: 2 / 3; 
+			}
+			
+		</style>
+
+		Dentro do container abaixo, foi gerado um grid de 5 colunas e 3 linhas. (Nao conseguimos ver, porque nao tem informação nelas. Use Dev tools para ver.) <br>
+		Porém, <b>o item 1</b> ocupa a coluna 1 até a coluna 5 (ou seja, ele ocupa a "1° linha" da coluna 1, até a "1° linha" da coluna 5), e a linha 3 até a linha 4. <br> <br>
+		Toda COLUNA e LINHA construida, tem 2 linhas nas bordas. <br>
+		 Exemplo abaixo: <br>
+		  4 linhas na horizontal e 6 linhas vertical. 
+		<div class="container15">
+			<div class="item0">Item 1</div>	
+		</div>
+		Uma forma mais simplificado.<br>
+		grid-column: 1 / span 3; [Start e End na Vertical]<br>
+		grid-row: 1 / span 2;  [Start e End na horizontal] <br>
+		<br> o SPAN faz com que o 'item 1' ocupe todas as linhas da COLUNA OU LINHA, OU seja todo o espaço.  <br>
+		<div class="container15">
+			<div class="item01">Item 1</div>	
+		</div>
+
+		<pre>
+			display: grid;
+			grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+			grid-template-rows: 100px 100px 100px;
+			height: 300px;
+
+			.selecionado {
+				background-color: yellow;
+				grid-column: 2 / 3;
+				grid-row: 2 / 3; 
+			}
+
+		</pre>
+		Como voce pode ver, o 'selecionado' é movimentado conforme determinado no style acima.
+		<div class="container15">
+			<div class="selecionado">selecionado</div>	
+			<div class="item-0">Item 1</div>	
+			<div class="item-0">Item 2</div>	
+			<div class="item-0">Item 3</div>	
+			<div class="item-0">Item 4</div>	
+			<div class="item-0">Item 5</div>	
+			<div class="item-0">Item 6</div>	
+			<div class="item-0">Item 7</div>
+			<div class="item-0">Item 8</div>
+			<div class="item-0">Item 9</div>
+			<div class="item-0">Item 10</div>
+			<div class="item-0">Item 11</div>
+			<div class="item-0">Item 12</div>
+			<div class="item-0">Item 13</div>
+			<div class="item-0">Item 14</div>							
+		</div>
+	</p>	
 
 	<br>
 	<br>
 
 	<h2>Areas do Grid</h2>	
 	<pre></pre>
-	<p></p>
+	<p>
+
+		<style>
+			.test2 {
+				border: 1px solid black;
+				padding: 10px;
+				margin-bottom: 20px;
+				padding: 50px;
+
+			}/*
+			.test2 .teste {
+				border: 3px solid black;
+				border-radius: 10px;
+				background-color: lightcoral;
+				grid-area: teste; /* Define a área do grid */
+				
+				
+			.teste2 > div {
+				color: white;
+				background-color: red;
+				border: 3px solid black;
+  				padding: 10px;
+				font-size: 30px;
+				text-align: center;
+			}
+		</style>
+		<div class="teste2">
+			<div>Test</div>
+		</div>
+	</p>
 
 	<br>
 	<br>
