@@ -635,97 +635,321 @@
 	<h2>Areas do Grid</h2>	
 	<pre></pre>
 	<p>
+	<style>
+		.container16 {
+			display: grid;
+			grid-template-columns: repeat(4, 1ft);
+			grid-template-rows: repeat(3, 1ft);
+			grid-template-areas: 
+			"cabecario cabecario cabecario cabecario"
+			"menu main main main"
+			"menu rodape rodape rodape";
+			border: 1px solid black;
+			padding: 5px;
+			gap: 5px;
+			margin-bottom: 20px;
+			
 
-		<style>
-			.test2 {
-				border: 1px solid black;
-				padding: 10px;
-				margin-bottom: 20px;
-				padding: 50px;
 
-			}/*
-			.test2 .teste {
-				border: 3px solid black;
-				border-radius: 10px;
-				background-color: lightcoral;
-				grid-area: teste; /* Define a área do grid */
-				
-				
-			.teste2 > div {
-				color: white;
-				background-color: red;
-				border: 3px solid black;
-  				padding: 10px;
-				font-size: 30px;
-				text-align: center;
-			}
-		</style>
-		<div class="teste2">
-			<div>Test</div>
-		</div>
+		}
+		header {
+			background-color: lightblue;
+			grid-area: cabecario;
+			min-width: 700px;
+			/* testar utilizando auto*/
+			place-items: end right;
+		
+		
+		}
+		main {
+			background-color: lightgreen;
+			grid-area: main;
+					
+		
+		}
+		aside {
+			background-color: lightcoral;
+			grid-area: menu;
+			min-width: 200px;
+			max-width: 200px;
+		}
+		footer {
+			background-color: lightyellow;
+			grid-area: rodape;
+			min-width: 600px;
+	
+		}
+	</style>
+	
+	
+	<div class="container16">
+		<header>Header
+			<ul>item</ul>
+			<ul>item</ul>
+			<ul>item</ul>
+			<ul>item</ul>
+		</header>
+		<main>Main
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+									
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/modelo_foto_desafio.png" alt="" width="300px" height="200px">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+	
+		</main>
+		<aside>SideBar:
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+
+		</aside>
+		<footer>Rodapé-Footer:
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?</p>
+	
+			
+
+		</footer>
+	</div>
 	</p>
 
 	<br>
 	<br>
 
+	
 	<h2>Shorthand grid-template</h2>	
-	<pre></pre>
-	<p></p>
+	<pre>				
+		
+		AQUI COLOCA-SE TODOS OS COMANDOS DO GRID, DE FORMA SIMPLIFICADA.
+
+		Para entender melhor, use Dev Tools do Chrome, e veja o grid.
+		Na aba "Layout" do Dev Tools, clique no grid e veja as linhas e colunas criadas.
+
+		La você consegui definir melhor o posicionamento dos elementos.
+
+		
+		Explicando detalhadamente:
+		"grid-template-areas" ea height 100px da Header.
+		"grid-template-areas" ea height 300px do main e aside.
+		"grid-template-areas" ea height 100px do Footer.
+		/ 1fr 3fr 1fr 1fr; [= a largura de cada coluna].
+		
+		</pre>
+	<p>
+		<style>
+		.container17 {
+			display: grid;	
+			border: 2px solid;	
+
+			/*
+			
+			**** grid-template-rows:			
+			**** grid-template-columns: 
+			**** grid-template-areas: 
+
+			*/
+			grid-template: 
+				"header header header header header" 100px
+				"main main aside aside aside" 300px
+				"footer footer footer footer footer" 100px 
+				/ 1fr 1fr 1fr 1fr 1fr;
+
+
+		}
+		.header1 {
+			background-color: lightblue;
+			grid-area: header;	
+		}
+		.main1 {
+			background-color: lightgreen;
+			grid-area: main;
+		}
+		.aside1 {
+			background-color: lightcoral;
+			grid-area: aside;
+		}
+		.footer1 {
+			background-color: lightyellow;
+			grid-area: footer;
+		}
+	</style>
+	
+	
+	<div class="container17">
+		<div class="header1">Header</div>
+		<div class="main1">Main</div>
+		<div class="aside1">SideBar</div>
+		<div class="footer1">Footer</div>
+
+	</div></p>
 
 	<br>
 	<br>
 
 	<h2>Definindo os espaçamentos dos elementos do Grid</h2>	
-	<pre></pre>
+	<pre>
+		UTILIZANDO O COMANDO:
+
+		gap: 10px; [= o espaçamento entre os itens do grid].
+		gap: 10px 20px; [= o espaçamento entre os itens do grid na vertical e horizontal].
+
+	</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Shorthand grid</h2>	
-	<pre></pre>
+	<pre>
+		OUTRA FORMA DE COMANDOS DO GRID, DE FORMA SIMPLIFICADA.
+		dense = explicando 4min5seg
+
+		Muita informação junta, torna-se confuso. Para Nivel Expert!
+
+	</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Alinhando os itens com justify-items e align-items</h2>	
-	<pre></pre>
+	<pre>
+		Exemplo: justify-items: center; [= alinha os itens na horizontal].
+		Exemplo: align-items: center; [= alinha os itens na vertical].
+
+				Pode-se usar: center | start | end | stretch | baseline | first baseline | last baseline;
+
+		header {
+			background-color: lightblue;
+			grid-area: cabecario;
+			min-width: 700px;
+			justify-items: center;  [= alinha os itens na horizontal].
+			align-items: center;   [= alinha os itens na vertical]
+		}
+
+
+	</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Alinhando os itens da linha e coluna com place-items</h2>	
-	<pre></pre>
+	<pre>
+		header {
+			background-color: lightblue;
+			grid-area: cabecario;
+			min-width: 700px;
+			
+			place-items: end right;      (permiti align-item e justify-item na  mesma linha)
+		}
+
+		</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Alinhando o conteúdo do Grid com justify-content e align-content</h2>	
-	<pre></pre>
+	<pre>
+		
+		justify-content: center; [= alinha os itens na horizontal].
+		align-content: center; [= alinha os itens na vertical].
+
+		fazendo com que o grid se ajuste ao tamanho do container.
+		movimentando toda a grid (grade) dentro do container.
+
+			Pode-se usar: center | start | end | stretch | space-between | space-around | space-evenly;
+
+		Exemplo:
+
+		.container16 {
+			display: grid;
+			grid-template-columns: repeat(4, 1ft);
+			grid-template-rows: repeat(3, 1ft);
+			border: 1px solid black;
+			
+			justify-content: space-evenly;
+			align-content: space-evenly;
+		}
+		
+
+		</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Alinhando o conteúdo do Grid horizontalmente e verticalmente com place-content</h2>	
-	<pre></pre>
+	<pre>
+		place-content: permiti alinhar o conteúdo do grid na horizontal e vertical de uma unica vez.
+		ou seja: ele é o atalho para justify-content e align-content.
+
+	Exemplo:
+	.container16 {
+		display: grid;
+		grid-template-columns: repeat(4, 1ft);
+		grid-template-rows: repeat(3, 1ft);
+		border: 1px solid black;
+		
+		place-content: start end;  [start= align-content | end=justify-content]
+	}
+
+	</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Alinhando itens específicos com justify-self e align-self</h2>	
-	<pre></pre>
+	<pre>
+		justify-self: center; [= alinha os itens na horizontal].
+		align-self: center; [= alinha os itens na vertical].
+
+		alinha a celula dentro do grid, ou seja, o item dentro da celula.
+
+		Exemplo:
+
+		.item-06 {
+			background-color: lightblue;
+			grid-area: cabecario;
+			min-width: 700px;
+			
+			justify-self: center;  [= alinha os itens na horizontal].
+			align-self: center;   [= alinha os itens na vertical]
+		}
+
+			Pode-se usar: center | start | end | stretch | baseline
+
+	</pre>
 	<p></p>
 
 	<br>
 	<br>
 
 	<h2>Alinhando itens específicos horizontalmente e verticalmente com place-self</h2>	
-	<pre></pre>
+	<pre>
+
+		place-self: permiti alinhar o item do grid na 'horizontal e vertical' de uma unica vez.
+		ou seja: ele é o atalho para justify-self e align-self.
+
+		.item-06 {
+			background-color: lightblue;
+			grid-area: cabecario;
+			min-width: 700px;
+			
+			place-self: center end;  [center= align-self | end=justify-self]	
+		}
+
+	</pre>
 	<p></p>
 
 	<br>
