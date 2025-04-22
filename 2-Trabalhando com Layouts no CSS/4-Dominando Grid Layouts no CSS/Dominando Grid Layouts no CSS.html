@@ -720,6 +720,91 @@
 		</footer>
 	</div>
 	</p>
+	<pre>
+		< style>
+			.container16 {
+				display: grid;
+				grid-template-columns: repeat(4, 1ft);
+				grid-template-rows: repeat(3, 1ft);
+				grid-template-areas: 
+				"cabecario cabecario cabecario cabecario"
+				"menu main main main"
+				"menu rodape rodape rodape";
+				border: 1px solid black;
+				padding: 5px;
+				gap: 5px;
+				margin-bottom: 20px;
+				
+	
+	
+			}
+			header {
+				background-color: lightblue;
+				grid-area: cabecario;
+				min-width: 700px;
+				/* testar utilizando auto*/
+				place-items: end right;
+			
+			
+			}
+			main {
+				background-color: lightgreen;
+				grid-area: main;
+						
+			
+			}
+			aside {
+				background-color: lightcoral;
+				grid-area: menu;
+				min-width: 200px;
+				max-width: 200px;
+			}
+			footer {
+				background-color: lightyellow;
+				grid-area: rodape;
+				min-width: 600px;
+		
+			}
+		< /style>
+		
+		
+		< div class="container16">
+			< header>Header
+				< ul>item< /ul>
+				< ul>item< /ul>
+				< ul>item< /ul>
+				< ul>item< /ul>
+			< /header>
+			< main>Main
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+										
+				< img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/modelo_foto_desafio.png" alt="" width="300px" height="200px">
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+		
+			< /main>
+			< aside>SideBar:
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+	
+			< /aside>
+			< footer>Rodapé-Footer:
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est?< /p>
+				< p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia, rem cumque sint libero atque facilis repudiandae. Nihil, inventore doloribus asperiores perferendis velit suscipit non dolor. Fugiat quaerat odio est? < /p>
+		
+				
+	
+			< /footer>
+		</div>
+	</pre>
 
 	<br>
 	<br>
@@ -790,6 +875,54 @@
 		<div class="footer1">Footer</div>
 
 	</div></p>
+	<pre>
+		< style>
+			.container17 {
+				display: grid;	
+				border: 2px solid;	
+	
+				/*
+				
+				**** grid-template-rows:			
+				**** grid-template-columns: 
+				**** grid-template-areas: 
+	
+				*/
+				grid-template: 
+					"header header header header header" 100px
+					"main main aside aside aside" 300px
+					"footer footer footer footer footer" 100px 
+					/ 1fr 1fr 1fr 1fr 1fr;
+	
+	
+			}
+			.header1 {
+				background-color: lightblue;
+				grid-area: header;	
+			}
+			.main1 {
+				background-color: lightgreen;
+				grid-area: main;
+			}
+			.aside1 {
+				background-color: lightcoral;
+				grid-area: aside;
+			}
+			.footer1 {
+				background-color: lightyellow;
+				grid-area: footer;
+			}
+		< /style>
+		
+		
+		< div class="container17" >
+			< div class="header1">Header< /div>
+			< div class="main1">Main< /div>
+			< div class="aside1">SideBar< /div>
+			< div class="footer1">Footer< /div>
+	
+		< /div>
+	</pre>
 
 	<br>
 	<br>
