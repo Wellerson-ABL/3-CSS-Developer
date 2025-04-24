@@ -2,21 +2,987 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsividade CSS</title>
 </head>
 
-   	<body> 
-		<h2> </h2>	
+<style>
+	h2 {
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 0px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;		
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+	}
+	pre {
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+	.img {
+		border-radius: 5px;
+		border: 2px solid black;
+		margin-top: 30px;
+		padding: 15px;
+	}
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div>
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Responsividade no CSS</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		</div></div>
+		
+	<h2>Introdução ao Design Responsivo</h2>	
 	<pre>
+
+		- O que é design responsivo?
+		- Por que usar design responsivo?
+		- Como funciona o design responsivo?
+		- Vantagens do design responsivo
+		- Desvantagens do design responsivo
+
+
+		!	  Ethan Marcotte - 2010
+			- O design responsivo é uma abordagem de design web que visa criar layouts que se adaptam a diferentes tamanhos de tela e dispositivos.
+			- Isso é feito usando uma combinação de grids fluidos, imagens flexíveis e media queries.
+
+
+
+	</pre>
+	<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Layouts flexíveis - Multicolunas</h2>	
+	<pre>
+		- O layout de múltiplas colunas é uma técnica de design responsivo que permite que o conteúdo
+		   seja exibido em várias colunas, dependendo do tamanho da tela.
+		
+		- Isso pode ser feito usando CSS Grid ou Flexbox, e é uma maneira eficaz de organizar o conteúdo em telas
+		  maiores,  enquanto ainda permite que ele seja exibido em uma única coluna em telas menores.
+
+		- Exemplo de CSS Grid:
+			.container {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 10px;
+			}
+
+			
+		- Exemplo de Flexbox:
+			.container {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.item {
+				flex: 1 1 200px;
+				background-color: lightgray;
+				padding: 20px;
+			}
+
+		- O layout de múltiplas colunas é uma técnica poderosa para criar layouts responsivos que se adaptam a 
+		  diferentes tamanhos de tela e dispositivos.
+
+		- No entanto, é importante lembrar que o layout de múltiplas colunas pode não ser adequado para todos 
+	 	  os tipos de conteúdo, e deve ser usado com cuidado para garantir que o conteúdo seja legível e acessível
+	          em todas as telas.
+
+			viewport:
+				- A viewport é a área visível de uma página da web em um dispositivo. Em dispositivos móveis, 
+				 a viewport é geralmente menor do que em desktops, o que significa que o layout deve ser 
+				 adaptado para caber na tela.
+
+				- Para garantir que o layout seja responsivo, é importante usar unidades relativas, como 
+				porcentagens e unidades de viewport (vw e vh), em vez de unidades absolutas, como pixels.
+				
+				- Isso permite que o layout se ajuste automaticamente ao tamanho da tela, garantindo que
+				 o conteúdo seja exibido corretamente em todos os dispositivos.
+
+	</pre>
 	<p>
 
+		<style>
+			.container {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 10px;
+				background-color: lightpink;
+				margin-bottom: 30px;
+			}
+			.container-1 {
+				display: flex;
+				flex-direction:column;
+				gap: 20px;
+			}
+			.item_1 {
+				column-count: 3;
+				
+				background-color: lightgray;
+				padding: 20px;
+				margin-bottom: 30px;
+			}
+			.item_2 {
+				column-count: 3;
+				column-rule: 5px solid black;
 
+				background-color: lightblue;
+				padding: 20px;
+				margin-bottom: 30px;
+			}
+			.item_3 {
+				column-width: 200px;
+
+				background-color: lightgreen;
+				padding: 20px;
+				margin-bottom: 30px;
+			}	
+			.item_4 {
+				column-count: 3;
+				column-gap: 50px;
+			
+				background-color: lightcoral;
+				padding: 20px;
+				margin-bottom: 30px;
+			}
+
+
+			
+		</style>
+		Exemplo de CSS Grid::Exemplo Container:
+		<div class="container">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam iusto sit corrupti veniam vitae, iure sed eum aliquid expedita maxime provident asperiores fugit! Sequi porro nihil reprehenderit vel eum?
+		</div>
+
+		<div class="container-1">
+			
+			Item_1<div class="item_1">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quis eveniet, vel fugit dolores veritatis minus aut voluptate saepe voluptatum ratione numquam minima nulla beatae dolorem deserunt, magni cupiditate eum.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat praesentium eveniet ducimus nulla non vero ad illum voluptas, consequatur ullam quos. Ullam nam soluta nulla quis dolorem possimus quisquam officiis!</div>
+			
+			Item_2<div class="item_2">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam pariatur est consequatur quaerat unde rerum quae enim voluptatum quis, libero incidunt culpa possimus perspiciatis. Necessitatibus nobis soluta facilis hic.
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, dolores explicabo nihil facilis officiis error facere ipsum eum repudiandae cupiditate velit, quod nobis placeat id, earum dignissimos libero omnis ea.</div>
+			Item_3<div class="item_3">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dolore. Repellat magnam quis, iste modi pariatur obcaecati ut officia numquam aspernatur vero. Deserunt sequi rerum ipsa qui dicta, nostrum magnam?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste necessitatibus totam, nemo possimus tenetur nostrum. Laudantium iusto tenetur, asperiores quos tempora modi libero! Exercitationem voluptatem veritatis quisquam in libero explicabo.</div>
+			Item_4<div class="item_4">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maiores repudiandae at aspernatur perspiciatis distinctio asperiores ipsa perferendis quasi, recusandae rem reprehenderit officiis soluta odio cum libero. Odio, iure architecto!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis similique dolorem omnis, aliquam blanditiis ratione. Enim minus pariatur suscipit unde aliquid sit labore est eum soluta sapiente, ipsum saepe!</div>
+		</div>
 	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>Layouts flexíveis - Flexbox</h2>	
+	<pre>
+		
+		- O layout flexível é uma técnica de design responsivo que permite que os elementos se ajustem automaticamente ao tamanho da tela.
+		
+		- Isso é feito usando o modelo de caixa flexível do CSS, que fornece uma maneira fácil de criar layouts responsivos que se adaptam a diferentes tamanhos de tela e dispositivos.
+
+		- O layout flexível é uma técnica poderosa para criar layouts responsivos que se adaptam a diferentes tamanhos de tela e dispositivos.
+
+		- No entanto, é importante lembrar que o layout flexível pode não ser adequado para todos os tipos de conteúdo, e deve ser usado com cuidado para garantir que o conteúdo seja legível e acessível em todas as telas.
+
+
+	</pre>
+	<p>
+
+		<style>
+			header {
+				background-color: lightblue;
+				text-align: center;
+				padding: 60px;
+			}
+			header h3 {
+				font-size: 1rem;
+				font-weight: normal;
+			}
+			main {
+				padding: 30px;
+				text-align: center;
+				max-width: 1200px;  /*Pensando em uma tela widescreen*/
+				margin: 0 auto; /*Centraliza o conteúdo*/
+			}
+			h4 {
+				text-transform: uppercase;
+			}
+			.details {
+				display: flex;
+				margin-bottom: 40px;
+				gap: 20px;
+			}
+			.card {
+				background-color: lightblue;
+				padding: 20px;
+				border-radius: 5px;
+			}
+			.image-card {
+				background-color: lightblue;
+				padding: 10px;
+				border-radius: 5px;
+				border: 1px solid black;
+				flex-basis: 200px;
+			}
+			.image-card img {
+				width: 100%;
+			}
+			.gallery {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 20px;
+				margin-top: 40px;
+			
+				/*
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 10px;*/
+			}
+		</style>
+
+
+
+		<header>
+			<h1>Layouts Flexiveis</h1>
+			<h3>Exemplo de layouts flexiveis utilizando Flexbox</h3>
+		</header>
+		
+		<main>
+			<section>
+				<h4>Saiba Mais</h4>
+				<div class="details">
+					<div class="card">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolorem dolore incidunt placeat dolorum fugit odit voluptatum vel? Ab non tempore nemo dolore commodi, odit nam minima ea dolor qui!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolorem dolore incidunt placeat dolorum fugit odit voluptatum vel? Ab non tempore nemo dolore commodi, odit nam minima ea dolor qui!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolorem dolore incidunt placeat dolorum fugit odit voluptatum vel? Ab non tempore nemo dolore commodi, odit nam minima ea dolor qui!
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h4>Galeria de imagens</h4>
+				<div class="gallery">
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+					<div class="image-card">
+						<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					</div>
+
+				</div>
+			</section>
+		</main>
+	</p>
+	<pre>
+		< style>
+			header {
+				background-color: lightblue;
+				text-align: center;
+				padding: 60px;
+			}
+			header h3 {
+				font-size: 1rem;
+				font-weight: normal;
+			}
+			main {
+				padding: 30px;
+				text-align: center;
+				max-width: 1200px;  /*Pensando em uma tela widescreen*/
+				margin: 0 auto; /*Centraliza o conteúdo*/
+			}
+			h4 {
+				text-transform: uppercase;
+			}
+			.details {
+				display: flex;
+				margin-bottom: 40px;
+				gap: 20px;
+			}
+			.card {
+				background-color: lightblue;
+				padding: 20px;
+				border-radius: 5px;
+			}
+			.image-card {
+				background-color: lightblue;
+				padding: 10px;
+				border-radius: 5px;
+				border: 1px solid black;
+				flex-basis: 200px;
+			}
+			.image-card img {
+				width: 100%;
+			}
+			.gallery {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 20px;
+				margin-top: 40px;
+			
+				/*
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 10px;*/
+			}
+		< /style>
+
+
+
+		< header>
+			< h1>Layouts Flexiveis< /h1>
+			< h3>Exemplo de layouts flexiveis utilizando Flexbox< /h3>
+		< /header>
+		
+		< main>
+			< section>
+				< h4>Saiba Mais< /h4>
+				< div class="details">
+					< div class="card">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolorem dolore incidunt placeat dolorum fugit odit voluptatum vel? Ab non tempore nemo dolore commodi, odit nam minima ea dolor qui!
+					< /div>
+					< div class="card">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolorem dolore incidunt placeat dolorum fugit odit voluptatum vel? Ab non tempore nemo dolore commodi, odit nam minima ea dolor qui!
+					< /div>
+					< div class="card">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolorem dolore incidunt placeat dolorum fugit odit voluptatum vel? Ab non tempore nemo dolore commodi, odit nam minima ea dolor qui!
+					< /div>
+				< /div>
+			< /section>
+
+			< section>
+				< h4>Galeria de imagens< /h4>
+				< div class="gallery">
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						< img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+					< div class="image-card">
+						<  img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" alt="imagem aleatoria">
+					< /div>
+
+				<  /div>
+			< /section>
+		< /main>
 	</pre>
 
+
 	<br>
 	<br>
+
+	
+	<h2>Layouts flexíveis - Grid</h2>	
+	<pre>	
+
+		- O layout de grid é uma técnica de design responsivo que permite criar layouts complexos usando uma grade de linhas e colunas.
+		
+		- Isso é feito usando CSS Grid, que fornece uma maneira fácil de criar layouts responsivos que se adaptam a diferentes tamanhos de tela e dispositivos.
+
+		- O layout de grid é uma técnica poderosa para criar layouts responsivos que se adaptam a diferentes tamanhos de tela e dispositivos.
+
+		- No entanto, é importante lembrar que o layout de grid pode não ser adequado para todos os tipos de conteúdo, e deve ser usado com cuidado para garantir que o conteúdo seja legível e acessível em todas as telas.
+
+	</pre>
+	<p>
+		<style>
+			.container-grid {
+				font-family: arial, sans-serif;
+				font-weight: bold;
+				text-align: center;
+
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: 100px repeat(3, 300px);
+				grid-template-areas: 
+					"header header header header"
+					"navbar main-content main-content main-content"
+					"navbar content-1 content-2 content-3"
+					"navbar footer footer footer";
+			}
+			.header-1, nav {
+				padding: 20px;
+			}
+			.header-1 {
+				grid-area: header;
+				background-color: lightblue;
+			}
+			nav {
+				background-color: lightgreen;	
+				grid-area: navbar;			
+			}
+			.main-section-content {
+				grid-area: main-content;
+				background-color: lightsalmon;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				list-style: none;
+				margin-bottom: 8px;
+			}
+			li  a {
+				color: black;
+			}
+			.content-1 {
+				grid-area: content-1;
+				background-color: lightpink;
+			}
+			
+			.content-2{
+				grid-area: content-2;
+				background-color: lightyellow;
+
+			}
+			.content-3{
+				grid-area: content-3;
+				background-color: lightgray;
+
+			}
+			footer {
+				grid-area: footer;
+				background-color: lightblue;
+			}
+
+			
+		</style>
+
+	<div class="container-grid">
+		<div class="header-1">
+			header - test
+		</div>
+		<nav>
+			<li><a href="#">Menu 0</a></li>
+			<li><a href="#">Menu 1</a></li>
+			<li><a href="#">Menu 2</a></li>
+			<li><a href="#">Menu 3</a></li>
+			<li><a href="#">Menu 4</a></li>
+		</nav>
+		<section class="main-section-content">
+			main content	
+		</section>
+		<section class="content-1">content-1</section>
+		<section class="content-2">content-2</section>
+		<section class="content-3">content-3</section>
+		
+		<footer>
+			footer - test
+		</footer>
+	
+	</div>
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>Meta tag viewport</h2>	
+	<pre>
+
+		- A meta tag viewport é uma tag HTML que define a largura e a escala da viewport em dispositivos móveis.
+		
+		- Isso é importante para garantir que o <u>layout seja responsivo e se ajuste corretamente ao tamanho da tela</u>.
+
+		- A meta tag viewport deve ser incluída no cabeçalho do documento HTML, e deve ter o seguinte formato:
+
+			<u>< meta name="viewport" content="width=device-width, initial-scale=1.0"></u>
+
+		- Isso garante que a largura da viewport seja igual à largura do dispositivo, e que a escala inicial seja 1.0.
+
+		Quais:
+			- width=device-width: sobrescreve a configuração padrão da viewport(navegadores), definindo a largura da viewport como a largura do dispositivo.
+			- height=device-height: define a altura da viewport como a altura do dispositivo.
+
+			- initial-scale=1.0: define o zoom inicial da pagina.
+
+			- user-scalable=no: desabilita o zoom na pagina.
+			- user-scalable=yes: permite o zoom na pagina.
+
+			- maximum-scale=1.0: define a escala máxima(zoom) da viewport(pagina) como 1.0.
+			- minimum-scale=1.0: define a escala mínima(zoom) da viewport(pagina) como 1.0.
+
+
+	</pre>
+	<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>O que são Media Queries</h2>	
+	<pre>
+		>>> ESTUDAR MAIS SOBRE MEDIA QUERIES <<<
+		
+		- Media queries são uma técnica de design responsivo que permite aplicar estilos CSS diferentes com base nas características
+		 do dispositivo, como largura da tela, altura, resolução e orientação.
+
+		- Isso é feito usando a regra @media no CSS, que permite definir estilos específicos para diferentes tamanhos de tela e 
+		dispositivos.
+
+		- As media queries são uma parte essencial do design responsivo, pois permitem que o layout se adapte a diferentes tamanhos
+		 de tela e dispositivos.
+
+		- Isso garante que o conteúdo seja exibido corretamente em todos os dispositivos, independentemente do tamanho da tela ou 
+		da resolução.
+
+		quais são:
+			- @media screen: aplica estilos apenas em telas de dispositivos.
+			- @media print: aplica estilos apenas em impressoras.
+			- @media all: aplica estilos em todos os dispositivos.
+
+			- @media (max-width: 600px): aplica estilos para telas com largura máxima de 600px.
+			- @media (min-width: 600px): aplica estilos para telas com largura mínima de 600px.
+			- @media (orientation: portrait): aplica estilos para telas em orientação retrato.
+			- @media (orientation: landscape): aplica estilos para telas em orientação paisagem.
+
+		onde usar?
+			- As media queries podem ser usadas em qualquer lugar no CSS, mas geralmente são
+			 colocadas no final do arquivo CSS para garantir que os estilos sejam aplicados corretamente.
+
+			- As media queries também podem ser usadas em arquivos CSS externos,
+				 o que permite que os estilos sejam aplicados a várias páginas da web.
+
+				Como usar na CSS externo?
+					
+					@media (max-width: 600px) {
+						body {
+							background-color: lightblue;
+						}
+					}
+
+
+	</pre>
+	<p align="center">
+		<img class="img" src="./exemplo_media_squerie.png" width="700px" alt="">
+	</p>
+	<br>
+	<br>
+
+	
+	<h2>Estruturas</h2>	
+	<pre>
+
+		@media(at-rule)
+
+		O que é @media?
+			- A @media é uma regra CSS que permite aplicar estilos diferentes com base nas características do dispositivo,
+				 como largura da tela, altura, resolução e orientação.
+
+			Exemplo com min e max:
+				@media (min-width: 600px) and (max-width: 1200px) {
+					/* Estilos para telas entre 600px e 1200px */
+				}
+
+
+	</pre>
+<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Media Types</h2>	
+	<pre>
+		- Os media types são categorias de dispositivos que podem ser usados para aplicar estilos diferentes com base no tipo de dispositivo.
+
+		- Os media types mais comuns são:
+			- all: aplica estilos em todos os dispositivos.
+			- screen: aplica estilos apenas em telas de dispositivos.
+			- print: aplica estilos apenas em impressoras.
+			- speech: aplica estilos apenas em dispositivos de leitura de tela.
+
+			- embossed: aplica estilos apenas em dispositivos de impressão em relevo.
+			- projection: aplica estilos apenas em dispositivos de projeção.
+			- handheld: aplica estilos apenas em dispositivos portáteis.
+			- tv: aplica estilos apenas em dispositivos de TV.			
+			- braille: aplica estilos apenas em dispositivos de leitura em braille.
+			
+			no Deve tools, você pode ver os media types disponíveis em um dispositivo específico.
+				Navegador Chrome:
+					- Abra o DevTools (F12 ou Ctrl + Shift + I)
+					- Clique no ícone de três pontos no canto superior direito do DevTools
+					- Selecione "More tools" e depois "Rendering"
+					- Na seção "Media", você verá os media types disponíveis para o dispositivo.
+					(print e screen são os mais comuns)
+
+
+
+
+
+	</pre>
+	<p><p align="center">
+		<img class="img" src="./media_type.png" width="700px" alt="">
+	</p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Media Features (recursos de mídia)</h2>	
+	<pre>
+
+		- As media features são características específicas do dispositivo que podem ser usadas para aplicar estilos diferentes com base nas características do dispositivo.
+
+		- As media features mais comuns são:
+			- width: largura da tela.
+			- height: altura da tela.
+			- min-width: largura mínima da tela.
+			- max-width: largura máxima da tela.
+			- min-height: altura mínima da tela.
+			- max-height: altura máxima da tela.
+			- orientation: orientação da tela (portrait ou landscape).
+			- resolution: resolução da tela.
+			- aspect-ratio: proporção da tela (largura/altura).
+			- color: número de cores suportadas pelo dispositivo.
+			- color-index: número de cores suportadas pelo dispositivo.
+			- monochrome: número de cores em escala de cinza suportadas pelo dispositivo.
+
+	</pre>
+	<p>
+		<p align="center">
+			<img class="img" src="./media_features-midia_recursos.png" width="700px" alt="">
+		</p>
+
+		
+		<style>
+			@media screen and (max-width: 600px) {
+				body {
+					background-color: lightblue;
+				}
+				.image-card{
+					flex-basis: 100px;
+				}
+				
+			}
+			/*  QUANDO A TELA FOR MENOR E ATÉ 600PX
+				VAI APLICAR ESSA CONFIGURAÇÃO ACIMA.
+				
+				SE A TELA FOR MAIOR: VAI MANTER A
+				 CONFIGURAÇÃO ATUAL*/
+
+
+			@media screen and (orientation: portrait) {
+				body {
+					background-color: lightgreen;
+				}
+				/* QUANDO A TELA ESTIVER DE PE = PORTRAIT*/
+			}
+			
+			@media screen and (orientation: landscape) {
+				body {
+					background-color: rgb(255, 255, 255);
+				}
+				/* QUANDO A TELA ESTIVER DEITADA = LANDSCAPE*/
+			}
+			@media screen  and(pointer: coarse) {
+				body {
+					background-color: lightcoral;
+				}
+				/* QUANDO A TELA FOR TOUCH*/
+				
+			}
+			@media screen  and(pointer: fine) {
+				body {
+					background-color: lightblue;
+				
+				}
+				/* QUANDO A TELA FOR TELA - tipo ponteiro de mousse */
+			}
+
+		</style>
+</p>
+<pre>
+	< style>
+		@media screen and (max-width: 600px) {
+			body {
+				background-color: lightblue;
+			}
+			.image-card{
+				flex-basis: 100px;
+			}
+			
+		}
+		/*  QUANDO A TELA FOR MENOR E ATÉ 600PX
+			VAI APLICAR ESSA CONFIGURAÇÃO ACIMA.
+			
+			SE A TELA FOR MAIOR: VAI MANTER A
+			 CONFIGURAÇÃO ATUAL*/
+
+
+		@media screen and (orientation: portrait) {
+			body {
+				background-color: lightgreen;
+			}
+			/* QUANDO A TELA ESTIVER DE PE = PORTRAIT*/
+		}
+		
+		@media screen and (orientation: landscape) {
+			body {
+				background-color: rgb(255, 255, 255);
+			}
+			/* QUANDO A TELA ESTIVER DEITADA = LANDSCAPE*/
+				MONITOR TAMBEM SE ENQUADRA AQUI.
+		}
+		@media screen  and(pointer: coarse) {
+			body {
+				background-color: lightcoral;
+			}
+			/* QUANDO A TELA FOR TOUCH*/
+			
+		}
+		@media screen  and(pointer: fine) {
+			body {
+				background-color: lightblue;
+			
+			}
+			/* QUANDO A TELA FOR MONITOR - tipo ponteiro de mousse */
+		}
+
+	< /style>
+</pre>
+
+	<br>
+	<br>
+
+	
+	<h2>Operadores</h2>	
+	<pre>
+		- Os operadores são usados para combinar media queries e aplicar estilos diferentes com base nas características do dispositivo.
+
+		- Os operadores mais comuns são:
+			- and: combina duas ou mais media queries.
+			- or: combina duas ou mais media queries.
+			- not: nega uma media query.
+
+	</pre>
+	
+		<p align="center">
+			<img class="img" src="./operadores.png" width="700px" alt="">
+		</p>
+
+		<p>
+		<style>
+			@media screen and (max-width: 600px), screen (orientation: landscape) {
+				body {
+					background-color: lightblue;
+				}
+			}  
+					/* QUANDO A TELA FOR MENOR E ATÉ 600PX OU A TELA ESTIVER DEITADA = LANDSCAPE*/
+					/* VAI APLICAR ESSA CONFIGURAÇÃO ACIMA.*/
+
+					/* a 'virgula' representa 'OU' um OU outro.*/
+
+			
+			
+			
+			@media screen and (min-width: 320px) and (max-width: 690px) {
+				body {
+					background-color: lightblue;
+				}
+			}  
+					/* QUANDO A TELA ESTIVER ENTRE 320PX A 690PX */
+					/* VAI APLICAR ESSA CONFIGURAÇÃO ACIMA.*/
+
+
+
+			@media not screen all and (orientation: landscape) {
+				body {
+					background-color: lightblue;
+				}
+			}  
+					/* quando a tela 'NÃO' estiver deitada = LANDSCAPE*/
+					/* VAI APLICAR ESSA CONFIGURAÇÃO ACIMA.*/
+
+					/* ou seja, só vai aplicar quando estiver Portrait*/
+
+		</style>
+
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>Maneiras de usar as Media Queries</h2>	
+	<pre>
+		- As media queries podem ser usadas de várias maneiras, incluindo:
+			- Inline: as media queries podem ser incluídas diretamente no HTML usando a tag < style>.
+			- Interno: as media queries podem ser incluídas em um arquivo CSS interno usando a regra @media.
+			- Externo: as media queries podem ser incluídas em um arquivo CSS externo usando a regra @media.
+
+			- Exemplo de uso inline:
+				< style>
+					@media (max-width: 600px) {
+						body {
+							background-color: lightblue;
+						}
+					}
+				< /style>
+
+		
+	</pre>
+
+	<p>
+		<style media="screen and (max-width: 500px)">
+			pre {
+				color: red;
+			}
+		</style>
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>Breakpoints</h2>	
+	<pre>
+		- Os breakpoints são pontos específicos em um layout onde o design muda para se adaptar a diferentes 
+		  tamanhos de tela e dispositivos.
+
+		  
+	</pre>
+	<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Devemos sempre usar as media queries</h2>	
+	<pre>
+		- Não é necessário usar media queries em todos os casos, mas elas são uma ferramenta poderosa para criar layouts 
+		  responsivos que se adaptam a diferentes tamanhos de tela e dispositivos.
+
+		- No entanto, é importante lembrar que o uso excessivo de media queries pode tornar o código CSS mais complexo e 
+		  difícil de manter.
+
+		- Portanto, é importante usar as media queries com moderação e apenas quando necessário.
+
+
+			Laura Kalbag:
+				"Não devemos usar media queries para tudo, mas devemos usá-las quando necessário."
+				um design acessível e responsivo deve ser o objetivo final.
+				Devemos usar media queries para garantir que o conteúdo seja exibido corretamente em todos os dispositivos,
+				 mas devemos evitar o uso excessivo de media queries para não tornar o código CSS mais complexo e difícil de manter.	
+
+	</pre>
+	<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Imagens Responsivas</h2>	
+	<pre></pre>
+	<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Tipografias Responsivas</h2>	
+	<pre></pre>
+	<p></p>
+
+	<br>
+	<br>
+
+	
+	<h2>Mobile First</h2>	
+	<pre></pre>
+	<p></p>
+
+	<br>
+	<br>
+
+
 
 	</body>
 </html>
