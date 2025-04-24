@@ -960,16 +960,95 @@
 
 	
 	<h2>Imagens Responsivas</h2>	
-	<pre></pre>
-	<p></p>
+	<pre>
+		Devemos usar o 
+		Max-width: 100%; para garantir que as imagens sejam exibidas corretamente em todos os dispositivos.
+						 Nesse caso a imagem vai o tamanho máximo natural da imagem.
+						 
+		NAO pode usar o width: 100%; pois isso pode distorcer a imagem e torná-la ilegível.
+
+
+		Exemplo:
+		< source srcset="./media_type.png" max-width="100%" media="(max-width: 400px)">
+				 A imagem vai ser exibida quando a tela for menor que 400px
+	</pre>
+	<p>
+
+		<style>
+			.image-container {
+				display: flex;
+				border: 1px solid black;
+				width: 500px;
+				height: 300px;
+				margin: auto;
+				
+				background-image: url(./media_type.png);
+			}
+			@media screen and (max-width: 600px) {
+				.image-container {		
+				background-image: url();
+			}
+			}
+		</style>
+
+
+		<div class="image-container">
+			<img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" width="350px" alt="">
+		</div>
+		<picture>
+			<source srcset="./media_type.png" max-width="100%" media="(max-width: 400px)"> 
+			<!-- A imagem vai ser exibida quando a tela for menor que 400px -->
+
+			<source srcset="./operadores.png">
+			<img src="./operadores.png" width="50%" alt="imagem de teste">
+		</picture>
+
+	</p>
 
 	<br>
 	<br>
 
 	
 	<h2>Tipografias Responsivas</h2>	
-	<pre></pre>
-	<p></p>
+	<pre>
+
+		unidade (vw)viewport NAO  é indicado para pessoas com acessibilidade visual ou a configurações de zoom padrao do usuario.
+
+		unidade rem é a unidade mais indicada para tipografias responsivas, pois ela se adapta ao tamanho da fonte do elemento pai.
+		Isso garante que o texto seja exibido corretamente em todos os dispositivos e tamanhos de tela.
+	</pre>
+	<p>
+
+		<style>
+		.container-text-1 {
+			font-family: arial, sans-serif;
+			font-size: x-small;
+		}
+			@media screen and (max-width: 400px) {
+				h1 {
+					font-size: 1rem;
+				}
+			}
+			@media screen and (min-width: 600px) {
+				h1 {
+					font-size: 3rem;
+				}
+			}
+			@media screen and (max-width: 400px) {
+				.text-1{
+					font-size: 1rem;
+				}
+			}
+		
+		
+		</style>
+		<h1>Texto responsivo</h1>
+		<div class="container-text-1">
+		<p class="text-1">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nobis in illum inventore eveniet tenetur corrupti vero at voluptas excepturi blanditiis amet facere, quam id sit animi ad! Amet, excepturi.
+		</p>
+		</div>
+	</p>
 
 	<br>
 	<br>
@@ -977,7 +1056,10 @@
 	
 	<h2>Mobile First</h2>	
 	<pre></pre>
-	<p></p>
+	<p>
+
+		
+	</p>
 
 	<br>
 	<br>
