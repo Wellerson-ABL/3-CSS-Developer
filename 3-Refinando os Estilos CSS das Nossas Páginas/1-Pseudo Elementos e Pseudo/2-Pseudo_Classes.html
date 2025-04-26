@@ -191,7 +191,7 @@
             label, .bnt-1 {
                 display: block;
                 margin: 12px;
-                font-size: 1.5rem;
+                font-size: 1rem;
             }
             .input-1, select {
                 font-size:1.5rem;
@@ -368,23 +368,184 @@
                
         <h2>checked e indeterminate</h2>	
         <pre>
-            <code></code>
+            <code>:checked</code>
+                    Uma forma de estilizar os chebox e outros types.
+
+
+
             </pre>
-       <style></style>
-       <h3>Pseudo-Classe <code></code></h3>
-       <p>       
-       </p>
+       <style>
+        .input-2 {
+            accent-color: red;
+        }
+        .input-2[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+        }
+        .input-2[type="radio"]{
+            accent-color: yellow;
+        }
+        .input-2[type="radio"]:checked + label{
+            color: blue;
+        }
+        .option-1:checked{
+            color: red;
+            font-weight: bold;
+        }
+        progress:indeterminate{   /*SÓ VAI APLICAR QUANDO NAO TIVER VALOR*/
+            accent-color: red;
+            }
+
+       </style>
+       <h3>Pseudo-Classe <code>:checked</code></h3>
+       <p>
+        <div>
+            <label for="task-01">
+             <input class="input-2" name="task-01" type="checkbox">
+             Tarefa 01</label>
+        </div>
+        <div>
+            <label for="task-02">
+            <input class="input-2" name="task-02" type="checkbox">
+            Tarefa 02</label>
+       </div>  
+       <div>
+            <label for="task-03">
+            <input class="input-2" name="task-03" type="checkbox">
+             Tarefa 03</label>
+        </div> 
+        <div>
+            <label for="task-04">
+            <input class="input-2" name="task-04" type="checkbox">
+            Tarefa 04</label>
+        </div>   
+       <hr>
+        <label for="genero">
+        <input class="input-2" name="genero" type="radio">
+        Feminimo</label>
+        <label for="genero">
+        <input class="input-2" name="genero" type="radio">
+        Masculino</label>
+        <label for="genero">
+        <input class="input-2" name="genero" type="radio">
+        Não Binário</label>
+
+        <hr>
+
+       <select name="sabor">
+                <option class="option-1" value="chocolate">Chocolate</option>
+                <option class="option-1" value="Menta">Menta</option>
+                <option class="option-1" value="Morango">Morango</option>
+        </select>
+            <hr>
+        
+        <progress></progress>
+    
+        
+    </p>
        
        <br>
        <br>
                
         <h2>valid e invalid, in-range e out-ofrange</h2>	
         <pre>
-            <code></code>
-            </pre>
-       <style></style>
+            <code>:valid</code>  e  <code>:invalid</code>
+                    Uma forma de aplicação de configuração para determinada codições. 
+                    Quando for "Valida" vai aplicar "Ex. verde", ou  quando for  "invalida" vai aplicar "ex: red"  
+                    nos formulario. 
+
+            <code>:in-range</code>  e  <code>:out-of-range</code>]
+                    São condições que vai aplica ao elemento, input por exemplo.
+                    Similar a valid e invalid.
+
+                    in-range = quando estar dentro da condição - paramentro por min e max no html.
+                    out-of-range = quando esta fora da condição.
+                </pre>
+       <style>
+
+            input[type="checkbox"]:checked + label{
+                text-decoration: line-through;
+            }
+            form label, form button {
+                display: block;
+                margin-top: 12px;
+            }
+            input {
+                padding: 4px 14px;
+                margin-top: 8px;    
+            }
+            form {
+                border: 1px solid grey;
+                border-radius: 4px;
+                width: 300px;
+                padding: 40px;
+                margin: auto;
+                background-color: beige;
+            }
+            form h4 {
+                margin: 0;
+            }
+            input:valid {   /*Quando estiver VALIDO, fica VERDE*/
+                border: 1px solid green;
+                color: rgb(10, 26, 10);
+            }
+            input:invalid{   /*Quando for INVALIDO ficara Vermelho*/
+                border: 1px solid red;
+            }
+            input:valid + span { 
+                color: rgb(3, 139, 46);
+            }
+            input:in-range, input:valid{   /*Quando estiver DENTRO da Codição input*/
+                border: 1px solid rgb(28, 168, 28);
+                color: rgb(80, 116, 116);
+            }
+            input:out-of-range{ /*Quando estiver FORA da Codição input*/
+                border: 1px solid orangered;
+                color: orangered;               
+            }
+            .error {
+                color: orangered;
+                font-size: 0.75rem;
+                display: none;  /*uma forma de esconder.*/
+                margin-top: 4px;
+            }
+            input:invalid + .error{
+                display: block; /*uma forma de aparecer.*/ 
+            }
+
+
+       </style>
        <h3>Pseudo-Classe <code></code></h3>
-       <p>       
+       <p>     
+        
+        <form>
+            <h4>Faça sua Compra</h4>
+            <label for="email" required>E-mail</label>
+            <input type="email" name="email">
+            <span class="error">E-mail invalida</span>
+
+            <label for="codigo-produto">Código Produto</label>
+            <input name="codigo-produto" type="number"  min="1000" max="3000">
+            <span class="error">Código produto invalida</span>
+
+            <label for="cupom">Cupom de Desconto:</label>
+            <input type="text" type="cupom" pattern="[a,z]+" placeholder="Apenas letras minúsculas">
+            <span class="error">Cupom de desconto invalida</span>
+
+            <label for="data-nascimento">Data de Nascimento</label>
+            <input type="date" name="data-nascimento" min="1942-01-01" max="2010-12-31">
+            <span class="error">Data de nascimento invalida.</span>
+
+            <label for="quantidade">Quantidade</label>
+            <input type="number" name="amount" min="3" max="10">
+            <span class="error">Quantidade invalida.</span>
+
+            <label>
+                <input type="checkbox" required>
+                <span>Li e aceito os termos de uso</span>
+            </label>
+        
+            <button type="submit">Comprar</button>
+        </form>
        </p>
        
        <br>
@@ -392,11 +553,39 @@
                
         <h2>required e optional</h2>	
         <pre>
-            <code></code>
+            <code>:required</code>
+                Uma forma de estilizar os input que sao :required no CSS.
+                
+                Mas tb, todo elemento INPUT que conter required no HTML,
+                vai exigir que o usuario responda ao pedido.
+   
+                < input type="text" type="cupom" placeholder="Apenas letras minúsculas" required>
+
+            <code>:optional</code>
+            Uma forma de estilizar os input que NÃO sao :required no CSS.
+            
             </pre>
-       <style></style>
+       <style>
+        .input-required:required {  /* no HTMl - input, tem que ter o required.*/
+            border-radius: 50px;
+            border: 2px solid violet;
+        }
+        .input-optional:optional {
+            border-radius: 20px;
+            background-color: lightblue transparent;
+        }
+       </style>
        <h3>Pseudo-Classe <code></code></h3>
        <p>       
+
+        <label for="cupom">Cupom de Desconto:</label>
+        <input class="input-required" type="text" type="cupom" pattern="[a,z]+" placeholder="Apenas letras minúsculas" required>
+        <span class="error">Cupom de desconto invalida</span>
+
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input class="input-optional" type="date" name="data-nascimento" min="1942-01-01" max="2010-12-31">
+        <span class="error">Data de nascimento invalida.</span>
+
        </p>
        
        <br>
@@ -405,11 +594,37 @@
         <h2>autofill</h2>	
         <pre>
             <code>:autofill</code>
-            </pre>
-       <style></style>
+                Uma forma de mostrar para o usuario, quando os inputs 
+                Estão ou nao no auto-complete exemplo; Usuario e senha que aparecem automaticamente.
+
+            <code>-webkit-autofill</code>
+                Caso nao funciona o de cima, use-se esse.
+                Nem todos os nevegadores aceitam o autofill
+        </pre>
+        
+       <style>
+            .input-autofill:-webkit-autofill {   /*depois que voce escrever o email no input que aparece :*/
+                border: 2px solid rgb(16, 20, 238);
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+       </style>
        <h3>Pseudo-Classe <code>:autofill</code></h3>
        <p>       
-       </p>
+        <form>
+        <h4>Login</h4>
+        <label for="email">E-mail:</label>
+        <input class="input-autofill" type="email" required>
+        <span class="error">E-mail invalido</span>
+
+        <label for="passaword">Senha:</label>
+        <input class="input-autofill" type="password" name="senha" required>
+        <span class="error">Senha invalida</span>
+        <button type="submit">Entrar</button>
+    </form>
+
+        </p>
        
        <br>
        <br>
@@ -417,8 +632,23 @@
         <h2>root</h2>	
         <pre>
             <code>:root</code>
+
+                uma forma de estilizar a raiz da pagina, que é o Html.
+
+                Exemplo:  MUDEI O FUNDO DA PAGINA:
+
+                :root {
+                    background-color: rgb(239, 234, 228);
+                }
+
+
             </pre>
-       <style></style>
+       <style>
+        :root {
+            background-color: rgb(beige);
+            border: 20px solid red;
+        }
+       </style>
        <h3>Pseudo-Classe <code>:root</code></h3>
        <p>       
        </p>
@@ -428,11 +658,124 @@
                
         <h2>nth-child e nth-of-type</h2>	
         <pre>
-            <code></code>
-            </pre>
-       <style></style>
-       <h3>Pseudo-Classe <code></code></h3>
-       <p>       
+
+            <code>:nth-child</code>
+            
+            
+            <code>:nth-of-type</code>
+                Vai estilizar os filhos de um detemrinado grupo:
+                 Exemplo: 
+
+                article p:nth-of-type(1){  /* aqui estiliza apenas o 1° 'paragrafo filho' do mesmo tipo (type:nesse caso o paragrafo) no article, a depender do html estrturado. */
+                    color:rgb(149, 85, 74);
+                    text-decoration: line-through;
+                }
+                    No caso acima, o 1° filho do p.
+
+                       Más, se estiver assim: sem grupo determinado.
+                        vai atingir todos os '1° filho' de todos os grupos. div, p, span e etc. 
+                      
+                              article :nth-of-type(1) {
+                    </pre>
+       <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th {
+            text-align: left;
+        }
+        th, td {
+            padding: 1rem;
+        }
+        td + td, th + th{
+            text-align: right;
+        }
+        
+        /* INICIO: apesar de diferentes comandos, vão para o mesmo paragrafo */
+
+        article p:nth-child(2){  /*estiliza apenas o 2° 'paragrafo filho', a depender do html estrturado. */
+            color:tomato;
+        }
+        article p:nth-of-type(1){  /* aqui estiliza apenas o 1° 'paragrafo filho' do mesmo tipo (type:nesse caso o paragrafo) no article, a depender do html estrturado. */
+            color:rgb(yellow);
+            
+        
+        /* FIM: Final do comentário de cima */
+        
+        }
+        article p:nth-child(3){  /*estiliza apenas o paragrafo 3, a depender do html estrturado. */
+            color:rgb(violet);
+        }
+        article :nth-child(4){  /* Nesse caso estiliza qualquer paragrafo dentro do article. */
+            color:yellowgreen;
+        }
+        li:nth-child(1){
+            color: rgb(lime);
+        }
+        .lista-1 :nth-child(2){
+            color: red;
+        }
+        .lista-2 :nth-child(1){
+            color: pink;
+        }
+        .lista-1:nth-child(even) { /*todos os pares.*/
+            color: lightseagreen;
+        }
+        .lista-1 :nth-child(odd) {  /*Todos os impares*/
+            background-color: lightcyan;
+        }
+        .lista-2 :nth-child(3n+2) {  /*Aqui comeca a marcar na li '2' e a cada '3' li, */
+            background-color: beige;
+            border: 1px solid;
+        }
+
+        
+       </style>
+       <h3>Pseudo-Classe <code>:nth-child</code> e <code>:nth-of-type</code></h3>
+       <p> 
+        
+        <article>
+            <span class="exemplo-3">Teste SPAN</span>
+            <!-- <span>Teste 02</span>-->
+            <p class="exemplo-3"> Paragrafo 1 -Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam provident iste tempore quae. Neque doloremque vel explicabo esse maiores, repellendus molestiae quibusdam rerum perferendis reiciendis nobis aperiam eos dolor autem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi expedita a molestiae ipsa temporibus. Ratione, aspernatur debitis rerum quasi omnis in sed quos dolorem, voluptas quo deserunt excepturi sequi necessitatibus!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vitae ut possimus, beatae, obcaecati molestiae accusamus velit iste illo distinctio assumenda repellat ratione minima? Possimus et ipsum delectus commodi rem.</p>
+            <p class="exemplo-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste in dolores? Deserunt totam sapiente at nostrum sint id vitae laborum repellendus eius illum, ducimus inventore eos veritatis mollitia in.</p>
+        </article>
+        <hr>
+
+        <div class="listas">
+            <ul class="lista-1">
+                <li>Item 01</li>
+                <li>Item 02</li>
+                <li>Item 03</li>
+                <li>Item 04</li>
+                <li>Item 05</li>
+                <li>Item 06</li>
+                <li>Item 07</li>
+                <li>Item 08</li>
+                <li>Item 09</li>
+                <li>Item 10</li>
+            </ul>
+        </div>
+
+        <div class="listas">
+            <ul class="lista-2">
+                <li>Categoria 01</li>
+                <li>Categoria 02</li>
+                <li>Categoria 03</li>
+                <li>Categoria 04</li>
+                <li>Categoria 05</li>
+                <li>Categoria 06</li>
+                <li>Categoria 07</li>
+                <li>Categoria 08</li>
+                <li>Categoria 09</li>
+                <li>Categoria 10</li>
+            </ul>
+        </div>
+
        </p>
        
        <br>
@@ -440,23 +783,95 @@
                
         <h2>first-of-type e last-of-type</h2>	
         <pre>
-            <code></code>
+            <code>:first-of-type</code>
+                Estiliza o 1° filho do grupo.
+
+            <code>:last-of-type</code>
+                estiliza o último filho do grupo
             </pre>
-       <style></style>
+       <style>
+            article{
+                border: 1px solid gray;
+                display: inline-block;
+                padding: 20px;
+            }
+            article :first-of-type{  /*Marca o 1° filho*/
+                color: red;
+            }
+            article :last-of-type{ /*Marca o 2° filho*/
+                color: blue;
+            }
+
+       </style>
        <h3>Pseudo-Classe <code></code></h3>
-       <p>       
-       </p>
+       <p>  
+
+        <article>
+            <div> 1° div</div>     
+            <div> 2° div</div><br>     
+            <span>1° span</span><br>
+            <span>2° span</span>
+            <p>1° paragrafo</p>
+            <p>2° paragrafo</p>
+        </article>
+     </p>
        
        <br>
        <br>
                
         <h2>nath-last-child e nth-last-of-type</h2>	
         <pre>
-            <code></code>
+            <code>:nath-last-child</code>
+                    Aqui ele vai estilizar debaixo para cima numa lista (os filhos).
+                    Exemplo das Verduras 5:
+
+                    permiti tambem:  odd, even,  -n+3,  3n+1
+
+            <code>:nth-last-of-type</code>
+                    Aqui vai estilizar por ordem decrescente por tipo de grupo.
             </pre>
-       <style></style>
+       <style>
+        .li-3:nth-last-child(2) {  /*permiti tambem:  odd, even,  -n+3,  3n+1*/
+            font-weight: bold;
+            border: 1px solid;
+        }
+        dd:nth-last-of-type(3) {  /*opcoes*/
+            font-weight: bold;
+            border: 1px solid red;
+        }        
+        dt:nth-last-of-type(2) {  /* menu*/
+            font-weight: bold;
+            border: 1px solid blue;
+        }        
+        dl:nth-last-of-type(1) {  /*estrutura da tabela*/ 
+            font-weight: bold;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+
+       </style>
        <h3>Pseudo-Classe <code></code></h3>
        <p>       
+
+        <ol>
+            <li class="li-3">Verduras</li>
+            <li class="li-3">Verduras</li>
+            <li class="li-3">Verduras</li>
+            <li class="li-3">Verduras</li>
+            <li class="li-3">Verduras</li>
+            <li class="li-3">Verduras</li>
+        </ol>
+        <dl>
+            <dt>Cesto-1:</dt>
+            <dd>Frutas</dd>
+            <dd>Frutas</dd>
+            <dd>Frutas</dd>
+            <dt>Cesto-2:</dt>
+            <dd>Frutas</dd>
+            <dd>Frutas</dd>
+            <dd>Frutas</dd>
+
+        </dl>
        </p>
        
        <br>
@@ -465,10 +880,31 @@
         <h2>only-child</h2>	
         <pre>
             <code>:only-child</code>
+
+                    So estiliza o elemento com unico filho.
+                        Ou seja, se tiver irmaos , ele nao aplica o style.
+
             </pre>
-       <style></style>
+       <style>
+            .li-5:only-child {
+                color: red;
+            }
+            ul{
+                border: 1px solid;
+            }
+        
+       </style>
        <h3>Pseudo-Classe <code>:only-child</code></h3>
-       <p>       
+       <p>
+        <ul>Filho unico:
+            <li class="li-5">Item</li>
+        </ul>    
+        <ul>Quatros irmãos:
+            <li class="li-5">Item</li>
+            <li class="li-5">Item</li>
+            <li class="li-5">Item</li>
+            <li class="li-5">Item</li>
+        </ul>       
        </p>
        
        <br>
@@ -477,7 +913,11 @@
         <h2>only-of-type</h2>	
         <pre>
             <code>:only-of-type</code>
-            </pre>
+                Só aplica o style em 1° filhos:
+                    Similar ao de cima, porem se aplica a 'p', 'em' e outros.
+
+
+        </pre>
        <style></style>
        <h3>Pseudo-Classe <code>:only-of-type</code></h3>
        <p>       
@@ -489,10 +929,39 @@
         <h2>empty</h2>	
         <pre>
             <code>:empty</code>
+                Só estiliza os elemento que nao contiverem informação nenhuma. 
+                Exemplo abaixo: Na B e D.
+
+                Ambos estão completamente vazio. 
+                            
+                
+                        A e C tem espaços na div.
+
             </pre>
-       <style></style>
+        <style>
+        .div-2 {
+            height: 30px;
+            background-color: aquamarine;
+            border: 1px solid;
+        }
+        .div-2:empty{
+            background-color: beige;
+
+        }
+       </style>
        <h3>Pseudo-Classe <code>:empty</code></h3>
-       <p>       
+       <p> 
+
+    <div class="div-0">     
+        A
+        <div class="div-2"> </div>
+        B
+        <div class="div-2"></div>
+        C
+        <div class="div-2">      </div>
+        D
+        <div class="div-2"></div>
+    </div>
        </p>
        
        <br>
@@ -501,10 +970,40 @@
         <h2>is</h2>	
         <pre>
             <code>:is</code>
+                uma forma de simplificar o codigo extenso em poucos linhas.
             </pre>
-       <style></style>
+       <style>
+
+        /*
+        .post h4,
+        .post li,
+        .post .red  {
+            color: red;*/
+        
+        .post :is(h4, li, .red){ /*uma forma simplificada de escrever*/
+            color: blue;
+        }
+
+
+       </style>
        <h3>Pseudo-Classe <code>:is</code></h3>
        <p>       
+
+        <article class="post">
+            <h4>Meu post</h4>
+            <p>sumario</p>
+            <ul>
+                <li>capitulo 01</li>
+                <li>capitulo 02</li>
+                <li>capitulo 03</li>
+                <li>capitulo 04</li>
+            </ul>
+
+            <div class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem, reprehenderit atque maxime aliquid esse eligendi eum cumque necessitatibus quibusdam in quo consequuntur nesciunt, excepturi, odit magni tenetur aut laboriosam.</div>
+            <div class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem, reprehenderit atque maxime aliquid esse eligendi eum cumque necessitatibus quibusdam in quo consequuntur nesciunt, excepturi, odit magni tenetur aut laboriosam.</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero assumenda, architecto, nam maiores, iure in aliquid aliquam cumque facere rem quo harum repudiandae molestias officiis ducimus dignissimos minus velit illo.</p>
+        </article>
+      
        </p>
        
        <br>
@@ -513,10 +1012,45 @@
         <h2>where</h2>	
         <pre>
             <code>:where</code>
+
+                similiar a função 'if'
+
+                        'where' pode ser trocado por 'is';
+
+                                Entretanto, where vai manter o style mais extenso.
+                                    'Is' vai manter o style simplificada.
+
             </pre>
-       <style></style>
+       <style>
+        section p,
+        article p
+        aside p,
+        nav p {
+        background-color: red;
+        font-weight: bold;*/
+        }
+        :where(section, article, aside, nav) p {
+            background-color: pink;
+            font-weight: bold;
+        }
+
+       </style>
        <h3>Pseudo-Classe <code>:where</code></h3>
-       <p>       
+       <p>    
+        
+        <section>
+            <p>exemplo 1 section</p>
+        </section>
+        <article>
+            <p>exemplo 2 article</p>            
+        </article>
+        <aside>
+            <p>exemplo 3 aside</p>
+        </aside>
+        <nav>
+            <p>exemplo 4 nav</p>
+        </nav>
+        
        </p>
        
        <br>
@@ -525,11 +1059,28 @@
         <h2>not</h2>	
         <pre>
             <code>:not</code>
+                    Conhecido com o negação.
+                            Uma forma de fizer para o style que é NEGADO a execucao desse elemento. 
             </pre>
-       <style></style>
+       <style>
+            div, .p-11:not(#irrelevante){ /*Tem que colocar a classe dentro dos aspas. */
+                font-weight: bold;
+                color: red;
+            }
+
+       </style>
        <h3>Pseudo-Classe <code>:not</code></h3>
        <p>       
-       </p>
+      
+
+                <h4>:not estilizando</h4>
+            <p class="p-11">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod nihil facere culpa similique consectetur, quae numquam, nostrum sapiente vel perspiciatis aut beatae! Eius, eveniet? Iste, ipsa natus! Praesentium, ea?</p>
+            <p class="p-11">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod nihil facere culpa similique consectetur, quae numquam, nostrum sapiente vel perspiciatis aut beatae! Eius, eveniet? Iste, ipsa natus! Praesentium, ea?</p>
+            <p class="p-11" id="irrelevante">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod nihil facere culpa similique consectetur, quae numquam, nostrum sapiente vel perspiciatis aut beatae! Eius, eveniet? Iste, ipsa natus! Praesentium, ea?</p>
+            
+    
+    
+            </p>
        
        <br>
        <br>
@@ -537,12 +1088,57 @@
         <h2>has</h2>	
         <pre>
             <code>:has</code>
-            </pre>
-       <style></style>
+
+                Faz com que somente os elementos dentros dos parenteses sejam estilizados. 
+                Exemplo:
+
+                
+            .gallery figure:has(figcaption) {
+                border: 1px solid;
+                border-radius: 5px;
+                padding: 8px;
+            }
+
+        
+        </pre>
+       <style>
+            .gallery figure:has(figcaption) {
+                border: 1px solid;
+                border-radius: 5px;
+                padding: 8px;
+            }
+
+       </style>
        <h3>Pseudo-Classe <code>:has</code></h3>
        <p>       
-       </p>
        
+        <h4>Imagens - Galleria</h4>
+        <div class="gallery">
+        <figure>
+            <img src="./img_header.png" width="150">
+            <figcaption>teste</figcaption>
+        </figure>
+        <figure>
+            <img src="./img_header.png" width="150">
+        </figure>
+        <figure>
+            <img src="./img_header.png" width="150">
+            <figcaption>teste</figcaption>
+        </figure>
+        <figure>
+            <img src="./img_header.png" width="150">
+        </figure>
+        <figure>
+            <img src="./img_header.png" width="150">
+            <figcaption>teste</figcaption>
+        </figure>
+
+    </div>
+    </p>
+       
+
+
+
        <br>
        <br>
         
