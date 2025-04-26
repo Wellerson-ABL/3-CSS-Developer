@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsividade CSS</title>
+</head>
+
+<style>
+	h2 {
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 0px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;		
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+	}
+	pre {
+		margin: 30px;
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+	.img {
+		border-radius: 5px;
+		border: 2px solid black;
+		margin-top: 30px;
+		padding: 15px;
+	}
+    code{
+        background-color: rgb(224, 231, 239);
+    }
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div>
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Pseudo-Elemento</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		</div></div>
+               
+        <h2>first-letter</h2>	
+        <pre> 
+            <code>::first-letter:</code>
+
+                        Usado para adicionar elementos extras na páginas sem a necessidde
+                             de alterar diretamente no HTML. ou para selecionar uma parte de algum elemento.
+        </pre>
+        <p>
+            <style>
+            .h3-0::first-letter {
+                color: red;
+                background-color: gray;
+                margin: 5px;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 30px;
+            }
+
+            </style>
+
+            <h3 class="h3-0">Pseudo-Elemento  <code>::first-letter</code></h3>
+        <ul>
+            <li>color</li>
+            <li>background</li>
+            <li>margin</li>
+            <li>padding</li>
+            <li>border</li>
+            <li>propriedade de texto</li>
+            <li>font</li>
+        </ul>
+        </p>
+        
+        <br>
+        <br>
+        
+        <h2>first-line</h2>	
+        <pre>
+
+                Pseudo-Elemento- <code>::first-line</code>    
+                
+                    Usado para estilizar alguns elementos na página sem a necessidde
+                        de alterar diretamente no HTML. ou para selecionar uma parte de algum elemento.
+
+
+            </pre>
+        <p>       
+
+            <style>
+                .h3-1::first-line {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(183, 36, 36);
+                    margin: 5px;
+                    padding: 10px;
+                    font-weight: bold;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    text-decoration: dotted;
+                }
+    
+                </style>    
+             <h3 class="h3-1">Pseudo-Elemento <code>::first-line</code></h3>
+        <ul>
+            <li>color</li>
+            <li>background</li>
+            <li>margin</li>
+            <li>padding</li>
+            <li>border</li>
+            <li>propriedade de texto</li>
+            <li>font</li>
+        </ul></p>
+        
+        <br>
+        <br>
+        
+        
+        <h2>backdrop</h2>	
+        <pre>
+
+            <code>::backdrop</code>
+            
+                uma forma de estilizar o plano de fundo do video - entre o video e tela restante.
+                    Só funciona em tela cheia.
+
+                        Exemplo abaixo. (Amarelo)
+        </pre>
+        <p>
+            <style>
+                video {
+                    width: 20%;
+                }
+                video::backdrop {
+                    background-color: yellow;
+                }
+            </style>
+            <h3>Pseudo-Elemento-  <code>::backdrop</code></h3>
+ 
+            <video controls>       
+                <source src="./video.mp4">
+            </video>
+
+        </p>
+        
+        <br>
+        <br>
+        
+        
+        <h2>marker</h2>	
+        <pre> 
+
+        <code>::marker</code>
+            
+                Permite stilizar os tópicos ou números de uma lista (li)
+                  ou então a flecha de um elemento <code>summary</code>
+
+                  Site para pegar symbols:    
+                  <a href="https://fsymbols.com/">https://fsymbols.com/</a>
+        </pre>
+        <p>
+
+            <style>
+                summary::marker {
+                    color: red;
+                    content: "웃 OI!";
+                }
+                li::marker {
+                    color:green;
+                    font-size: 20px;
+                    content:"% @";
+                }
+            </style>
+
+            <h3>Pseudo-Elemento- <code>::marker</code></h3>
+            <details>
+                <summary>Propriedades aceitas:</summary>
+            </details>
+
+                <ul>
+                    <li>color</li>
+                    <li>content</li>
+                    <li>white-space</li>
+                    <li>font</li>
+                    <li>animation</li>
+                    <li>transition</li>
+                </ul>
+        </p>
+        
+        <br>
+        <br>
+        
+        
+        <h2>placeholder</h2>	
+        <pre>
+
+            <code>::placeholder</code>
+           
+                 Um placeholder é uma dica para ajudar no
+                         preenchimento de algum campo de formulário.    
+                            Orientação.
+                        </pre>          
+        <p>
+        <style>
+            input::placeholder {  /*Cor da dica*/
+                color: green
+            }
+            input {
+                color: blue;  /*Cor durante a escrita*/
+            }
+        </style>
+
+            <h3>Pseudo-Elemento-  <code>::placeholder</code></h3>
+            <hr>
+            <p>Exemplo:</p>
+            <label for="name">Nome</label>
+            <input name="nome" type="text" placeholder="Ex. Dr. Fulano">
+            <br>
+            <label for="senha">Senha</label>
+            <input name="senha" type="password" placeholder="Mínimo de 10 caracteres">
+            
+            <hr>
+
+        </p>
+        
+        <br>
+        <br>
+        
+        
+        <h2>selection</h2>	
+        <pre>  
+
+                <code>::selection</code>
+
+                        Permite estiliza a SELEÇÃO de textos no navegador.
+
+        </pre>
+        <p>
+            <style>
+                ::selection {
+                    background-color: bisque;
+                    color: palevioletred;
+                }
+
+                .exemplo-1::selection {
+                    background-color:aquamarine;
+                    color: blue;
+                    text-decoration:line-through;
+                }
+
+
+            </style>
+            <h3>Pseudo-Elemento-  <code>::selection</code></h3>
+
+                <li>Color</li>
+                <li>background-color</li>
+                <li>text</li>
+
+                <p class="exemplo-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, eius repudiandae facilis explicabo asperiores inventore fugit, dolor praesentium dolorem maxime qui, ipsum veritatis! Quidem nostrum aut aliquam amet soluta illo.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatibus, saepe iusto repellendus numquam deserunt assumenda cumque eius quod aspernatur nihil, neque, asperiores vel suscipit cum? Error asperiores impedit a.</p>
+        </p>
+        
+        <br>
+        <br>
+        
+        
+        <h2>file-selector-button</h2>	
+        <pre>  
+
+            <code>::file-selector-button</code>
+
+        </pre>
+        
+        <p>
+            <style>
+                input::file-selector-button {
+                    border: 1px solid black;
+                    background-color: violet;
+                    color: white;
+                    padding: 12px;
+                    border-radius: 4px;
+                }
+
+            </style>
+            <h3>Pseudo-Elemento-  <code>::file-selector-button</code></h3>
+
+                <form>
+                    <label for="fileUpload">Upload de Arquivos</label>
+                    <input name="fileUpload" type="file">
+                </form>
+        </p>
+    
+        <br>
+        <br>
+        
+        
+        <h2>before e after</h2>	
+        <pre>  
+
+            <code>::before</code>
+                Cria um elemento dentro do seletor, e esse elemento vai se tornar seu primeiro filho.
+
+            <code>::after</code>
+                Também vai criar um elemento dentro do seletor, porem vai ser o considerado o último filho.
+
+
+                Com isso, você vai poder estilizar avontade esses elementos adicionado.
+
+                    Exemplo abaixo:
+
+
+            </pre>
+        
+        <p>
+            <style>
+                span{
+                    background-color: aquamarine;
+                    padding: 10px;
+                }
+                .p-1::before{
+                    content: "&*&";
+                }
+                .p-2::after{
+                    content: "***";
+                }
+                .card-image {
+                    width: 300px;
+                    height: 300px;
+                    border: 1px solid gray;
+                    border-radius: 8px;
+                    background: url(./img_header.png);
+                    background-size: cover;
+                    position: relative;
+                    
+                }
+                .card-image::before{
+                    content:"";
+                    position: absolute;
+                    width: 80%;
+                    height: 100%;
+                    opacity: 75%;
+                    background:linear-gradient(transparent, rgb(0, 255, 247));
+                }
+            </style>
+            <h3>Pseudo-Elemento-  <code>::before</code> e <code>::after</code></h3>
+
+            <br>
+            <p class="p-1">
+                <span>Exemplo Before</span>           
+            </p>
+            <br>
+            <p class="p-2">
+                <span>Exemplo After</span>
+            
+            </p>
+            <br><br><br>
+
+            Exemplo na pratica da professora:
+            <div class="card-image"></div>
+
+
+
+
+        </p>
+    
+        <br>
+        <br>
+        
+	</body>
+</html>
+
+

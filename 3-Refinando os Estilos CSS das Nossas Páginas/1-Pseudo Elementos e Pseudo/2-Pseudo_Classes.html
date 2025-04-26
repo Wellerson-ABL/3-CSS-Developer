@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo Classes</title>
+</head>
+
+<style>
+	h2 {
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 0px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;		
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+	}
+	pre {
+		margin: 30px;
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+	.img {
+		border-radius: 5px;
+		border: 2px solid black;
+		margin-top: 30px;
+		padding: 15px;
+    }
+    code{
+        background-color: rgb(224, 231, 239);
+    }
+	
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div>
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Pseudo Classes</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		</div></div>
+
+        <h2>hover</h2>	
+        <pre>
+                <code>:hover</code>
+
+                        Uma forma de fazer uma 'segunda configuração' do mesmo elemento, que aparece
+                            quando se passar o mouse por cima.
+
+                
+            </pre>
+        <p>
+            <style>
+                #b1 {
+                    background-color: palevioletred;
+                    border: none;
+                    padding: 8px 20px;
+                    color: white;
+                }
+                #b1:hover {
+                    background-color: aquamarine;
+                    color: green;
+                    border: 1px slid darkgreen;
+                    cursor: pointer;  /*Ver todos os poteiros.*//
+                }
+                .container, .container2 {
+                    width: 200px;
+                    height: 100px;
+                    background-color: palegoldenrod;
+                    margin-top: 30px;
+                }
+                .container button{
+                    background-color: black;
+                    border: none;
+                    padding: 8px 20px;
+                    color: yellowgreen;
+                }
+                .container #b1:hover{
+                    background-color: white;
+                    border: 5px double red;
+                    padding: 8px 20px;
+                    color: black;
+                }
+                .container2:hover button{
+                    background-color: rgb(87, 83, 83);
+                    border: 5px double rgb(157, 123, 123);
+                    padding: 8px 20px;
+                    color: black;
+                }
+            </style>
+            <h3>Pseudo-Classe <code>:hover</code></h3>
+           
+            
+            <button id="b1">AQUI BOTAO</button>
+
+            <div class="container"><button id="b1">Passe o mouse no botao</button></div>
+                       
+            <div class="container2"><button id="b1"> Passe o mouse no container</button></div>
+      
+        </p>
+        
+        <br>
+        <br>
+        
+       
+        <h2>active</h2>	
+        <pre> 
+            
+                <code>:active</code> 
+
+                        Estizar elemento para botao ou qualquer outro elemento.
+                                Ex. Quando você 'clicar no botao' vai mostra a estilização do elemento. 
+                    
+                                clique abaixo!
+                            </pre>
+        
+            <style>
+                .bnt-active {
+                    background-color: rgb(74, 72, 73);
+                    border: none;
+                    padding: 8px 20px;
+                    color: white;
+                }
+                .bnt-active:hover {
+                    background-color: aquamarine;
+                    color: green;
+                    border: 1px slid darkgreen;
+                }
+                .bnt-active:active {
+                    background-color: purple;
+                    color: white;
+                }
+             
+                .h3-1:active {
+                    background: greenyellow;
+                }
+            </style>
+
+            <h3 class="h3-1">Pseudo-Classe <code>:active</code>  <u>cliqui aqui</u></h3>
+       
+            <p>  
+                <button class="bnt-active">Entrar em contato</button>
+                <br><br>
+                <a href="#">Site da DIO</a>
+            </p>
+        
+        <br>
+        <br>
+               
+        <h2>focus</h2>	
+        <pre>
+             <code>:focus</code>
+                    Uma maneira de focus no elemento.
+                    Por Exemplo: input, button ...
+
+             <code>:focus-within</code>
+                    Quando o elemento com :focus esta em uso, todos os demais elementos filhos e irmaos serão modificado tambem.
+                    porém, o :focus-within é aplicável em outros elemento em que o :focus nao se aplica. 
+                        Por Exemplo: label, h1, p ...  
+           
+             <code>:focus-visible</code>
+                    Uma forma de desativar a estilizacao do elemento.
+                    Exemplo:  
+                    
+                    .bnt-1:focus-visible {  [< VAI DESATIVAR TUDO ABAIXO]
+                        outline: 3px dashed red; /*Espessura da borda do botao*/
+                        outline-offset: 10px;   /*quantos em px vai ficar distante do button*/
+                        background-color: palevioletred;
+                        color: white;
+                    }
+
+                    Olhem todos os exemplos abaixo:
+         </pre>
+        <style>
+            label, .bnt-1 {
+                display: block;
+                margin: 12px;
+                font-size: 1.5rem;
+            }
+            .input-1, select {
+                font-size:1.5rem;
+            }
+            .input-1:focus {
+                outline: 2px solid blue;
+            }
+            select:focus {
+                background-color: yellow;
+            }
+
+            .bnt-1:focus {
+                outline: 3px dashed red; /*Espessura da borda do botao*/
+                outline-offset: 10px;   /*quantos em px vai ficar distante do button*/
+                background-color: palevioletred;
+                color: white;
+            }
+            label:focus-within {
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+        <h3>Pseudo-Classe <code>:focus , :focus-within , focus-visible</code></h3>
+        <p>
+            <form>
+                <p>Faca seu pedido! Escolha o sabor:</p>
+
+                <label>
+                    Nome completo:
+                    <input class="input-1" name="nome" type="text"><< <font size="2px"> cliqui aqui = BORDA AZUL está para <code>:focus</code></font>
+                </label>
+                <label>
+                    Sabor do Sorvete: 
+                    <Select name="Sabor">
+                        <option value="chocolate">Chocolate</option>
+                        <option value="morango">Morango</option>
+                        <option value="doce-leite">Doce de Leite</option>
+                        <option value="abacaxi">Abacaxi</option>
+                    </Select>  <font size="2px"> << aqui em AMARELO esta para <code>:focus</code></font>
+                </label>
+                <button class="bnt-1">Finalizar Pedido</button>
+                <font size="3px"> observe que os textos ficam vermelho quando clica na caixa, porque está para <code>:focus-within</code></font>
+            </form>       
+        </p>
+        
+        <br>
+        <br>
+               
+        <h2>target</h2>	
+        <pre>
+            <code>:target</code>
+
+                Uma forma de 'selecionar' com representação de estilizacao num texto.
+                Exemplos abaixo:
+            </pre>
+       <style>
+            p:target {
+                background-color: gold;
+            }
+            p:target::before {
+                content:">>";
+                color: red;
+                margin-right: 10px;                
+            }
+
+       </style>
+       <h3>Pseudo-Classe <code>:target</code></h3>
+       <p>       
+        <h4>Table of Contents</h4>
+
+        <ol>
+            <li><a href="#p1">Pular para o Primeiro parágrafo</a></li>
+            <li><a href="#p2">Pular para o Segundo parágrafo</a></li>
+            <li><a href="#nowhere">Esse link não vai para lugar nenhum.</a></li>
+        </ol>
+
+        <h4>Meu artigo:</h4>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iusto assumenda quaerat consequatur aut. Incidunt corporis doloremque alias, quae quisquam expedita ex facere quidem ea autem excepturi et eaque nisi!</p>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iusto assumenda quaerat consequatur aut. Incidunt corporis doloremque alias, quae quisquam expedita ex facere quidem ea autem excepturi et eaque nisi!</p>
+       </p>
+              
+       
+       <br>
+       <br>
+               
+        <h2>enabled e disabled</h2>	
+        <pre>
+            <code>:enabled</code> e <code>:disabled</code>
+                No HTML é uma forma desabilitar um botao. 
+                Exmeplo:
+                        < button desabled> Botão desabilitado < /button>
+
+                        Entretanto, é possivel estilizar no CSS esses botoes, desabilitados e habilitados.
+            </pre>
+       <style>
+        .bnt-disabled:disabled {
+            background-color: lightgreen;
+            color:rgb(183, 176, 176);
+        }
+        .bnt-enabled:enabled {
+            border-radius: 10px;
+            font-weight: bold;
+        }
+       </style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>     
+        
+        <button enabled class="bnt-enabled">Botão Habilitado</button>
+        <button disabled class="bnt-disabled">Botão desabilitado</button>
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>link e visited</h2>	
+        <pre>
+            <code>:link</code>
+                    Estilização para o link que nao foi visitado/clicado.
+                    Depois que clica, o link fica azul.
+
+            <code>:visited</code>
+                    Que já foi visitado.
+                    Depois que clica, o link fica azul.
+            </pre>
+       <style>
+        .exemplo:link {    /*Depois de clicar no link ele muda pra azul, */
+            color: white;
+            background-color: rgb(212, 25, 25);
+        }
+        .a1:visited{
+            color: yellow;
+        }
+       </style>
+       <h3>Pseudo-Classe <code>:link</code>e<code>:visited</code></h3>
+       <p>       
+            <a class="exemplo" href="#">LINK Nao foi visitado</a><br>
+            <a class="a1" href="#">LINK já foi Visitado</a>
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>placeholder-shown</h2>	
+        <pre>
+            <code>:placeholder-shown</code>
+
+                    NAO DEU CERTO!!
+
+                    Uma forma de estilizar no CSS - input
+            </pre>
+       
+       <style>
+        .inn1:placeholder-shown {
+            border-color: blue;
+            background-color: lightcyan;
+        }
+       </style>
+
+        <h3>Pseudo-Classe <code>:place-holder-shown</code></h3>
+       <p>       
+        
+        <form>
+            <label for="name"> Nome completo:</label>
+               <input class="inn1" name="name" type="text">              
+            <label>
+                Endereço:
+                <input class="inn2" name="nome" type="text">
+            </label>
+        </form>
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>checked e indeterminate</h2>	
+        <pre>
+            <code></code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>valid e invalid, in-range e out-ofrange</h2>	
+        <pre>
+            <code></code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>required e optional</h2>	
+        <pre>
+            <code></code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>autofill</h2>	
+        <pre>
+            <code>:autofill</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:autofill</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>root</h2>	
+        <pre>
+            <code>:root</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:root</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>nth-child e nth-of-type</h2>	
+        <pre>
+            <code></code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>first-of-type e last-of-type</h2>	
+        <pre>
+            <code></code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>nath-last-child e nth-last-of-type</h2>	
+        <pre>
+            <code></code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code></code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>only-child</h2>	
+        <pre>
+            <code>:only-child</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:only-child</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>only-of-type</h2>	
+        <pre>
+            <code>:only-of-type</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:only-of-type</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>empty</h2>	
+        <pre>
+            <code>:empty</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:empty</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>is</h2>	
+        <pre>
+            <code>:is</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:is</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>where</h2>	
+        <pre>
+            <code>:where</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:where</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>not</h2>	
+        <pre>
+            <code>:not</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:not</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+               
+        <h2>has</h2>	
+        <pre>
+            <code>:has</code>
+            </pre>
+       <style></style>
+       <h3>Pseudo-Classe <code>:has</code></h3>
+       <p>       
+       </p>
+       
+       <br>
+       <br>
+        
+	</body>
+</html>
+
+
