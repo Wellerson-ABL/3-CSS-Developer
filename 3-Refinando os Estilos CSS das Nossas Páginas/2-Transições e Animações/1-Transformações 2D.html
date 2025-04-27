@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transições e Animações - Transformações 2D</title>
+</head>
+
+<style>
+	h2 {
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 0px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;	
+		background-color: gray;
+		background:radial-gradient(white 85%, blue, yellow 10%, blue)	
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+		color: black;
+	}
+	pre {
+		margin: 30px;
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+	.img {
+		border-radius: 5px;
+		border: 2px solid black;
+		margin-top: 30px;
+		padding: 15px;
+    }
+    code{
+        background-color: rgb(224, 231, 239);
+    }
+
+	
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div>
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Transições 2D</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		
+		Site para base de experimento:<br> https://angrytools.com/css-generator/transform/
+		</div>
+	</div>
+
+
+	<h2>translate()</h2>	
+	
+	<pre></pre>
+	
+	<style>
+		.container{
+			margin: 0;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box{
+			background:linear-gradient(90deg, red 50%, blue 70%, yellow 90%);
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+		}
+		.box:hover{
+			transform: translateX(-50px) translateY(100px);
+		}
+	</style>
+	
+	<p>
+		<div class="container">
+			<div class="box"></div>
+		</div>
+		</p>
+
+	<br>
+	<br>
+
+	<h2>rotate()</h2>	
+	
+	<pre></pre>
+	
+	<style>
+		.container-1{
+			margin: 0;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box-1{
+			background:linear-gradient(90deg, red 50%, blue 70%, yellow 90%);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+		}
+		.box-1:hover{
+			transform: rotate(-50deg);
+			/*transform: translateX(-50px) translateY(100px);*/
+		}
+	</style>
+	
+	<p>
+		<div class="container-1">
+			<div class="box-1"></div>
+		</div>
+		</p>
+
+	<br>
+	<br>
+
+	<h2>rotateX() e rotateY()</h2>	
+	
+	<pre>
+
+			medidasa em graus. 
+				Parece  que achatou, mas entenda que é uma rotação em 2D.
+					ao girar.
+
+			90deg = graus vai parecer que sumiu, mas na verdade ele esta de lado.
+				
+					Experimente na sua imaginação Girar um Quadrado de 2D (duas dimenções)			
+	</pre>
+	
+	<style>
+		.container-2{
+			margin: 0;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box-2{
+			background:linear-gradient(90deg, red 50%, blue 70%, yellow 90%);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			background-image: url(./img_header.png);
+			transform: rotateY(70deg) rotateX(-40deg);
+		}		
+		.box-2:hover{
+			transform: rotateY(40deg) rotateX(-70deg);
+			/*transform: translateX(-50px) translateY(100px);*/
+		}
+	</style>
+	
+	<p>
+		<div class="container-2">
+			<div class="box-2"></div>
+		</div>
+		</p>
+	<br>
+	<br>
+
+	<h2>scale()</h2>	
+	
+	<pre></pre>
+	
+	<style>
+		.container-3{
+			margin: 0;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}	
+		.box-3{
+			background:linear-gradient(90deg, red 50%, blue 70%, yellow 90%);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			background-image: url(./img_header.png);
+			}
+		.box-3:hover{
+			transform: scale(2, 0.5);
+				/* 2 x width */ /* 0.5 x height*/
+		}
+	</style>
+	
+	<p>
+		<div class="container-3">
+			<div class="box-3"></div>
+		</div>
+		</p>
+	<br>
+	<br>
+
+	<h2>skew()</h2>	
+	
+	<pre></pre>
+	<style>
+		.container-4{
+			margin: 0;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}	
+		.box-4{
+			background:linear-gradient(90deg, red 50%, blue 70%, yellow 90%);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			background-image: url(./img_header.png);
+			}
+		.box-4:hover{
+			transform: skew(10deg, -10deg)
+		}
+	</style>
+	
+	<p>
+		<div class="container-4">
+			<div class="box-4"></div>
+		</div>
+		</p>
+
+	<br>
+	<br>
+
+	<h2>matrix()</h2>	
+	
+	<pre>
+	
+		<code>transform: matrix()</code>
+		
+			Matrix: é a junção dos comandos em uma linha de style.;
+		scaleX(),
+		skewX(),
+		skewY(),
+		scaleY(),
+		translateX(),
+		translateY(),
+
+		Exemplo:
+		transform:matrix(1.2,0.5,0,1.2,50,50);
+					Para cada espaço entre as virgulas um comando difernte.
+
+
+			Site somente essas modicações: https://angrytools.com/css-generator/transform/
+
+	</pre>
+	<style>
+		.container-5{
+			margin: 0;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}	
+		.box-5{
+			background:linear-gradient(90deg, red 50%, blue 70%, yellow 90%);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			background-image: url(./img_header.png);
+			}
+		.box-5:hover{
+			transform:matrix(1.2,0.5,0,1.2,50,50);
+
+			/*
+			matrix: é a junção dos comandos emuma linha;
+				scaleX(),
+				skewX),
+				skewY(),
+				scaleY(),
+				translateX(),
+				translateY(),
+
+			*/
+		}
+	</style>
+	
+	<p>
+		<div class="container-5">
+			<div class="box-5"></div>
+		</div>
+		</p>
+
+	<br>
+	<br>
+
+	</body>
+</html>
+
+
