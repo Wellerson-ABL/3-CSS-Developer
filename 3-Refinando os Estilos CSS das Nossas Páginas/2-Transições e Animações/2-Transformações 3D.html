@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transformações 3D</title>
+</head>
+
+<style>
+	h2 {
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 1px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;	
+		background:linear-gradient(white 80%, rgb(255, 0, 162), yellow 10%, rgb(0, 255, 20))	
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+		color: black;
+	}
+	pre {
+		margin: 30px;
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+	.img {
+		width: 200px;
+		height: 200px;
+		border-radius: 5px;
+		border: 2px solid black;
+		border-left: 2px solid red;
+		margin-top: 30px;
+		padding: 15px;
+		transform: rotateY(170deg);
+
+    }
+	.img-1 {
+		width: 200px;
+		height: 200px;
+		border-radius: 5px;
+		border: 2px solid black;
+		border-left: 2px solid red ;
+		margin-top: 30px;
+		padding: 15px;
+		transform: rotateY(10deg);
+		opacity: 50%;
+    }
+    code{
+        background-color: rgb(224, 231, 239);
+    }
+	.img-container {
+		perspective: 180px;
+		perspective-origin: top left;
+	}
+	.img-container-1 {
+		perspective: 150px;
+		perspective-origin: top left;
+	}
+
+	
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div class="img-container">
+			<img class="img" src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="img-container-1">
+			<img class="img-1" src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Transformações 3D</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		
+		Site para base de experimento:<br> https://angrytools.com/css-generator/transform/
+		</div>
+	</div>
+
+	
+
+
+	<h2>Demonstração</h2>	
+	
+	<pre><code></code>
+
+		demonstração do site:
+
+		https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d
+
+		https://developer.mozilla.org/en-US/play
+		
+	</pre>
+	
+	<style>#example-element {
+		width: 100px;
+		height: 100px;
+		transform-style: preserve-3d;
+		transition: transform 1.5s;
+		transform: rotate3d(1, 5, 1, 30deg);
+		margin: 50px auto;
+	  }
+	  
+	  #example-element:hover,
+	  #example-element:focus {
+		transform: rotate3d(1, 1, 1, 30deg)
+		  matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+	  }
+	  
+	  .face {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		backface-visibility: inherit;
+		font-size: 60px;
+		color: #fff;
+	  }
+	  
+	  .front {
+		background: rgb(90 90 90 / 70%);
+		transform: translateZ(50px);
+	  }
+	  
+	  .back {
+		background: rgb(0 210 0 / 70%);
+		transform: rotateY(180deg) translateZ(50px);
+	  }
+	  
+	  .right {
+		background: rgb(210 0 0 / 70%);
+		transform: rotateY(90deg) translateZ(50px);
+	  }
+	  
+	  .left {
+		background: rgb(0 0 210 / 70%);
+		transform: rotateY(-90deg) translateZ(50px);
+	  }
+	  
+	  .top {
+		background: rgb(210 210 0 / 70%);
+		transform: rotateX(90deg) translateZ(50px);
+	  }
+	  
+	  .bottom {
+		background: rgb(210 0 210 / 70%);
+		transform: rotateX(-90deg) translateZ(50px);
+	  }
+	  #example-element{
+		position: fixed;
+		left: 890px;
+		bottom: 500px;
+	  }
+	  </style>
+	
+	<p><section id="example-element" tabindex="0">
+		<div class="face front">1</div>
+		<div class="face back">2</div>
+		<div class="face right">3</div>
+		<div class="face left">4</div>
+		<div class="face top">5</div>
+		<div class="face bottom">6</div>
+	  </section></p>
+
+	<br>
+	<br>
+	
+	<h2>Perspectiva</h2>	
+	
+	<pre><code>Perspectiva</code>
+		<code>perspectiva-origin:</code>
+		<code>perspectiva:</code>
+		
+	</pre>
+	
+	<style>
+		.container {
+			margin: 0px;
+			height: 400px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+
+			perspective: 300px;
+			perspective-origin: top left;
+		}
+		.box {
+			background: linear-gradient(90deg, red 0%, blue 50%);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			transform: rotateY(250deg);
+
+			align-content:End;
+			font-size: xx-large;
+			color: aliceblue;			
+		}
+	</style>
+   	
+	<p>
+		<div class="container">
+			<div class="box">
+				olá!!!<br>
+				Denovo. 			
+			</div>
+		</div>
+	</p>
+
+	<br>
+	<br>
+
+	
+
+	<h2>Rotacionando e movendo elementos no eixo Z</h2>	
+	
+	<pre>
+		Eixo: X = rotacionando na horizontal
+		Eixo: Y = rotacionando na vertical
+		Eixo: Z = rotação do objeto na tela, sem a impressao 3D.
+					Valores negativo vao dar a impressão de que estar mais longe.
+					Positivos mais perto.	
+
+		* Tem que aplicar a perspectiva
+		<code></code>
+
+
+		
+	</pre>
+
+	<style>
+		.container-1 {
+			margin: 0px;
+			height: 400px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+
+			perspective: 200px;
+		}
+		.box-1 {
+			background: linear-gradient(90deg, yellow, black);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			transform: rotatex(20deg) rotateY(40deg) rotateZ(50deg);
+			}
+	</style>
+   	
+	<p>
+		<div class="container-1">
+			<div class="box-1">olá!!!<br>
+				Denovo.</div>
+		</div>
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>Escalando elementos de forma tridimensional</h2>	
+	
+	<pre><code></code>
+		
+	</pre>
+	
+	<style>
+		.container-2 {
+			margin: 0px;
+			height: 400px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+
+			perspective: 200px;
+		}
+		.box-2 {
+			background: linear-gradient(90deg, yellow, black);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			transform: rotatex(20deg);
+			padding: 20px;
+			border: 10px solid yellowgreen;
+			
+			
+			}
+		.box-2:hover{
+			transform: scaleZ(1.2) rotateX(20deg);
+			
+		}
+	</style>
+   	
+	<p>
+		<div class="container-2">
+			<div class="box-2">olá!!!<br>
+				Denovo.</div>
+		</div>
+	</p>
+
+	<br>
+	<br>
+
+
+	<h2>transform-origin</h2>	
+	
+	<pre><code></code>
+		
+	</pre>
+	
+	<style>
+		.container-3 {
+			margin: 0px;
+			height: 400px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+
+			perspective: 200px;
+		}
+		.box-3 {
+			background: linear-gradient(90deg, yellow, black);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			transform: rotatex(20deg);
+			padding: 20px;
+			border: 10px solid red;
+			
+			transition: 2s;
+			transform-origin: top right;
+			
+			}
+		.box-3:hover{
+			transform: rotate(40deg);
+		}
+	</style>
+   	
+	<p>
+		<div class="container-3">
+			<div class="box-3">olá!!!<br>
+				Denovo.</div>
+		</div>
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>transform-style</h2>	
+	
+	<pre><code></code>
+		
+	</pre>
+	<style>
+		.container-4 {
+			margin: 0px;
+			height: 400px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+
+			perspective: 200px;
+			perspective-origin: top;
+			transform-style: preserve-3d; /*ou flat*/
+		}
+		.box-4 {
+			background: linear-gradient(90deg, yellow, black);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;		
+			position: absolute;	
+		}
+		.box-4:nth-child(1){
+			background: linear-gradient(90deg, green, black);
+			transform:rotatey(40deg) ;
+			transition: 2s;
+		}
+		.box-4:nth-child(2){
+			background: linear-gradient(90deg, red, black);
+			transform:rotatey(-40deg) ;
+			transition: 4s;
+		}
+		.box-4:hover{	
+			transform:rotateX(-40deg) ;
+		}
+	</style>
+   	
+	<p>
+		<div class="container-4">
+			<div class="box-4">olá!!!<br>
+				Denovo.</div>
+				
+			<div class="box-4">olá!!!<br>
+				Denovo.</div>
+		</div>
+	</p>
+
+
+	<br>
+	<br>
+
+
+	<h2>matrix3d</h2>	
+	
+	<pre><code></code>
+
+		objeto do site:
+
+		https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d
+		
+	</pre>
+	
+	<style>html {
+		width: 100%;
+	  }
+	  .container-5 {
+		height: 100vh;
+		/* Centering content */
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: center;
+	  }
+	  .foo {
+		width: 50%;
+		padding: 1em;
+		color: white;
+		background: #ff8c66;
+		border: 2px dashed black;
+		text-align: center;
+		font-family: system-ui, sans-serif;
+		font-size: 14px;
+		/* Setting up animation for better demonstration */
+		animation: MotionScale 2s alternate linear infinite;
+	  }
+	  
+	  @keyframes MotionScale {
+		from {
+		  /*
+			Identity matrix is used as basis here.
+			The matrix below describes the
+			following transformations:
+			  Translates every X point by -50px
+			  Translates every Y point by -100px
+			  Translates every Z point by 0
+			  Scales down by 10%
+		  */
+		  transform: matrix3d(
+			1, 0, 0, 0,
+			0, 1, 0, 0,
+			0, 0, 1, 0,
+			-50, -100, 0, 1.1
+		  );
+		}
+		50% {
+		  transform: matrix3d(
+			1, 0, 0, 0,
+			0, 1, 0, 0,
+			0, 0, 1, 0,
+			0, 0, 0, 0.9
+		  );
+		}
+		to {
+		   transform: matrix3d(
+			1, 0, 0, 0,
+			0, 1, 0, 0,
+			0, 0, 1, 0,
+			50, 100, 0, 1.1
+		  )
+		}
+	  }
+	</style>
+   	
+	<p>
+		<div class="container-5">
+		<div class="foo">
+			olá!!! Tudo bem?
+		  </div></div>
+	</p>
+
+	<br>
+	<br>
+
+	
+	<h2>backface-visibily</h2>	
+	
+	<pre><code></code>
+		
+	</pre>
+	
+	<style>
+		.container-6 {
+			margin: 0px;
+			height: 400px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+
+			perspective: 200px;
+		}
+		.box-6 {
+			background: linear-gradient(90deg, yellow, black);
+			width: 200px;
+			height: 200px;
+			border-radius: 8px;
+			color: white;
+			
+			transform: rotatey(20deg);
+			backface-visibility: visible; 
+			
+			/*ou hiddem  = esconde a uma parte da rotação*/
+			
+			}
+		.box-6:hover{
+			transform: scaleZ(1.2) rotateX(20deg);
+			
+		}
+	</style>
+   	
+	<p>
+		<div class="container-6">
+			<div class="box-6">olá!!!<br>
+				Denovo.</div>
+		</div>
+	</p>
+
+	<br>
+	<br>
+
+
+
+</body>
+</html>
