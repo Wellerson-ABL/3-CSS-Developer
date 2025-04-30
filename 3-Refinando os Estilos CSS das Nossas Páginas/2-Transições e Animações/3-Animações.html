@@ -292,22 +292,21 @@
 			justify-content:center;
 			align-items: center;
 
-			perspective: 200px;
+			perspective: 200px;	
 		}
 		.box-3 {
 			background: linear-gradient(90deg, yellow, black);
 			width: 200px;
 			height: 200px;
 			border-radius: 8px;
-			animation-name: exemplo; /*nome da animação*/			
-			animation-duration: 40s;
+			animation-name: exemplo-5; /*nome da animação*/			
+			animation-duration: 10s;
 		}
-		@keyframes exemplo { 
+		@keyframes exemplo-5 { 
 			30% {
 				background: palegreen;
 				width: 200px;
 				height: 200px;
-				content:"% @"; /* content nao foi pq?*/
 			}
 			0% {
 				background: darkmagenta;
@@ -525,6 +524,7 @@
 				forwards : faz com que termine na ultima cor.
 				backwards : termina no rosa (background do conteiner)
 				both: 
+				alternate:
 
 			*/
 		}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Organizando os Estilos CSS</title>
+</head>
+
+<style>
+	
+	h2 { /*sub-menus*/
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 0px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;
+		background-color: black;
+		padding: 30px;
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+		
+		background: var(--bg-gradients);
+		font-size: 1.4rem;
+		text-align: center;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	pre {
+		margin: 30px;
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+    code{
+        background-color: rgb(224, 231, 239);
+    }
+
+	
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div>
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Compatibilidade entre navegadores</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br><br><br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		</div>
+	</div>
+
+	<h2>Definindo variáveis</h2>	
+	<pre>
+		definir variaveis facilita a organização e estilizando quanto a manutenções futuras.
+		Programadas-Arquivadas no :root  tudo fica facil. 
+		Exmeplo no style
+
+	</pre>
+	
+	<style>
+	:root {
+		--bg-gradient: linear-gradient(195deg, red 20%, yellow 50%, blue 70%);
+		--bg-gradients: linear-gradient(155deg, red 20%, yellow 50%);
+		--espaco: 10px 54px;
+	}		
+	
+	.container {
+		background-color: rgb(34,34,34);
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		padding: 50px;
+	}
+	h3 {
+		background: var(--bg-gradient);
+		font-size: 5rem;
+		text-align: center;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	a {
+		text-decoration: none;
+		background: linear-gradient(90deg, red 20%, blue 100%);
+		padding: var(--espaco);
+		border-radius: 4px;
+		color: white;
+	}
+	.p {
+		color: lightgreen;
+		letter-spacing: 5px;
+		padding-bottom: 20px;
+
+		
+	}
+		
+	</style>
+	
+	<p>
+
+		<div class="container">
+			<h3>Digital One Full</h3>
+			<p class="p">Sua jornada começa aqui!</p>
+			<a href="#">Me Increver</a>
+		</div>
+	</p>
+	
+	<br>
+	<br>
+
+	
+
+	<h2>BEM (Block, Element, Modifier)</h2>	
+	<pre>
+		BEM é uma forma de organização padrao e mundial mais popular.
+		acessar o site: 
+		https://desenvolvimentoparaweb.com/css/bem/
+	</pre>
+	
+	<style></style>
+	
+	<p></p>
+	
+	<br>
+	<br>
+
+
+	
+
+	<h2>SMACSS (Scalable and Modular Architecture for CSS)</h2>	
+	<pre>
+
+		Outra forma de organização SMACSS: acesse: 
+		https://medium.com/@larymagal/organize-seu-css-com-smacss-bem-e-sass-7e8f50a41544
+	</pre>
+	
+	<style></style>
+	
+	<p></p>
+	
+	<br>
+	<br>
+
+
+	
+
+	<h2>OOCSS (Object Oriented CSS)</h2>	
+	<pre>
+		outra forma de organização:
+			reútilizar códigos: ACesse::
+
+			https://allonsmandy.netlify.app/blog/arquitetura-css-oocss/
+
+	</pre>
+	
+	<style></style>
+	
+	<p></p>
+	
+	<br>
+	<br>
+
+
+	</body>
+</html>
+
+

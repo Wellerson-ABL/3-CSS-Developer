@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hierarquia e Especificidade</title>
+</head>
+
+<style>
+	h2 {
+		border: 1px solid yellow;
+		border-radius: 5px;
+		color: white;
+		background-color: black;
+		text-align: center;
+		padding: 5px 0px 5px 0px;
+	}
+	.menu_logo {
+		display: flex;
+		justify-content: center;	
+		background-color: gray;
+		background:radial-gradient(rgb(188, 48, 48), blue, yellow 10%, blue)	
+	}
+	.menu_texto {
+		align-content: center;
+		text-align: center;
+		color: black;
+	}
+	pre {
+		margin: 30px;
+		justify-content: center;
+		overflow:scroll;
+
+		font-weight: bold;
+		font-size: 1.1em;
+		border: 1px dashed black;
+		height: 200px;
+	}
+    code{
+        background-color: rgb(224, 231, 239);
+    }
+
+	
+</style>
+
+<body> 		
+	<div class="menu_logo">
+		<div>
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+		</div>
+		<div class="menu_texto">
+			<h1>Compatibilidade ente navegadores</h1>
+			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
+		</div>
+	</div>
+
+	<h2>Motores de Renderização</h2>	
+	<pre>Exemplo de motores:
+
+		blink = para google chrome e opera
+		Gecko = para Firefox
+		Webkit = para iOS, Safari
+		Trident - para Internet Explorer
+
+		Cada nevegador tem um motor que renderiza a forma como cada um deve exibir o que foi programado no CSS.
+		É por isso que cada navegador exibi um 'comando-tag e html' de uma forma visual diferente.  
+	</pre>
+	
+	<style></style>
+	
+	<p></p>
+	
+	<br>
+	<br>
+
+
+	
+	<h2>Compatibilidade com Navegadores</h2>	
+	<pre>
+		Acsse esse site conferir a compatibilidade com os navegadores.
+		Atenção exclusiva: para o chrome, firefox, ed-ge e safari (Desktop e Mobile)
+
+		https://caniuse.com/?search=div</pre>
+	
+	<style></style>
+	
+	<p></p>
+	
+	<br>
+	<br>
+
+
+
+	
+	<h2>Prefixos no CSS</h2>	
+	<pre>Cada Navegador usa um tipo de prefixo. 
+     	 Para o deesenvolvedor , é importante ficar atento, porque você não sabe
+ 	     qual navegador o usuario vai usar.
+		Então caso, alguma parte do seu site nao apareca no seu navegador, verifique qual é a 'tag' e consulte no icanuse.com
+			Na sequenca adicione o prefixo. Exemplo na style da pagina.
+
+			Prefixos:
+			-moz-      Firefox
+			-webkit-   Chrome/Edge/opera
+			-ms-       IE(Versões antiga)
+			-o-        Opera(Versões antiga)
+
+	</pre>
+	
+	<style>
+		.conteiner {
+			background-color: rgb(34,34,34);
+		
+		}
+		h3 {
+			background: linear-gradient(90deg, red 20%, blue 100%);
+			font-size: 5rem;
+			text-align: center;
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+	</style>
+		
+	<p>
+		<div class="conteiner">
+			<h3>digital <br> innovation <br> one</h3>
+		</div>
+	</p>
+	
+	<br>
+	<br>
+
+
+	</body>
+</html>
+
+
