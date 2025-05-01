@@ -1,0 +1,10 @@
+.btn{
+    --bs-btn-border-color: #ffffff;
+}
+.navbar-brand img {
+    width: 70px;
+}
+.cont a{
+    height: 1500px;
+    border: 1px;
+}
