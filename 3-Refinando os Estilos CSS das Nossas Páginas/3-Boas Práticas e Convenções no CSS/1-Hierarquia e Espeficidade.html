@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hierarquia e Especificidade</title>
+	<title>Hierarquia e Especificidade</title>
 </head>
 
 <style>
@@ -16,48 +17,51 @@
 		text-align: center;
 		padding: 5px 0px 5px 0px;
 	}
+
 	.menu_logo {
 		display: flex;
-		justify-content: center;	
+		justify-content: center;
 		background-color: gray;
-		background:radial-gradient(rgb(188, 48, 48), blue, yellow 10%, blue)	
+		background: radial-gradient(rgb(188, 48, 48), blue, yellow 10%, blue)
 	}
+
 	.menu_texto {
 		align-content: center;
 		text-align: center;
 		color: black;
 	}
+
 	pre {
 		margin: 30px;
 		justify-content: center;
-		overflow:scroll;
+		overflow: scroll;
 
 		font-weight: bold;
 		font-size: 1.1em;
 		border: 1px dashed black;
 		height: 200px;
 	}
-    code{
-        background-color: rgb(224, 231, 239);
-    }
 
-	
+	code {
+		background-color: rgb(224, 231, 239);
+	}
 </style>
 
-<body> 		
+<body>
 	<div class="menu_logo">
 		<div>
-			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png" alt="">
+			<img src="/1-Primeiros Passos com CSS/4-Criando sua  Primeira Landing Page com HTLM e CSS/Desafio_Landing_Page_CSS/assets/images/logo.png"
+				alt="">
 		</div>
 		<div class="menu_texto">
 			<h1>Hierarquia e Especificidade</h1>
 			<p>Aulas com <b>Prof. Michele Ambrosio</b> <br> <a href="http://dio.me">DIO</a> | abril/2025</u></p>
-		
-		Site para base de experimento:<br> https://angrytools.com/css-generator/transform/
+
+			Site para base de experimento:<br> https://angrytools.com/css-generator/transform/
 		</div>
 	</div>
 
-	<h2>Hierarquia do Efeito em Cascata</h2>	
+	<h2>Hierarquia do Efeito em Cascata</h2>
 	<pre>
 	No geral segue essa regra, de  qual style tem mais forca na estilização:
 		
@@ -69,41 +73,41 @@
 		   	
 
 	</pre>
-	
+
 	<style></style>
-	
+
 	<p></p>
-	
+
 	<br>
 	<br>
 
-	<h2>Especificidade</h2>	
+	<h2>Especificidade</h2>
 	<pre>Entendendo o calculo de especificidade:</pre>
-	
+
 	<style></style>
-	
+
 	<p>
-		<h6>Cálculo de Especificidade</h6>
-		<ol>
-			<li>inline: 1000 pontos</li>
-			<li>Id:      100 pontos</li>
-			<li>Classes, pseudos-classes e atributos: 10 pontos</li>
-			<li>Tag HTML: 1 Ponto</li>
-		</ol>
+	<h6>Cálculo de Especificidade</h6>
+	<ol>
+		<li>inline: 1000 pontos</li>
+		<li>Id: 100 pontos</li>
+		<li>Classes, pseudos-classes e atributos: 10 pontos</li>
+		<li>Tag HTML: 1 Ponto</li>
+	</ol>
 
-		<ul>
-			<li><strong>#exemplo h1.titulo</strong> = 111 pontos</li>
-			<li><strong>a:hover</strong> = 11 pontos</li>
-			<li><strong>div p</strong> = 2 pontos</li>
-		</ul>
+	<ul>
+		<li><strong>#exemplo h1.titulo</strong> = 111 pontos</li>
+		<li><strong>a:hover</strong> = 11 pontos</li>
+		<li><strong>div p</strong> = 2 pontos</li>
+	</ul>
 	</p>
-	
+
 	<br>
 	<br>
 
 
-	
-	<h2>!important</h2>	
+
+	<h2>!important</h2>
 	<pre>
 		Tomar cuidado ao uso excessivo !important.
 		utilizar quando vincular um arquivo ou estilo externo a sua pagina, 
@@ -113,45 +117,45 @@
 		Assim o navegador na hora de inspecionar nao precisara anular nenhum estilo duplicado.
 
 		</pre>
-	
-	<style>
 
+	<style>
 		p {
-			color: blue !important; /*Anulou o vermelho*/
+			color: blue !important;
+			/*Anulou o vermelho*/
 			font-size: 1.1rem;
 		}
+
 		div p {
 			color: red;
 		}
-
 	</style>
-	
+
 	<p>
 	<div>
-		<p>Nivel de prioridade do  efeito em cascata:</p>
+		<p>Nivel de prioridade do efeito em cascata:</p>
 	</div>
-		<ol>
-			<li>Declarações com !important do usuário</li>
-			<li>Declarações com !important do desenvolvedor</li>
-			<li>
-				Folha de estilos do desenvolvedor
-				<ol>
-					<li>CSS inline</li>
-					<li>CSS interno</li>
-					<li>CSS externo</li>
-					<li>Folha de estilos padrões do navegador</li>
-				</ol>
-			</li>
-		</ol>
+	<ol>
+		<li>Declarações com !important do usuário</li>
+		<li>Declarações com !important do desenvolvedor</li>
+		<li>
+			Folha de estilos do desenvolvedor
+			<ol>
+				<li>CSS inline</li>
+				<li>CSS interno</li>
+				<li>CSS externo</li>
+				<li>Folha de estilos padrões do navegador</li>
+			</ol>
+		</li>
+	</ol>
 	</p>
-	
+
 	<br>
 	<br>
 
 
 
-	
-	<h2>Herança</h2>	
+
+	<h2>Herança</h2>
 	<pre>
 		.teste {      = PAI
 			padding: 8px;
@@ -163,72 +167,77 @@
 		}
 	
 	</pre>
-	
+
 	<style>
 		.teste {
 			padding: 8px;
 			border: 2px solid red;
 		}
+
 		.teste p {
-			border: inherit;  /*inherit herar o elemento-custumizado do pai*/
+			border: inherit;
+			/*inherit herar o elemento-custumizado do pai*/
 			padding: inherit;
 		}
 	</style>
-	
-	<p>
-		<h3>Herança | CSS</h3>
-		<div class="teste">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi molestias ea ex odit facilis, perspiciatis quidem quisquam recusandae repudiandae officiis minus est doloribus minima id qui explicabo culpa quia!</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi molestias ea ex odit facilis, perspiciatis quidem quisquam recusandae repudiandae officiis minus est doloribus minima id qui explicabo culpa quia!</p>
 
-		</div>
+	<p>
+	<h3>Herança | CSS</h3>
+	<div class="teste">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi molestias ea ex odit facilis,
+			perspiciatis quidem quisquam recusandae repudiandae officiis minus est doloribus minima id qui explicabo
+			culpa quia!</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi molestias ea ex odit facilis,
+			perspiciatis quidem quisquam recusandae repudiandae officiis minus est doloribus minima id qui explicabo
+			culpa quia!</p>
+
+	</div>
 
 	</p>
-	
+
 	<br>
 	<br>
 
 
 
-	
-	<h2></h2>	
+
+	<h2></h2>
 	<pre></pre>
-	
+
 	<style></style>
-	
+
 	<p></p>
-	
+
 	<br>
 	<br>
 
 
 
-	
-	<h2></h2>	
+
+	<h2></h2>
 	<pre></pre>
-	
+
 	<style></style>
-	
+
 	<p></p>
-	
+
 	<br>
 	<br>
 
 
 
-	
-	<h2></h2>	
+
+	<h2></h2>
 	<pre></pre>
-	
+
 	<style></style>
-	
+
 	<p></p>
-	
+
 	<br>
 	<br>
 
 
-	</body>
+</body>
+
 </html>
-
-
