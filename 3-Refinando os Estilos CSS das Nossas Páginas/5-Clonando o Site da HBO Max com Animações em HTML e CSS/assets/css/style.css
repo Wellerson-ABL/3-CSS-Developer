@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --one-color: #020228;
+    --two-color: #ff00e5;
+    --three-color: #b535f6;
+
+    --btn-gradient: linear-gradient(75deg,
+    #9b34ef 20%,#490cb0 40%,
+    transparent 50% );
+
+    --barra-gradient: linear-gradient(45deg,
+    #9b34ef 20%,white 30%, #490cb0 100%, transparent 100% );
+
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+body{
+    background-color: var(--one-color);
+}
+p {
+  font-family: "Quicksand", sans-serif;
+}
+.nav_container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--one-color);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.nav_bnt_container{
+    display: block;
+    justify-content: right;
+    padding-right: 30px;
+    text-decoration: none;
+}
+.nav_bnt_entrar {
+    background-color: var(--one-color);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer; 
+    letter-spacing: 1px;
+
+}
+.nav_bnt_assine{
+    padding: 8px 24px;
+    background-color: var(--three-color);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border-radius: 20px;
+    cursor: pointer;        
+    transition: background 1s, color 1s;
+    
+}
+.nav_bnt_assine:hover{
+    background-color: white;
+    color: black;
+    
+}
+    
+.nav_logo {
+    max-width: 160px;
+    background-color: var(--one-color);
+}
+.nav_logo2 {
+    width: 100%;
+}
+
+/*FIM  Navbar*/
+
+
+/*INICIO HEADER*/
+
+.header__channel{
+    background-color: var(--one-color);
+
+}
+.header__channels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 100px 0 20px 0;
+}
+.header_h1{
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+.header_span_h1{
+    font-size: 2rem;
+    font-weight: lighter;
+    display: block;    
+}
+.barra {
+    display: block;
+    margin: 0 100px 0 100px;
+    padding: 2px;
+    background: var(--barra-gradient);   
+    border-radius: 20px;
+}
+
+/* OFERTAS: */
+header{
+    text-align: center;    
+}
+.header_oferta_container{
+    color:white;
+    padding: 30px 0px;
+}
+.header_oferta_h3 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.header_oferta_price {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 10px 10px;
+    padding-bottom: 50px;
+}
+.header_oferta_price_span{
+    font-size: 1rem;
+    font-weight: lighter;
+    padding-left: 10px;
+}
+.header_oferta_btn{
+    color: white;
+    background: var(--btn-gradient);
+    padding: 14px 50px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;    
+
+}
+
+.header_oferta_btn:hover {
+  background-color: transparent;
+  background-position: 100%;
+  outline: 1px solid var(--two-color);
+  transform: scale(1.05);
+}
+
+.header_oferta_text {
+    padding: 50px;    
+}
+.header_oferta_text_span {
+    display: block;    
+}
