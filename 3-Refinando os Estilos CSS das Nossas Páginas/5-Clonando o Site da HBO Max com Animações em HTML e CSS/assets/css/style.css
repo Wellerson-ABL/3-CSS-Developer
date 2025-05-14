@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
 
 :root {
-    --one-color: #020228;
+    --one-color:#020228;
     --two-color: #ff00e5;
     --three-color: #b535f6;
 
@@ -12,7 +12,9 @@
 
     --barra-gradient: linear-gradient(45deg,
     #9b34ef 20%,white 30%, #490cb0 100%, transparent 100% );
-
+    
+    --card-color: linear-gradient(0deg, transparent, #3b1e63);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
     
 }
 * {
@@ -27,19 +29,40 @@ body{
 p {
   font-family: "Quicksand", sans-serif;
 }
+
+/* Header */
+.header {
+  position: relative;
+  margin-top: 0px;
+  padding: 100px 0 100px;
+  background: linear-gradient(-125deg, #461d49, #0f0f10, #282065 );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite alternate;
+}
+.header::after {
+  content: "";
+  width: 0%;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--one-color), transparent);
+}
 .nav_container{
     display: flex;
-    flex-wrap: wrap;
-    background-color: var(--one-color);
+    background-color: var(--nav-bg-color);
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
 }
 .nav_bnt_container{
     display: block;
     justify-content: right;
     padding-right: 30px;
-    text-decoration: none;
+    text-decoration: none;   
 }
 .nav_bnt_entrar {
     background-color: var(--one-color);
@@ -158,19 +181,205 @@ header{
     outline: 3px solid transparent;
     transition: background 1s, outline 1s, transform 1s;
     background-size: 250%;    
-
 }
-
 .header_oferta_btn:hover {
-  background-color: transparent;
-  background-position: 100%;
-  outline: 1px solid var(--two-color);
-  transform: scale(1.05);
+    background-color: transparent;
+    background-position: 100%;
+    outline: 1px solid var(--two-color);
+    transform: scale(1.05);
 }
-
 .header_oferta_text {
     padding: 50px;    
 }
 .header_oferta_text_span {
     display: block;    
+}
+
+/* MAIN */
+
+/* CARD_ MOBILE*/
+.plano_mobile_conteiner  { 
+    background: var(--card-color);
+    padding: 30px 60px;
+    border-radius: 8px;
+    flex-direction: column; 
+    height: 600px;
+}
+.plano_mobile_text {
+    padding: 15px 0 15px 0;
+    font-size: 1.2rem;
+    font-weight:normal;
+    color: white;
+}
+.container_planos {
+    padding: 10px 180px 10px 180px;
+}
+.planos_conteiner {
+    padding: 24px;
+}
+.plano_mobile_h3 {
+    display: flex;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 0px 20px 0;
+    justify-content: space-between;
+}
+.plano_mobile_price {
+    color: var(--two-color);
+    font-size: 1.8rem;
+}
+.plano_mobile_price_mes {
+    padding-left: 10px;
+    color: white;
+    font-size: 1rem;
+}
+.planos_conteiner_text { /*frase*/
+    padding-top: 100px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+}
+.plano_mobile_bnt{ /*BUTTON_MOBILE*/    
+    color: white;
+    background: var(--btn-gradient);
+    padding: 14px 110px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 200%;    
+}
+.plano_mobile_bnt:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 1px solid var(--two-color);
+    transform: scale(1.05);
+}
+.plano_mobile_bnt_container {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+
+/* CARD_ multitelas*/
+.card_conteiner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+    
+}
+.card_imagens {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+
+}
+.card_1 {
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: opacity 2s;
+    
+}
+.contents {
+  margin: 100px auto;
+}
+
+.card_imagens:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--three-color);
+}
+
+.card_imagens:hover .card_1 {
+  opacity: 0;
+}
+.card_imagens:nth-child(1):hover {
+  background-image: url("../images/hbo-hover_0.webp");
+}
+
+.card_imagens:nth-child(2):hover {
+  background-image: url("../images/MAX-Hover.webp");
+}
+
+/* DC Content */
+
+.card_imagens:nth-child(3):hover {
+  background-image: url("../images/DC-Hover.webp");
+}
+
+/* WB Content */
+
+.card_imagens:nth-child(4):hover {
+  background-image: url("../images/WB-Hover.webp");
+}
+
+/* CN Content */
+
+.card_imagens:nth-child(5):hover {
+  background-image: url("../images/CN-Hover.png");
+}
+
+/* Champions League Content */
+
+.card_imagens:nth-child(6):hover {
+  background-image: url("../images/UCL-Hover.webp");
+}
+
+
+
+/* Animations */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  10% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  100% {
+    transform: rotate(0);
+  }
 }
