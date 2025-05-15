@@ -14,14 +14,17 @@
     #9b34ef 20%,white 30%, #490cb0 100%, transparent 100% );
     
     --card-color: linear-gradient(0deg, transparent, #3b1e63);
-    --nav-bg-color: rgba(0, 0, 0, 0.3);
     
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --footer-links-social:  #9e86ff;
+    --card-bg-ofert: rgba(0, 0, 100, 0.5)
 }
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
+    
 }
 body{
     background-color: var(--one-color);
@@ -65,7 +68,6 @@ p {
     text-decoration: none;   
 }
 .nav_bnt_entrar {
-    background-color: var(--one-color);
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -99,7 +101,7 @@ p {
     
 .nav_logo {
     max-width: 160px;
-    background-color: var(--one-color);
+    
 }
 .nav_logo2 {
     width: 100%;
@@ -141,7 +143,7 @@ p {
     padding: 2px;
     background: var(--barra-gradient);   
     border-radius: 20px;
-}
+ }
 
 /* OFERTAS: */
 header{
@@ -152,15 +154,16 @@ header{
     padding: 30px 0px;
 }
 .header_oferta_h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: lighter;
 }
 .header_oferta_price {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     padding: 10px 10px;
     padding-bottom: 50px;
+    color: var(--three-color);
 }
 .header_oferta_price_span{
     font-size: 1rem;
@@ -180,7 +183,9 @@ header{
 
     outline: 3px solid transparent;
     transition: background 1s, outline 1s, transform 1s;
-    background-size: 250%;    
+    background-size: 250%; 
+
+    animation: wiggle 2.2s linear infinite; /*animation*/
 }
 .header_oferta_btn:hover {
     background-color: transparent;
@@ -198,24 +203,32 @@ header{
 /* MAIN */
 
 /* CARD_ MOBILE*/
+
+.container_planos {
+    display: flex;
+    padding: 10px 40px 10px 40px;
+    justify-content: center;
+  }
+.planos_mobile_multitelas {  
+    padding: 25px 20px;
+    min-height: 600px;
+}
 .plano_mobile_conteiner  { 
     background: var(--card-color);
-    padding: 30px 60px;
+    padding: 30px 60px;    
     border-radius: 8px;
     flex-direction: column; 
-    height: 600px;
+    margin: auto;
+    padding: 24px;
+    height: 500px;
+    
+    border: 1px solid var(--card-bg-ofert);
 }
 .plano_mobile_text {
     padding: 15px 0 15px 0;
     font-size: 1.2rem;
     font-weight:normal;
     color: white;
-}
-.container_planos {
-    padding: 10px 180px 10px 180px;
-}
-.planos_conteiner {
-    padding: 24px;
 }
 .plano_mobile_h3 {
     display: flex;
@@ -243,17 +256,17 @@ header{
 .plano_mobile_bnt{ /*BUTTON_MOBILE*/    
     color: white;
     background: var(--btn-gradient);
-    padding: 14px 110px;
+    padding: 14px 20px;
     border-radius: 30px;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size:0.9rem;
     font-weight: bold;
     text-decoration: none;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.5px;
 
     outline: 3px solid transparent;
     transition: background 1s, outline 1s, transform 1s;
-    background-size: 200%;    
+    background-size: 250%;    
 }
 .plano_mobile_bnt:hover {
     background-color: transparent;
@@ -265,12 +278,13 @@ header{
     display: flex;
     box-sizing: border-box;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 
 /* CARD_ multitelas*/
 .card_conteiner{
+    background: var(--one-color);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -282,13 +296,13 @@ header{
     
 }
 .card_imagens {
-    border-radius: 16px;
+    border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    border: 2px solid transparent;
-    transition: transform 0.8s, background 0.8s, border 1s;
+    border: 2px solid var(--card-bg-ofert);
+    transition: transform 0.8s, background 0.8s, border 5s;
 
 }
 .card_1 {
@@ -297,13 +311,14 @@ header{
     object-fit: cover;
     transition: opacity 2s;
     
-}
+ }
 .contents {
   margin: 100px auto;
 }
 
 .card_imagens:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
+  z-index: 1;
   border: 2px solid var(--three-color);
 }
 
@@ -358,7 +373,7 @@ header{
   }
 }
 
-@keyframes wiggle {
+@keyframes wiggle {   /* ANIMATION BUTTON*/
   0%,
   10% {
     transform: rotate(0);
@@ -382,4 +397,48 @@ header{
   100% {
     transform: rotate(0);
   }
+}
+
+
+
+/*FOOTER*/
+.footer_container, .footer_social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_links, .footer_social_link{
+  color: var(--footer-links-social);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 50px 10px 15px 10px;
+}
+.footer_text_container {
+  text-align: center;
+}
+.footer_text{  
+  color: var(--footer-links-social);
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+.footer_social_link {
+  padding: 50px 25px 25px;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--footer-links-social);
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--two-color);
+  
 }
