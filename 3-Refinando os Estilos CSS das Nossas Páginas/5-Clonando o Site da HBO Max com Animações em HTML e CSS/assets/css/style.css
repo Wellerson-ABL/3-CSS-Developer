@@ -64,7 +64,6 @@ p {
 .nav_bnt_container{
     display: block;
     justify-content: right;
-    padding-right: 30px;
     text-decoration: none;   
 }
 .nav_bnt_entrar {
@@ -180,10 +179,11 @@ header{
     font-weight: bolder;
     text-decoration: none;
     letter-spacing: 2.5px;
+    border: none;
 
     outline: 3px solid transparent;
     transition: background 1s, outline 1s, transform 1s;
-    background-size: 250%; 
+    background-size: 250% 400%; 
 
     animation: wiggle 2.2s linear infinite; /*animation*/
 }
@@ -248,6 +248,7 @@ header{
 }
 .planos_conteiner_text { /*frase*/
     padding-top: 100px;
+    padding: 10px;
     color: white;
     font-size: 2rem;
     text-align: center;
@@ -287,7 +288,7 @@ header{
     background: var(--one-color);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 20px;
 
     max-width: 1200px;
     margin: auto;
@@ -441,4 +442,154 @@ header{
 ::-webkit-scrollbar-thumb:hover {
   background: var(--two-color);
   
+}
+
+/* Media Queries */
+@media (pointer: coarse) {
+  .contents__card:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 700px) {
+
+  .container_planos {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card_conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .header__channels {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .nav_logo {
+    width: 110px;
+  }
+  .nav_container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid white;
+  }
+  .planos_conteiner_text {
+    font-size: 1.5rem;
+  }
+  .plano_responsive {
+    height: 380px;
+  }
+  .plano_mobile_conteiner {
+    margin-top: 50px;
+    border: 1px solid var(--card-bg-ofert);
+  }
+  .footer_container {
+    flex-wrap: wrap;
+  }
+  .footer_links{
+    padding-right: 50px;
+    padding-top: 0%;
+  }  
+  .footer_text_container {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .container_planos {
+    padding: 5px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .plano_mobile_text {
+    font-size: 1.1rem;
+  }
+  .card_conteiner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5px;
+  }
+  .header__channels {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .nav_logo {
+    width: 110px;
+  }
+  .nav_container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .planos_conteiner_text {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+  .plano_responsive {
+    height: 380px;
+  }
+  .plano_mobile_conteiner {
+    margin-top: 50px;
+    border: 1px solid var(--card-bg-ofert);
+  }
+  .footer_container {    
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0px 20px 20px
+  }
+  .footer_text_container {
+    padding: 20px;
+  }
+  .plano_mobile_h3, .plano_mobile_price, .plano_mobile_price_mes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 360px) {
+   .plano_mobile_text {
+    font-size: 0.5rem;
+  }
+  .plano_responsive {
+    height: 450px;
+  }
+  .plano_mobile_h3, .plano_mobile_price, .plano_mobile_price_mes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .plano_mobile_conteiner {
+    min-height: 600px;
+  }
+  .plano_mobile_bnt {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .header_h1, .header_span_h1 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  .card_conteiner {
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+    gap: 5px;
+    overflow: auto hidden;
+    grid-auto-flow: column;
+  }
+}
+@media screen and (max-width: 950px) {
+.plano_mobile_conteiner, .planos_mobile_multitelas, .container_planos {
+  padding: 15px;
+}
+.plano_mobile_text {
+  font-size: 1.1rem;
+}
+.plano_mobile_h3, .plano_mobile_price, .plano_mobile_price_mes {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 }
